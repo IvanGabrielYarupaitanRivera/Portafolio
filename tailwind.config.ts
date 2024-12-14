@@ -6,7 +6,11 @@ export default {
 	darkMode: 'selector',
 
 	theme: {
-		extend: {}
+		extend: {
+			fontFamily: {
+				sans: ['Satoshi', 'sans-serif']
+			}
+		}
 	},
 
 	plugins: []
