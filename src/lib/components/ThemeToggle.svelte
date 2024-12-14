@@ -1,31 +1,20 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-
-	let isDark = false;
-
-	onMount(() => {
-		isDark = document.documentElement.classList.contains('dark');
-	});
+	import { SunMoon } from 'lucide-svelte';
 
 	function toggleTheme() {
 		document.documentElement.classList.toggle('dark');
-		isDark = !isDark;
 	}
 </script>
 
 <button
 	on:click={toggleTheme}
-	class="relative border-2 border-black p-2
-         hover:-translate-y-0.5 hover:translate-x-0.5
-         active:translate-x-0 active:translate-y-0
-         dark:border-white"
+	class="relative border-2 border-black
+           hover:-translate-y-0.5 hover:translate-x-0.5
+           active:translate-x-0 active:translate-y-0
+           dark:border-white"
 	aria-label="Cambiar tema"
 >
-	<div class="text-xl">
-		{#if isDark}
-			☀️
-		{:else}
-			🌙
-		{/if}
+	<div class="relative p-2 hover:rotate-12 hover:scale-110">
+		<SunMoon class="stroke-black dark:stroke-white" size={24} strokeWidth={2}></SunMoon>
 	</div>
 </button>
