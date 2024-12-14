@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { fly, slide } from 'svelte/transition';
+	import { slide } from 'svelte/transition';
 	import ThemeToggle from './ThemeToggle.svelte';
 	import { Menu, X } from 'lucide-svelte';
 	import { page } from '$app/stores';
@@ -29,7 +29,7 @@
 				href={item.href}
 				class="text-slate-800 hover:text-orange-600
 			   dark:text-slate-50 dark:hover:text-orange-400
-			   {isCurrentPage(item.href) ? 'text-orange-600 dark:text-orange-400' : ''}"
+			   {isCurrentPage(item.href) ? 'text-orange-400 dark:text-orange-600' : ''}"
 			>
 				{item.text}
 			</a>
@@ -46,7 +46,7 @@
 			class="  rounded-3xl border-2 border-sky-900 p-2
                        hover:-translate-y-0.5 hover:translate-x-0.5
                        active:translate-x-0 active:translate-y-0
-                       dark:border-sky-300"
+                       dark:border-sky-100"
 			aria-expanded={isMenuOpen}
 			onclick={toggleMenu}
 		>
@@ -73,7 +73,7 @@
 		id="mobile-menu"
 		class="absolute left-0 right-0 top-24 z-50 -mt-4 rounded-b-3xl border-b-2
 	   border-sky-900 bg-sky-50 py-4 md:hidden
-	   dark:border-sky-300 dark:bg-slate-950"
+	   dark:border-sky-100 dark:bg-slate-950"
 		transition:slide={{ duration: 500 }}
 	>
 		<div class="container mx-auto flex flex-col gap-4 px-4 pb-2">
