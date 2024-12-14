@@ -70,7 +70,7 @@
                    dark:border-sky-300 dark:bg-slate-950"
 		transition:slide={{ duration: 500 }}
 	>
-		<div class="container mx-auto flex flex-col gap-4 px-4 pb-4">
+		<div class="container mx-auto flex flex-col gap-4 px-4 pb-2">
 			{#each menuItems as item}
 				<a
 					href={item.href}
