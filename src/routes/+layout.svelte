@@ -1,19 +1,21 @@
 <script lang="ts">
 	import '../app.css';
-	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
 	import Header from '$lib/components/Header.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 
 	let { children } = $props();
 </script>
 
-<div class="min-h-screen bg-zinc-300 dark:bg-zinc-950">
+<div class="flex min-h-screen flex-col bg-blue-50 dark:bg-blue-950">
 	<!-- Header con navegación -->
 	<Header />
 
 	<!-- Contenido principal -->
-	<main class="container mx-auto px-4 py-8">
-		<div class="border-2 border-black p-8 dark:border-white">
+	<main class="container mx-auto flex-1 px-4 py-8">
+		<div
+			class="rounded-3xl border-2 border-blue-950 bg-white p-8
+                    dark:border-orange-100 dark:bg-blue-900"
+		>
 			{@render children()}
 		</div>
 	</main>

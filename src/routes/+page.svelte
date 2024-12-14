@@ -7,7 +7,7 @@
 	</h1>
 
 	<div
-		class="border-2 border-black p-6
+		class="rounded-3xl border-2 border-black p-6
                 hover:-translate-y-0.5 hover:translate-x-0.5
                 dark:border-white"
 	>
