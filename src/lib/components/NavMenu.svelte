@@ -9,7 +9,8 @@
 		{ href: '/', text: 'Inicio' },
 		{ href: '/proyectos', text: 'Proyectos' },
 		{ href: '/sobre-mi', text: 'Sobre Mí' },
-		{ href: '/contacto', text: 'Contacto' }
+		{ href: '/contacto', text: 'Contacto' },
+		{ href: '/practicando', text: 'Practicando' }
 	];
 
 	const toggleMenu = () => (isMenuOpen = !isMenuOpen);
