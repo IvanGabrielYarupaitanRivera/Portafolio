@@ -2,6 +2,8 @@
 	import '../app.css';
 	import Header from '$lib/components/Header.svelte';
 	import Footer from '$lib/components/Footer.svelte';
+	import { scale } from 'svelte/transition';
+	import { page } from '$app/stores';
 
 	let { children } = $props();
 </script>
@@ -11,13 +13,15 @@
 	<Header />
 
 	<!-- Contenido principal -->
-	<main class="container mx-auto flex-1 px-4 py-8">
-		<div
-			class="rounded-3xl border-2 border-sky-900 bg-white p-8 dark:border-sky-300
-                     dark:bg-slate-900"
-		>
-			{@render children()}
-		</div>
+	<main class="container relative mx-auto flex-1 px-4 py-8">
+		{#key $page.url.pathname}
+			<div
+				class="absolute rounded-3xl border-2 border-sky-900 bg-white p-8 dark:border-sky-300 dark:bg-slate-900"
+				transition:scale={{ duration: 300, opacity: 0.5 }}
+			>
+				{@render children()}
+			</div>
+		{/key}
 	</main>
 
 	<!-- Footer -->
