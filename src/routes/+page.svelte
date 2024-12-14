@@ -1,5 +1,28 @@
-<div class="rounded-lg bg-gray-300 px-6 py-8 dark:bg-slate-800">
-	<h1 class="font-cabinet text-6xl font-extrabold text-slate-950 dark:text-white">Mi Portafolio</h1>
-	<h3 class="text-2xl font-bold text-slate-900 dark:text-slate-300">Título 3</h3>
-	<p class="mt-2 font-medium text-slate-600 dark:text-slate-400">Contenido de ejemplo</p>
+<div class="space-y-8">
+	<h1
+		class="font-cabinet p-6
+	 text-6xl font-extrabold text-black dark:text-white"
+	>
+		Mi Portafolio
+	</h1>
+
+	<div
+		class="border-2 border-black p-6
+                hover:-translate-y-0.5 hover:translate-x-0.5
+                dark:border-white"
+	>
+		<h3
+			class="font-cabinet text-2xl font-bold
+                   text-black dark:text-white"
+		>
+			Título 3
+		</h3>
+
+		<p
+			class=" mt-2
+                  text-zinc-700 dark:text-zinc-300"
+		>
+			Contenido de ejemplo
+		</p>
+	</div>
 </div>
