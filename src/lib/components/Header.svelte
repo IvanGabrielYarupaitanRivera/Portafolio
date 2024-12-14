@@ -13,7 +13,7 @@
 					   active:translate-y-0 dark:border-sky-300
 					    dark:text-slate-50"
 			>
-				Ivan
+				Ivan Gabriel
 			</a>
 
 			<NavMenu />
