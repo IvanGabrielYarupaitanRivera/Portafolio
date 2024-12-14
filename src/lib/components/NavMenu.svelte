@@ -8,9 +8,9 @@
 
 	const menuItems = [
 		{ href: '/', text: 'Inicio' },
-		{ href: '/proyectos', text: 'Proyectos' },
+		/* { href: '/proyectos', text: 'Proyectos' },
 		{ href: '/sobre-mi', text: 'Sobre Mí' },
-		{ href: '/contacto', text: 'Contacto' },
+		{ href: '/contacto', text: 'Contacto' }, */
 		{ href: '/practicando', text: 'Practicando' }
 	];
 
@@ -53,9 +53,13 @@
 			</span>
 
 			{#if isMenuOpen}
-				<X size={24} strokeWidth={2} class="stroke-slate-800 dark:stroke-slate-50" />
+				<div transition:slide={{ duration: 500 }}>
+					<X size={24} strokeWidth={2} class="stroke-slate-800 dark:stroke-slate-50" />
+				</div>
 			{:else}
-				<Menu size={24} strokeWidth={2} class="stroke-slate-800 dark:stroke-slate-50" />
+				<div transition:slide={{ duration: 500 }}>
+					<Menu size={24} strokeWidth={2} class="stroke-slate-800 dark:stroke-slate-50" />
+				</div>
 			{/if}
 		</button>
 	</div>
