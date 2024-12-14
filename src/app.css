@@ -53,6 +53,6 @@
 	}
 
 	.p {
-		@apply text-pretty text-base leading-relaxed text-slate-600 sm:text-base md:text-lg dark:text-slate-400;
+		@apply text-pretty text-sm leading-relaxed text-slate-600 sm:text-base md:text-lg dark:text-slate-400;
 	}
 }
