@@ -8,7 +8,7 @@
 
 <button
 	on:click={toggleTheme}
-	class="relative rounded-3xl border-2 border-sky-900 p-2 hover:-translate-y-0.5 hover:translate-x-0.5 active:translate-x-0 active:translate-y-0 dark:border-sky-300"
+	class=" rounded-3xl border-2 border-sky-900 p-2 hover:-translate-y-0.5 hover:translate-x-0.5 active:translate-x-0 active:translate-y-0 dark:border-sky-300"
 	aria-label="Cambiar tema"
 >
 	<SunMoon
