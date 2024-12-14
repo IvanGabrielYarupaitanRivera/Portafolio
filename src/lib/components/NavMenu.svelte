@@ -18,7 +18,7 @@
 
 	const toggleMenu = () => (isMenuOpen = !isMenuOpen);
 
-	let isCurrentPage = $derived((href: string) => $page.url.pathname === href);
+	const isCurrentPage = $derived((href: string) => $page.url.pathname === href);
 </script>
 
 <div class="flex items-center justify-between">
