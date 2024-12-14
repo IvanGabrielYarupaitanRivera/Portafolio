@@ -38,3 +38,9 @@
 	font-weight: 800;
 	font-display: swap;
 }
+
+@layer components {
+	.heading-1 {
+		@apply font-cabinet text-6xl font-extrabold text-slate-800 dark:text-slate-50;
+	}
+}
