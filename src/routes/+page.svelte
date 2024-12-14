@@ -6,18 +6,12 @@
                 hover:translate-x-0.5 dark:border-sky-300
                  "
 	>
-		<h3
-			class="font-cabinet text-2xl font-bold
-                   text-slate-800 dark:text-slate-50"
-		>
-			Título 3
-		</h3>
+		<h2 class="heading-2">Portafolio</h2>
 
-		<p
-			class=" mt-2
-                  text-slate-600 dark:text-slate-400"
-		>
-			Contenido de ejemplo
+		<p class="p">
+			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil assumenda explicabo at alias
+			delectus officiis, exercitationem commodi, aut corrupti quis sapiente expedita nulla libero
+			voluptatum atque odit odio dolorum. Laborum.
 		</p>
 	</div>
 </div>
