@@ -55,11 +55,11 @@
 			</span>
 
 			{#if isMenuOpen}
-				<div transition:slide={{ duration: 1000 }}>
+				<div transition:slide={{ duration: 500 }}>
 					<X size={24} strokeWidth={2} class="stroke-slate-800 dark:stroke-slate-50" />
 				</div>
 			{:else}
-				<div transition:slide={{ duration: 1000 }}>
+				<div transition:slide={{ duration: 500 }}>
 					<Menu size={24} strokeWidth={2} class="stroke-slate-800 dark:stroke-slate-50" />
 				</div>
 			{/if}
@@ -71,10 +71,10 @@
 {#if isMenuOpen}
 	<div
 		id="mobile-menu"
-		class="absolute left-0 right-0 top-24 -mt-4 rounded-b-3xl border-b-2 border-sky-900
-                   bg-sky-50 py-4 md:hidden
-                   dark:border-sky-300 dark:bg-slate-950"
-		transition:slide={{ duration: 1000 }}
+		class="absolute left-0 right-0 top-24 z-50 -mt-4 rounded-b-3xl border-b-2
+	   border-sky-900 bg-sky-50 py-4 md:hidden
+	   dark:border-sky-300 dark:bg-slate-950"
+		transition:slide={{ duration: 500 }}
 	>
 		<div class="container mx-auto flex flex-col gap-4 px-4 pb-2">
 			{#each menuItems as item}
