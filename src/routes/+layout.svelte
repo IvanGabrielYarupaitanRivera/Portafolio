@@ -2,7 +2,6 @@
 	import '../app.css';
 	import Header from '$lib/components/Header.svelte';
 	import Footer from '$lib/components/Footer.svelte';
-	import { scale } from 'svelte/transition';
 	import { page } from '$app/stores';
 
 	let { children } = $props();
@@ -13,12 +12,9 @@
 	<Header />
 
 	<!-- Contenido principal -->
-	<main class="container relative mx-auto flex-1 py-4">
+	<main class="container mx-auto flex-1 px-4 py-8">
 		{#key $page.url.pathname}
-			<div
-				class="absolute z-0 bg-sky-50 p-8 dark:bg-neutral-900"
-				transition:scale={{ duration: 500, opacity: 0.9 }}
-			>
+			<div class="space-y-8">
 				{@render children()}
 			</div>
 		{/key}
