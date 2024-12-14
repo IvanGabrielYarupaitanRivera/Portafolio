@@ -1,10 +1,5 @@
 <div class="space-y-8">
-	<h1
-		class="font-cabinet p-6
-	 text-6xl font-extrabold text-slate-800 dark:text-slate-50"
-	>
-		Mi Portafolio
-	</h1>
+	<h1 class="heading-1">Mi Portafolio</h1>
 
 	<div
 		class="rounded-3xl border-2 border-sky-900 p-6 hover:-translate-y-0.5
