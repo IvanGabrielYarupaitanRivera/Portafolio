@@ -16,7 +16,7 @@
 	<main class="container relative mx-auto flex-1 px-4 py-8">
 		{#key $page.url.pathname}
 			<div
-				class="absolute z-0 rounded-3xl border-2 border-sky-900 bg-white p-8 dark:border-sky-300 dark:bg-slate-900"
+				class="absolute z-0 bg-sky-50 p-8 dark:bg-slate-950"
 				transition:scale={{ duration: 500, opacity: 0.9 }}
 			>
 				{@render children()}
