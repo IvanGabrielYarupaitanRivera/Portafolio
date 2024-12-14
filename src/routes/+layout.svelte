@@ -8,15 +8,15 @@
 	let { children } = $props();
 </script>
 
-<div class="flex min-h-screen flex-col bg-sky-50 dark:bg-slate-950">
+<div class="flex min-h-screen flex-col bg-sky-50 dark:bg-neutral-900">
 	<!-- Header con navegación -->
 	<Header />
 
 	<!-- Contenido principal -->
-	<main class="container relative mx-auto flex-1 px-4 py-8">
+	<main class="container relative mx-auto flex-1 py-4">
 		{#key $page.url.pathname}
 			<div
-				class="absolute z-0 bg-sky-50 p-8 dark:bg-slate-950"
+				class="absolute z-0 bg-sky-50 p-8 dark:bg-neutral-900"
 				transition:scale={{ duration: 500, opacity: 0.9 }}
 			>
 				{@render children()}

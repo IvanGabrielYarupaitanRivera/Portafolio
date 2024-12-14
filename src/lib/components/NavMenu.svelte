@@ -73,7 +73,7 @@
 		id="mobile-menu"
 		class="absolute left-0 right-0 top-24 z-50 -mt-4 rounded-b-3xl border-b-2
 	   border-sky-900 bg-sky-50 py-4 md:hidden
-	   dark:border-sky-100 dark:bg-slate-950"
+	   dark:border-sky-100 dark:bg-neutral-900"
 		transition:slide={{ duration: 500 }}
 	>
 		<div class="container mx-auto flex flex-col gap-4 px-4 pb-2">
@@ -82,7 +82,7 @@
 					href={item.href}
 					class="text-slate-800 hover:text-orange-600
 				   dark:text-slate-50 dark:hover:text-orange-500
-				   {isCurrentPage(item.href) ? 'text-orange-600 dark:text-orange-500' : ''}"
+				   {isCurrentPage(item.href) ? 'text-orange-400 dark:text-orange-600' : ''}"
 					onclick={toggleMenu}
 				>
 					{item.text}
