@@ -36,7 +36,7 @@
 			<div
 				class="flex w-44 flex-col items-center gap-4 rounded-xl border-2 border-sky-900 p-4 text-center hover:-translate-y-0.5 hover:translate-x-0.5 active:translate-x-0 active:translate-y-0 dark:border-sky-100"
 			>
-				<div class="mb-4 flex h-24 w-24 items-center justify-center">
+				<div class="flex h-24 w-24 items-center justify-center">
 					<img src={tech.logo} alt={tech.name} />
 				</div>
 				<p class="p">{tech.name}</p>
