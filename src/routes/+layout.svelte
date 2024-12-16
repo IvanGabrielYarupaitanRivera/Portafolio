@@ -16,8 +16,8 @@
 					opacity: [0, 1]
 				},
 				{
-					duration: 0.5,
-					ease: [0.35, 0, 0.25, 1]
+					duration: 1,
+					ease: [0.5, 0, 0.5, 1]
 				}
 			);
 		}
