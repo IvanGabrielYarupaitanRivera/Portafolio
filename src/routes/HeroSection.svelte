@@ -30,15 +30,5 @@
 				</a>
 			</div>
 		</div>
-		<!-- Imagen o Avatar -->
-		<div class="w-48 md:w-1/3">
-			<!-- Aquí puedes agregar tu foto o un avatar -->
-			<div class="overflow-hidden rounded-full">
-				<img
-					src="images/Avatar-de-Ivan-Gabriel-Yarupaitan-Rivera.webp"
-					alt="Foto de Ivan Gabriel"
-				/>
-			</div>
-		</div>
 	</div>
 </section>
