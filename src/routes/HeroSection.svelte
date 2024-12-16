@@ -35,7 +35,7 @@
 			<!-- Aquí puedes agregar tu foto o un avatar -->
 			<div class="overflow-hidden rounded-full">
 				<img
-					src="https://cdn.icon-icons.com/icons2/1457/PNG/512/element-1_99625.png"
+					src="images/Avatar-de-Ivan-Gabriel-Yarupaitan-Rivera.webp"
 					alt="Foto de Ivan Gabriel"
 				/>
 			</div>
