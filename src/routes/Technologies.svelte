@@ -29,7 +29,9 @@
 </script>
 
 <section class="py-16">
-	<h2 class="heading-2">Tecnologías que uso</h2>
+	<h2 class="heading-2 rounded-3xl border-2 border-sky-900 py-4 text-center dark:border-sky-100">
+		Tecnologías que uso
+	</h2>
 
 	<div class="mt-8 flex flex-row flex-wrap justify-center gap-6 md:gap-8">
 		{#each technologies as tech}
