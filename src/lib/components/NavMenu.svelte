@@ -71,9 +71,9 @@
 {#if isMenuOpen}
 	<div
 		id="mobile-menu"
-		class="absolute left-0 right-0 top-24 z-50 -mt-4 rounded-b-3xl border-b-2
-	   border-sky-900 bg-sky-50 py-4 md:hidden
-	   dark:border-sky-100 dark:bg-neutral-900"
+		class="absolute left-0 right-0 top-24 z-10 -mt-6 rounded-b-3xl border-b-2
+	   border-sky-900 bg-white pb-4 pt-8 md:hidden
+	   dark:border-sky-100 dark:bg-neutral-800"
 		transition:slide={{ duration: 500 }}
 	>
 		<div class="container mx-auto flex flex-col gap-4 px-4 pb-2">

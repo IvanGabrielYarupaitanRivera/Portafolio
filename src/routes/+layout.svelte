@@ -29,8 +29,8 @@
 	<Header />
 
 	<!-- Contenido principal -->
-	<main class="container mx-auto flex-1 px-4 py-8">
-		<div bind:this={mainContent} class="space-y-8">
+	<main class="container mx-auto flex-1">
+		<div bind:this={mainContent}>
 			{@render children()}
 		</div>
 	</main>
