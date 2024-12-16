@@ -24,7 +24,7 @@
 	});
 </script>
 
-<div class="flex min-h-screen flex-col bg-green-300 dark:bg-neutral-950">
+<div class="flex min-h-screen flex-col bg-green-100 dark:bg-neutral-950">
 	<!-- Header con navegación -->
 	<Header />
 
