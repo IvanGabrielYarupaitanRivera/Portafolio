@@ -1,19 +1,14 @@
 <script lang="ts">
-	import { slide } from 'svelte/transition';
 	import ThemeToggle from './ThemeToggle.svelte';
 	import { Menu, X } from 'lucide-svelte';
 	import { page } from '$app/stores';
+	import { slide } from 'svelte/transition';
 
 	let isMenuOpen = $state(false);
 
 	const menuItems = [
 		{ href: '/', text: 'Inicio' },
-		/* 
-		{ href: '/proyectos', text: 'Proyectos' },
-		{ href: '/sobre-mi', text: 'Sobre Mí' },
-		{ href: '/contacto', text: 'Contacto' },
-		*/
-		{ href: '/practicando', text: 'Practicando' }
+		{ href: '/blog', text: 'Blog' }
 	];
 
 	const toggleMenu = () => (isMenuOpen = !isMenuOpen);
@@ -27,9 +22,11 @@
 		{#each menuItems as item}
 			<a
 				href={item.href}
-				class="text-slate-800 hover:text-orange-600
-			   dark:text-slate-50 dark:hover:text-orange-400
-			   {isCurrentPage(item.href) ? 'text-orange-400 dark:text-orange-600' : ''}"
+				class=" font-bold hover:text-green-500
+			    dark:hover:text-green-500
+			   {isCurrentPage(item.href)
+					? ' text-green-800 underline underline-offset-8 dark:text-green-600'
+					: 'text-neutral-500 dark:text-neutral-200'}"
 			>
 				{item.text}
 			</a>
@@ -43,10 +40,7 @@
 
 		<button
 			type="button"
-			class="  rounded-3xl border-2 border-sky-900 p-2
-                       hover:-translate-y-0.5 hover:translate-x-0.5
-                       active:translate-x-0 active:translate-y-0
-                       dark:border-sky-100"
+			class="my-border my-effect border-2 p-2"
 			aria-expanded={isMenuOpen}
 			onclick={toggleMenu}
 		>
@@ -55,12 +49,12 @@
 			</span>
 
 			{#if isMenuOpen}
-				<div transition:slide={{ duration: 500 }}>
-					<X size={24} strokeWidth={2} class="stroke-slate-800 dark:stroke-slate-50" />
+				<div>
+					<X size={24} strokeWidth={2} class="my-stroke" />
 				</div>
 			{:else}
-				<div transition:slide={{ duration: 500 }}>
-					<Menu size={24} strokeWidth={2} class="stroke-slate-800 dark:stroke-slate-50" />
+				<div>
+					<Menu size={24} strokeWidth={2} class="my-stroke" />
 				</div>
 			{/if}
 		</button>
@@ -71,18 +65,18 @@
 {#if isMenuOpen}
 	<div
 		id="mobile-menu"
-		class="absolute left-0 right-0 top-24 z-10 -mt-6 rounded-b-3xl border-b-2
-	   border-sky-900 bg-white pb-4 pt-8 md:hidden
-	   dark:border-sky-100 dark:bg-neutral-800"
+		class="my-border my-component-bg absolute left-0 right-0 top-24 z-10 border-b-2 pb-4 pt-8 md:hidden"
 		transition:slide={{ duration: 500 }}
 	>
 		<div class="container mx-auto flex flex-col gap-4 px-4 pb-2">
 			{#each menuItems as item}
 				<a
 					href={item.href}
-					class="text-slate-800 hover:text-orange-600
-				   dark:text-slate-50 dark:hover:text-orange-500
-				   {isCurrentPage(item.href) ? 'text-orange-400 dark:text-orange-600' : ''}"
+					class=" font-bold hover:text-green-500
+			    dark:hover:text-green-500
+			   {isCurrentPage(item.href)
+						? ' text-green-800 underline underline-offset-8 dark:text-green-600'
+						: 'text-neutral-500 dark:text-neutral-200'}"
 					onclick={toggleMenu}
 				>
 					{item.text}
