@@ -29,18 +29,16 @@
 </script>
 
 <section class="py-16">
-	<h2 class="heading-2 rounded-3xl border-2 border-sky-900 py-4 text-center dark:border-sky-100">
-		Tecnologías que uso
-	</h2>
+	<h2 class="heading-2">Tecnologías que uso</h2>
 
 	<div class="mt-8 flex flex-row flex-wrap justify-center gap-6 md:gap-8">
 		{#each technologies as tech}
 			<div
-				class="flex w-32 flex-col items-center gap-2 rounded-3xl border-2 border-sky-900 bg-white px-2 py-6
+				class="flex w-32 flex-col items-center gap-2 rounded-3xl border-2 border-sky-900 bg-white px-2 pb-4 pt-6
 				 
 				hover:-translate-y-1
                 hover:translate-x-1 active:translate-x-0 active:translate-y-0 md:w-44
-                md:gap-4 md:px-4 md:py-8 dark:border-sky-100
+                md:gap-4 md:px-4 md:pb-6 md:pt-8 dark:border-sky-100
                  dark:bg-neutral-800
                 "
 			>
