@@ -41,18 +41,38 @@
 
 @layer components {
 	.heading-1 {
-		@apply text-pretty font-cabinet text-5xl font-extrabold text-slate-800 md:text-6xl dark:text-slate-50;
+		@apply text-pretty font-cabinet text-5xl font-extrabold text-neutral-950 md:text-6xl dark:text-neutral-50;
 	}
 
 	.heading-2 {
-		@apply text-pretty font-cabinet text-3xl font-bold text-slate-800 md:text-4xl dark:text-slate-50;
+		@apply text-pretty font-cabinet text-3xl font-bold text-neutral-950 md:text-4xl dark:text-neutral-50;
 	}
 
 	.heading-3 {
-		@apply text-pretty font-cabinet text-xl font-bold text-slate-800 md:text-2xl dark:text-slate-50;
+		@apply text-pretty font-cabinet text-xl font-bold text-neutral-950 md:text-2xl dark:text-neutral-50;
 	}
 
 	.p {
-		@apply text-pretty text-base leading-relaxed text-slate-600 md:text-lg dark:text-slate-400;
+		@apply text-pretty text-base leading-relaxed text-neutral-800 md:text-lg dark:text-neutral-200;
+	}
+
+	.my-border {
+		@apply border-green-900 dark:border-green-900;
+	}
+
+	.my-bg {
+		@apply bg-green-400 hover:bg-green-500 dark:bg-green-600 dark:hover:bg-green-500;
+	}
+
+	.my-component-bg {
+		@apply bg-green-50 dark:bg-black;
+	}
+
+	.my-effect {
+		@apply hover:-translate-y-0.5 hover:translate-x-0.5 active:translate-x-0 active:translate-y-0;
+	}
+
+	.my-stroke {
+		@apply stroke-green-900 dark:stroke-green-100;
 	}
 }
