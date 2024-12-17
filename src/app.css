@@ -57,7 +57,7 @@
 	}
 
 	.my-border {
-		@apply border-green-900 dark:border-green-50;
+		@apply border-green-900 dark:border-green-100;
 	}
 
 	.my-bg {
@@ -73,7 +73,7 @@
 	}
 
 	.my-stroke {
-		@apply stroke-green-900 dark:stroke-green-50;
+		@apply stroke-green-900 dark:stroke-green-100;
 	}
 
 	.my-span {
