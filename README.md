@@ -1,13 +1,37 @@
-# 🌟 Portafolio Personal
+# 🚀 Ivan Yarupaitan | Portafolio Personal
 
-Este repositorio contiene el código fuente de mi portafolio personal, construido con SvelteKit. Aquí podrás encontrar información sobre mis proyectos, habilidades y experiencia profesional.
+<div align="center">
 
-## 🚀 Tecnologías Utilizadas
+[![Svelte](https://img.shields.io/badge/SvelteKit-FF3E00?style=for-the-badge&logo=svelte&logoColor=white)](https://kit.svelte.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
 
-- SvelteKit
-- TypeScript
-- TailwindCSS
-- Vite
+</div>
+
+## 📋 Descripción
+
+Bienvenido a mi portafolio personal, una aplicación web moderna construida con las últimas tecnologías de desarrollo frontend. Este proyecto muestra mi experiencia profesional, proyectos destacados y habilidades técnicas en desarrollo web.
+
+## 🛠️ Tecnologías
+
+El proyecto está construido utilizando un stack moderno de desarrollo web:
+
+- **[SvelteKit](https://kit.svelte.dev/)** - Framework web moderno y eficiente
+- **[TypeScript](https://www.typescriptlang.org/)** - Tipado estático para JavaScript
+- **[TailwindCSS](https://tailwindcss.com/)** - Framework CSS utility-first
+- **[Vite](https://vitejs.dev/)** - Build tool y dev server ultrarrápido
+- **Motion One** - Librería de animaciones fluidas
+- **CSS Moderno** - Diseño responsive y animaciones
+
+## 🚀 Características
+
+- ✨ Diseño moderno y minimalista
+- 📱 Totalmente responsive
+- 🎨 Modo claro/oscuro
+- ⚡ Optimizado para rendimiento
+- 🔍 SEO optimizado
+- 🎭 Animaciones suaves
 
 ## 📜 Licencia
 
