@@ -28,7 +28,7 @@
 	];
 </script>
 
-<section class="">
+<section>
 	<h2 class="heading-2">Tecnologías que uso</h2>
 
 	<div class="mt-8 flex flex-row flex-wrap justify-center gap-6 md:gap-8">
