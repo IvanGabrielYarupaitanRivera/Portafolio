@@ -7,8 +7,8 @@
 		background-color 1s ease-out,
 		color 1s ease-out,
 		border 1s ease-out,
-		transform 0.3s ease-out,
-		stroke 0.3s ease-out;
+		transform 0.4s ease-out,
+		stroke 0.4s ease-out;
 }
 
 @font-face {
@@ -53,19 +53,19 @@
 	}
 
 	.p {
-		@apply text-pretty text-base leading-relaxed text-neutral-800 md:text-lg dark:text-neutral-200;
+		@apply text-pretty text-base text-neutral-800 md:text-lg dark:text-neutral-200;
 	}
 
 	.my-border {
-		@apply border-green-900 dark:border-green-900;
+		@apply border-green-900 dark:border-green-50;
 	}
 
 	.my-bg {
-		@apply bg-green-400 hover:bg-green-500 dark:bg-green-600 dark:hover:bg-green-500;
+		@apply bg-green-500 hover:bg-green-600 dark:bg-green-600 dark:hover:bg-green-500;
 	}
 
 	.my-component-bg {
-		@apply bg-green-50 dark:bg-black;
+		@apply bg-white dark:bg-black;
 	}
 
 	.my-effect {
@@ -73,6 +73,6 @@
 	}
 
 	.my-stroke {
-		@apply stroke-green-900 dark:stroke-green-100;
+		@apply stroke-green-900 dark:stroke-green-50;
 	}
 }
