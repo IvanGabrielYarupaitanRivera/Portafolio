@@ -1,14 +1,5 @@
 # 🚀 Ivan Yarupaitan | Portafolio Personal
 
-<div align="center">
-
-[![Svelte](https://img.shields.io/badge/SvelteKit-FF3E00?style=for-the-badge&logo=svelte&logoColor=white)]
-[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)]
-[![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)]
-[![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)]
-
-</div>
-
 ## 📋 Descripción
 
 Bienvenido a mi portafolio personal, una aplicación web moderna construida con las últimas tecnologías de desarrollo frontend. Este proyecto muestra mi experiencia profesional, proyectos destacados y habilidades técnicas en desarrollo web.
