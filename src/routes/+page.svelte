@@ -30,12 +30,6 @@
 
 <main class="relative">
 	<section class="relative z-10 px-8 py-36 md:px-36" aria-label="Introducción y presentación">
-		<!-- Fondo decorativo -->
-		<!-- <div
-            class="absolute inset-0 z-0 -my-4 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#0369A1_100%)]"
-            aria-hidden="true"
-        ></div> -->
-
 		<HeroSection />
 	</section>
 
