@@ -64,10 +64,8 @@
 	<Header />
 
 	<!-- Contenido principal -->
-	<main class="container mx-auto flex-1">
-		<div bind:this={mainContent}>
-			{@render children()}
-		</div>
+	<main class="container mx-auto flex-1 px-4 py-6" bind:this={mainContent}>
+		{@render children()}
 	</main>
 
 	<!-- Footer -->
