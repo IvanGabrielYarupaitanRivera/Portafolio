@@ -2,7 +2,7 @@
 
 ## 📋 Descripción
 
-Bienvenido a mi portafolio personal, una aplicación web moderna construida con las últimas tecnologías de desarrollo frontend. Este proyecto muestra mi experiencia profesional, proyectos destacados y habilidades técnicas en desarrollo web.
+Bienvenido a mi portafolio personal, una página web moderna construida con las últimas tecnologías de desarrollo frontend. Este proyecto muestra mi experiencia profesional, proyectos destacados y habilidades técnicas en desarrollo web.
 
 ## 🛠️ Tecnologías
 
