@@ -13,7 +13,7 @@
 	<!-- Texto principal -->
 	<div class="flex flex-col items-center gap-6 text-center">
 		<h1 class="heading-1">
-			Hola, soy <span class="text-sky-700 dark:text-sky-400">Ivan Gabriel</span>
+			Hola, soy <span class="my-span">Ivan Gabriel</span>
 		</h1>
 
 		<p class="p">Desarrollador Full Stack apasionado por crear experiencias web excepcionales</p>
