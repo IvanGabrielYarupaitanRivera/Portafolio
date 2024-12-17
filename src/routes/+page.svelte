@@ -28,12 +28,12 @@
 	/>
 </svelte:head>
 
-<main class="relative px-8 md:px-24">
+<main class="relative">
 	<section class="relative z-10 py-40 md:px-36" aria-label="Introducción y presentación">
 		<HeroSection />
 	</section>
 
-	<section class="my-border relative z-10 border-t-2" aria-label="Tecnologías y habilidades">
+	<section class="my-border relative z-10 border-t-2 py-8" aria-label="Tecnologías y habilidades">
 		<Technologies />
 	</section>
 </main>
