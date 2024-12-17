@@ -1,4 +1,15 @@
+<script lang="ts">
+	import { SquareDashedBottomCode } from 'lucide-svelte';
+</script>
+
 <section class="relative z-10">
+	<!-- Ícono hero -->
+	<div class="mb-8 flex justify-center">
+		<div class="my-bg my-effect border-4 border-green-900 p-3 dark:border-green-100">
+			<SquareDashedBottomCode size={50} strokeWidth={2} class="my-stroke"></SquareDashedBottomCode>
+		</div>
+	</div>
+
 	<!-- Texto principal -->
 	<div class="flex flex-col items-center gap-6 text-center">
 		<h1 class="heading-1">
