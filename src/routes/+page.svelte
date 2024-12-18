@@ -1,6 +1,7 @@
 <script lang="ts">
 	import HeroSection from './HeroSection.svelte';
 	import Technologies from './Technologies.svelte';
+	import Projects from './Projects.svelte';
 
 	const pageTitle = 'Ivan Gabriel Yarupaitan Rivera | Programador de aplicaciones web';
 	const pageDescription =
@@ -33,7 +34,11 @@
 		<HeroSection />
 	</section>
 
-	<section class="my-border relative z-10 border-t-2 py-8" aria-label="Tecnologías y habilidades">
+	<section class="relative z-10 py-16" aria-label="Proyectos destacados">
+		<Projects />
+	</section>
+
+	<section class="relative z-10 py-16" aria-label="Tecnologías y habilidades">
 		<Technologies />
 	</section>
 </main>
