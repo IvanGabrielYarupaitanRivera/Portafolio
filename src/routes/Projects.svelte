@@ -56,7 +56,7 @@
 						<footer class="mb-4 flex flex-wrap gap-2">
 							{#each project.technologies as tech}
 								<span
-									class="rounded-full bg-green-100 px-3 py-1 text-xs font-medium text-green-800 dark:bg-green-900 dark:text-green-100"
+									class="rounded-full bg-sky-100 px-3 py-1 text-xs font-medium text-sky-800 dark:bg-sky-900 dark:text-sky-100"
 								>
 									{tech}
 								</span>
