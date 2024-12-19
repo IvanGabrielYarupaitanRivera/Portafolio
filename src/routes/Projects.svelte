@@ -30,9 +30,7 @@
 </script>
 
 <div class="container mx-auto p-4">
-	<h2 class="heading-2 my-shadow my-border my-component-bg mb-12 border-2 px-8 py-4">
-		Proyectos Destacados
-	</h2>
+	<h2 class="heading-2 my-shadow my-border my-bg mb-12 border-2 px-8 py-4">Proyectos Destacados</h2>
 
 	<section class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 		{#each projects as project}
