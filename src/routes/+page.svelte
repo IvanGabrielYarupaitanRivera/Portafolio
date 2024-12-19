@@ -1,6 +1,7 @@
 <script lang="ts">
 	import HeroSection from './HeroSection.svelte';
 	import Projects from './Projects.svelte';
+	import Contact from './Contact.svelte';
 
 	const pageTitle = 'Ivan Gabriel Yarupaitan Rivera | Programador de aplicaciones web';
 	const pageDescription =
@@ -28,12 +29,16 @@
 	/>
 </svelte:head>
 
-<main class="relative">
-	<section class="relative z-10 py-16 md:px-36" aria-label="Introducción y presentación">
+<main class="relative flex flex-col gap-16">
+	<section class="relative z-10 pt-16 md:px-36" aria-label="Introducción y presentación">
 		<HeroSection />
 	</section>
 
 	<section class="relative z-10" aria-label="Proyectos destacados" id="proyectos">
 		<Projects />
+	</section>
+
+	<section class="relative z-10" aria-label="Formulario de contacto">
+		<Contact />
 	</section>
 </main>
