@@ -40,7 +40,7 @@
 
 		<button
 			type="button"
-			class="my-border my-effect border-2 p-2"
+			class="my-border my-effect my-shadow border-2 p-2"
 			aria-expanded={isMenuOpen}
 			onclick={toggleMenu}
 		>
