@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { Mail, CircleUserRound, MessageSquareMore } from 'lucide-svelte';
+
 	let formData = {
 		nombre: '',
 		email: '',
@@ -12,35 +14,46 @@
 	<form
 		method="POST"
 		action="?/send"
-		class="my-shadow my-border my-component-bg border-2 px-8 py-8 md:px-16 lg:px-24"
+		class="my-shadow my-border my-component-bg border-2 px-8 py-8 md:px-16"
 	>
 		<label class="mb-6 block">
-			<span class="p font-bold">Nombre</span>
+			<span class="p flex items-center gap-2 font-bold">
+				<CircleUserRound size={20} class="my-stroke" aria-hidden="true" />
+				<span>Nombre</span>
+			</span>
 			<input
 				type="text"
 				required
 				bind:value={formData.nombre}
-				class="my-border my-shadow mt-2 w-full border-2 p-3 focus:outline-none"
+				placeholder="Escribe tu nombre"
+				class="my-border my-shadow p mt-2 w-full border-2 bg-green-100 p-3 focus:outline-none dark:bg-neutral-950"
 			/>
 		</label>
 
 		<label class="mb-6 block">
-			<span class="p font-bold">Email</span>
+			<span class="p flex items-center gap-2 font-bold">
+				<Mail size={20} class="my-stroke" aria-hidden="true" />
+				<span>Email</span>
+			</span>
 			<input
 				type="email"
 				required
 				bind:value={formData.email}
-				class="my-border my-shadow mt-2 w-full border-2 p-3 focus:outline-none"
+				placeholder="Escribe tu email"
+				class="my-border my-shadow p mt-2 w-full border-2 bg-green-100 p-3 focus:outline-none dark:bg-neutral-950"
 			/>
 		</label>
 
 		<label class="mb-8 block">
-			<span class="p font-bold">Mensaje</span>
+			<span class="p flex items-center gap-2 font-bold">
+				<MessageSquareMore size={20} class="my-stroke" aria-hidden="true" />
+				<span>Mensaje</span>
+			</span>
 			<textarea
 				required
-				rows="2"
 				bind:value={formData.mensaje}
-				class="my-border my-shadow mt-2 w-full resize-none border-2 p-3 focus:outline-none"
+				placeholder="Escribe tu mensaje"
+				class="my-border my-shadow p mt-2 w-full resize-none border-2 bg-green-100 p-3 focus:outline-none dark:bg-neutral-950"
 			></textarea>
 		</label>
 
