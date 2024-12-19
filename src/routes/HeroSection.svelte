@@ -31,6 +31,6 @@
 			</a>
 		</nav>
 
-		<ChevronDown size={25} aria-hidden="true" class="mt-12 animate-bounce" />
+		<ChevronDown size={25} aria-hidden="true" class="mt-20 animate-bounce" />
 	</main>
 </section>
