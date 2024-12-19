@@ -34,7 +34,7 @@
 
 	<section class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 		{#each projects as project}
-			<article class="my-shadow my-border my-component-bg inline-block border-2">
+			<article class="my-shadow my-border my-component-bg border-2">
 				<header class="flex flex-row justify-end gap-1 px-2 py-2 text-lg">
 					<span>🟢</span>
 					<span>🟡</span>
