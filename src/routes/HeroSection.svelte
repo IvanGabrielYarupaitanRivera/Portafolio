@@ -21,16 +21,22 @@
 		<nav class="flex flex-wrap justify-center gap-4" aria-label="Navegación principal">
 			<a
 				href="#proyectos"
-				class="my-effect my-border my-bg p border-2 px-6 py-3 font-bold"
+				class="my-effect my-border my-bg p my-shadow border-2 px-6 py-3 font-bold"
 				role="button"
 			>
 				Ver Proyectos
 			</a>
-			<a href="#contacto" class="my-border p my-effect border-2 px-6 py-3 font-bold" role="button">
+			<a
+				href="#contacto"
+				class="my-border p my-effect my-shadow my-active-bg border-2 px-6 py-3 font-bold"
+				role="button"
+			>
 				Contáctame
 			</a>
 		</nav>
 
-		<ChevronDown size={25} aria-hidden="true" class="my-stroke mt-20 animate-bounce" />
+		<a href="#proyectos" aria-label="Ir a proyectos destacados">
+			<ChevronDown size={25} aria-hidden="true" class="my-stroke mt-20 animate-bounce" />
+		</a>
 	</main>
 </section>
