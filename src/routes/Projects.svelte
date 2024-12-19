@@ -38,8 +38,9 @@
 		{#each projects as project}
 			<article class="my-shadow my-border my-component-bg inline-block border-2">
 				<header class="flex flex-row justify-end gap-1 px-2 py-2 text-lg">
-					<span>ℹ️</span>
-					<span>👁️</span>
+					<span>🟢</span>
+					<span>🟡</span>
+					<span>🔴</span>
 				</header>
 
 				<figure class="my-border mb-4 aspect-video overflow-hidden border-b-2 border-t-2">
