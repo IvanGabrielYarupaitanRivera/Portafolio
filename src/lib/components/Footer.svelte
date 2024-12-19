@@ -2,7 +2,7 @@
 	import { Github, LinkedinIcon } from 'lucide-svelte';
 </script>
 
-<footer class="my-component-bg my-border container border-t-2 px-4 py-6">
+<footer class="my-component-bg my-border border-t-2 px-4 py-6">
 	<div class="mx-auto flex flex-col items-center gap-4">
 		<div class="flex gap-6">
 			<a href="/">
