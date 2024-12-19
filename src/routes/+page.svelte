@@ -1,6 +1,5 @@
 <script lang="ts">
 	import HeroSection from './HeroSection.svelte';
-	import Technologies from './Technologies.svelte';
 	import Projects from './Projects.svelte';
 
 	const pageTitle = 'Ivan Gabriel Yarupaitan Rivera | Programador de aplicaciones web';
