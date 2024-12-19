@@ -70,7 +70,7 @@
 	}
 
 	.my-active-bg {
-		@apply bg-sky-500 hover:bg-sky-600 dark:bg-sky-600 dark:hover:bg-sky-500;
+		@apply bg-sky-500 hover:bg-sky-600 dark:bg-sky-700 dark:hover:bg-sky-600;
 	}
 
 	.my-effect {
