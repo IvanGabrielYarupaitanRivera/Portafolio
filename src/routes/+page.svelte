@@ -33,7 +33,7 @@
 		<HeroSection />
 	</section>
 
-	<section class="relative z-10" aria-label="Proyectos destacados">
+	<section class="relative z-10" aria-label="Proyectos destacados" id="proyectos">
 		<Projects />
 	</section>
 </main>
