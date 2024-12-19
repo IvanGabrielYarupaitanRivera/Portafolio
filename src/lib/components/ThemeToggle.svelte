@@ -8,7 +8,7 @@
 
 <button
 	onclick={toggleTheme}
-	class="my-border my-bg my-effect border-2 p-2"
+	class="my-border my-bg my-effect my-shadow border-2 p-2"
 	aria-label="Cambiar tema"
 >
 	<SunMoon size={24} strokeWidth={2} class="my-stroke"></SunMoon>
