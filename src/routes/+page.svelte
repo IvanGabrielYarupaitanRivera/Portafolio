@@ -37,8 +37,4 @@
 	<section class="relative z-10 py-16" aria-label="Proyectos destacados">
 		<Projects />
 	</section>
-
-	<section class="relative z-10 py-16" aria-label="Tecnologías y habilidades">
-		<Technologies />
-	</section>
 </main>
