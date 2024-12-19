@@ -29,11 +29,11 @@
 </svelte:head>
 
 <main class="relative">
-	<section class="relative z-10 pb-24 pt-16 md:px-36" aria-label="Introducción y presentación">
+	<section class="relative z-10 py-16 md:px-36" aria-label="Introducción y presentación">
 		<HeroSection />
 	</section>
 
-	<section class="relative z-10 py-16" aria-label="Proyectos destacados">
+	<section class="relative z-10" aria-label="Proyectos destacados">
 		<Projects />
 	</section>
 </main>
