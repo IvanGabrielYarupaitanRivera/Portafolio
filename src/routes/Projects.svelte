@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { BadgeInfo } from 'lucide-svelte';
+
 	const projects = [
 		{
 			title: 'E-commerce Modern',
@@ -28,42 +30,40 @@
 </script>
 
 <div class="container mx-auto p-4">
-	<h2 class="heading-2 mb-8">Proyectos Destacados</h2>
+	<h2 class="heading-2 my-shadow my-border my-component-bg mb-12 border-2 px-8 py-4">
+		Proyectos Destacados
+	</h2>
 
 	<div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 		{#each projects as project}
-			<article class="relative">
-				<!-- Utilizo este div como sombra no lo elimines porque da un efecto de elevado -->
-				<div
-					class="absolute left-0 top-0 ml-1 mt-1 h-full w-full bg-green-900 dark:bg-green-100"
-				></div>
+			<article class="my-shadow my-border my-component-bg inline-block border-2">
+				<section class="flex flex-row justify-end px-2 py-2 text-lg">🟢🟡🔴</section>
 
-				<div class="my-border my-component-bg relative inline-block h-full w-full border-2">
-					<figure class="relative mb-4 aspect-video overflow-hidden">
-						<img
-							src={project.image}
-							alt={project.title}
-							class="h-full w-full object-cover hover:scale-110"
-						/>
-					</figure>
+				<figure class="my-border mb-4 aspect-video overflow-hidden border-b-2 border-t-2">
+					<img
+						src={project.image}
+						alt={project.title}
+						class="h-full w-full object-cover hover:scale-110"
+					/>
+				</figure>
 
-					<section class="px-6">
-						<header>
-							<h3 class="heading-3 mb-2">{project.title}</h3>
-						</header>
+				<section class="px-8">
+					<header>
+						<h3 class="heading-3 mb-2">{project.title}</h3>
+					</header>
 
-						<p class="p mb-4">{project.description}</p>
-						<footer class="mb-4 flex flex-wrap gap-2">
-							{#each project.technologies as tech}
-								<span
-									class="rounded-full bg-sky-100 px-3 py-1 text-xs font-medium text-sky-800 dark:bg-sky-900 dark:text-sky-100"
-								>
-									{tech}
-								</span>
-							{/each}
-						</footer>
-					</section>
-				</div>
+					<p class="p mb-8">{project.description}</p>
+
+					<footer class="mb-4 flex flex-wrap gap-2">
+						{#each project.technologies as tech}
+							<span
+								class="border-2 border-sky-800 bg-sky-100 px-3 py-1 text-xs font-medium text-sky-800 hover:bg-sky-300 dark:border-sky-100 dark:bg-sky-900 dark:text-sky-100 hover:dark:bg-sky-600"
+							>
+								{tech}
+							</span>
+						{/each}
+					</footer>
+				</section>
 			</article>
 		{/each}
 	</div>
