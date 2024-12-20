@@ -86,6 +86,6 @@
 	}
 
 	.my-shadow {
-		@apply shadow-[3px_3px_0px_rgba(20,83,45,1)];
+		@apply shadow-[5px_5px_0px_rgba(20,83,45,1)];
 	}
 }
