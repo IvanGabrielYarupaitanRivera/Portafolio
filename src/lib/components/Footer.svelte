@@ -6,10 +6,10 @@
 	<div class="mx-auto flex flex-col items-center gap-4">
 		<div class="flex gap-6">
 			<a href="/">
-				<Github class="my-stroke" size={20} />
+				<Github class="my-stroke" size={24} />
 			</a>
 			<a href="/">
-				<LinkedinIcon class="my-stroke" size={20} />
+				<LinkedinIcon class="my-stroke" size={24} />
 			</a>
 		</div>
 		<p class="p text-center">
