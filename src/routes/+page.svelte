@@ -9,6 +9,8 @@
 
 	const skills = 'Svelte, TypeScript, JavaScript, CSS, HTML, Desarrollo Web, Supabase';
 	const currentLocation = 'Junín, Perú';
+
+	let mostrar = false;
 </script>
 
 <svelte:head>
