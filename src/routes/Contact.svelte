@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
-	import { Mail, CircleUserRound, MessageSquareMore } from 'lucide-svelte';
+	import { Mail, User, MessageSquare } from 'lucide-svelte';
 
 	let isLoading = $state(false);
 	let showSuccess = $state(false);
@@ -15,91 +15,85 @@
 		setTimeout(() => {
 			isLoading = false;
 			showSuccess = true;
-		}, 5500);
+		}, 1500);
 	};
 </script>
 
 <article class="container mx-auto p-4">
-	<h2 class="header">
+	<h2 class="heading-2 my-shadow my-border my-bg mb-12 border-2 px-8 py-4">
 		{showSuccess ? 'Mensaje Enviado con éxito' : '¡Hablemos!'}
 	</h2>
 
-	<form method="POST" action="?/send" class="form-container" use:enhance={handleSubmit}>
+	<form
+		method="POST"
+		action="?/send"
+		class="my-shadow my-border my-component-bg border-2 px-8 py-8 md:px-16"
+		use:enhance={handleSubmit}
+	>
 		{#if showSuccess && !isLoading}
-			<div class="success-message">
+			<section class="flex flex-col items-center gap-8 p-8 text-center">
 				<span class="text-6xl">🌞</span>
 				<h3 class="heading-3">¡Gracias por tu mensaje!</h3>
 				<p>Me pondré en contacto contigo lo antes posible</p>
-				<button onclick={resetForm} class="btn">Enviar otro mensaje</button>
-			</div>
+				<button
+					onclick={resetForm}
+					class="my-effect my-border my-bg p my-shadow border-2 px-6 py-3 font-bold"
+					>Enviar otro mensaje</button
+				>
+			</section>
 		{:else if !showSuccess}
-			{#each [{ label: 'Nombre', icon: CircleUserRound, type: 'text', name: 'nombre' }, { label: 'Email', icon: Mail, type: 'email', name: 'email' }, { label: 'Mensaje', icon: MessageSquareMore, type: 'textarea', name: 'mensaje' }] as field}
-				<label class="form-field">
-					<span class="field-label">
-						<svelte:component this={field.icon} size={20} class="my-stroke" aria-hidden="true" />
-						<span>{field.label}</span>
+			<fieldset>
+				<legend class="sr-only">Información de contacto</legend>
+
+				<label class="mb-6 block">
+					<span class="p flex items-center gap-2 font-bold">
+						<User size={20} class="my-stroke" aria-hidden="true" />
+						Nombre
 					</span>
-
-					{#if field.type === 'textarea'}
-						<textarea
-							name={field.name}
-							required
-							placeholder="Escribe tu {field.name}"
-							class="input-field"
-						/>
-					{:else}
-						<input
-							type={field.type}
-							name={field.name}
-							required
-							placeholder="Escribe tu {field.name}"
-							class="input-field"
-						/>
-					{/if}
+					<input
+						type="text"
+						name="nombre"
+						required
+						placeholder="Escribe tu nombre"
+						class="my-border my-shadow p mt-2 w-full border-2 bg-green-100 p-3 focus:outline-none dark:bg-neutral-950"
+					/>
 				</label>
-			{/each}
 
-			<button type="submit" class="btn submit-btn" disabled={isLoading}>
-				{isLoading ? 'Enviando...' : 'Enviar mensaje'}
-			</button>
+				<label class="mb-6 block">
+					<span class="p flex items-center gap-2 font-bold">
+						<Mail size={20} class="my-stroke" aria-hidden="true" />
+						Email
+					</span>
+					<input
+						type="email"
+						name="email"
+						required
+						placeholder="Escribe tu email"
+						class="my-border my-shadow p mt-2 w-full border-2 bg-green-100 p-3 focus:outline-none dark:bg-neutral-950"
+					/>
+				</label>
+
+				<label class="mb-6 block">
+					<span class="p flex items-center gap-2 font-bold">
+						<MessageSquare size={20} class="my-stroke" aria-hidden="true" />
+						Mensaje
+					</span>
+					<textarea
+						name="mensaje"
+						required
+						placeholder="Escribe tu mensaje"
+						class="my-border my-shadow p mt-2 w-full resize-none border-2 bg-green-100 p-3 focus:outline-none dark:bg-neutral-950"
+					></textarea>
+				</label>
+
+				<button
+					type="submit"
+					class="my-effect my-border my-bg p my-shadow mb-6 mt-12 flex w-full items-center justify-center overflow-hidden border-2 px-6 py-3 font-bold"
+					disabled={isLoading}
+				>
+					{isLoading ? 'Enviando...' : 'Enviar mensaje'}
+				</button>
+			</fieldset>
 		{/if}
 	</form>
 </article>
-
-<style>
-	.header {
-		@apply heading-2 my-shadow my-border my-bg mb-12 border-2 px-8 py-4;
-	}
-
-	.form-container {
-		@apply my-shadow my-border my-component-bg border-2 px-8 py-8 md:px-16;
-	}
-
-	.success-message {
-		@apply flex flex-col items-center gap-8 p-8 text-center;
-	}
-
-	.form-field {
-		@apply mb-6 block;
-	}
-
-	.field-label {
-		@apply p flex items-center gap-2 font-bold;
-	}
-
-	.input-field {
-		@apply my-border my-shadow p mt-2 w-full resize-none border-2 bg-green-100 p-3 focus:outline-none dark:bg-neutral-950;
-	}
-
-	.btn {
-		@apply my-effect my-border my-bg p my-shadow border-2 px-6 py-3 font-bold;
-	}
-
-	.submit-btn {
-		@apply mb-6 mt-12 flex w-full items-center justify-center overflow-hidden;
-	}
-
-	textarea {
-		field-sizing: content;
-	}
-</style>
