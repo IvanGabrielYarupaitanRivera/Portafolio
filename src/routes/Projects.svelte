@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { BadgeInfo } from 'lucide-svelte';
+	import { Circle } from 'lucide-svelte';
 
 	const projects = [
 		{
@@ -8,7 +8,7 @@
 				'Plataforma de comercio electrónico con diseño moderno y minimalista. Integración con Stripe y gestión de inventario en tiempo real.',
 			technologies: ['SvelteKit', 'Supabase', 'Stripe'],
 			link: '#',
-			image: '/images/E-commerce-Modern.webp'
+			gradient: 'bg-gradient-to-b from-green-300 via-green-400 to-green-500'
 		},
 		{
 			title: 'Task Master Pro',
@@ -16,7 +16,7 @@
 				'Aplicación de gestión de tareas con características avanzadas de organización y colaboración en tiempo real.',
 			technologies: ['Svelte', 'TypeScript', 'Supabase'],
 			link: '#',
-			image: '/images/Task-Master-Pro.webp'
+			gradient: 'bg-gradient-to-b from-blue-400 via-blue-500 to-blue-700'
 		},
 		{
 			title: 'Weather Dashboard',
@@ -24,7 +24,7 @@
 				'Dashboard del clima con visualizaciones dinámicas y pronósticos detallados utilizando APIs meteorológicas.',
 			technologies: ['JavaScript', 'CSS', 'APIs'],
 			link: '#',
-			image: '/images/Weather-Dashboard.webp'
+			gradient: 'bg-gradient-to-b from-slate-400 via-slate-500 to-slate-600'
 		}
 	];
 </script>
@@ -35,18 +35,14 @@
 	<section class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 		{#each projects as project}
 			<article class="my-shadow my-border my-component-bg border-2">
-				<header class="flex flex-row justify-end gap-1 px-2 py-2 text-lg">
-					<span>🟢</span>
-					<span>🟡</span>
-					<span>🔴</span>
+				<header class="flex flex-row justify-end gap-1 p-2">
+					<Circle class="my-effect fill-green-500 stroke-green-500" size={20}></Circle>
+					<Circle class="my-effect fill-yellow-500 stroke-yellow-500" size={20}></Circle>
+					<Circle class="my-effect fill-red-500 stroke-red-500" size={20}></Circle>
 				</header>
 
-				<figure class="my-border aspect-video overflow-hidden border-b-2 border-t-2">
-					<img
-						src={project.image}
-						alt={project.title}
-						class="h-full w-full object-cover hover:scale-110"
-					/>
+				<figure class="my-border aspect-video border-b-2 border-t-2">
+					<div class="{project.gradient} h h-full w-full"></div>
 				</figure>
 
 				<section class="px-8 pb-8 pt-4">
