@@ -34,7 +34,7 @@
 			<section class="flex flex-col items-center gap-8 p-8 text-center">
 				<span class="text-6xl">🌞</span>
 				<h3 class="heading-3">¡Gracias por tu mensaje!</h3>
-				<p>Me pondré en contacto contigo lo antes posible</p>
+				<p class="p">Me pondré en contacto contigo lo antes posible</p>
 				<button
 					onclick={resetForm}
 					class="my-effect my-border my-bg p my-shadow border-2 px-6 py-3 font-bold"
