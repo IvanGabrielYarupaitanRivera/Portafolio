@@ -38,7 +38,7 @@
 		<Projects />
 	</section>
 
-	<section class="relative z-10" aria-label="Formulario de contacto">
+	<section class="relative z-10" aria-label="Formulario de contacto" id="contacto">
 		<Contact />
 	</section>
 </main>
