@@ -58,7 +58,7 @@
 	}
 
 	.my-border {
-		@apply border-green-900 dark:border-green-100;
+		@apply border-green-900;
 	}
 
 	.my-bg {
@@ -86,6 +86,6 @@
 	}
 
 	.my-shadow {
-		@apply shadow-[3px_3px_0px_rgba(20,83,45,1)] dark:shadow-[3px_3px_0px_rgba(220,252,231,1)];
+		@apply shadow-[3px_3px_0px_rgba(20,83,45,1)];
 	}
 }
