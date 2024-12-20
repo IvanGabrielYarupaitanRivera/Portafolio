@@ -97,3 +97,9 @@
 		{/if}
 	</form>
 </article>
+
+<style>
+	textarea {
+		field-sizing: content;
+	}
+</style>
