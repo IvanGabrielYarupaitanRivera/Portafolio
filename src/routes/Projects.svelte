@@ -24,7 +24,7 @@
 				'Dashboard del clima con visualizaciones dinámicas y pronósticos detallados utilizando APIs meteorológicas.',
 			technologies: ['JavaScript', 'CSS', 'APIs'],
 			link: '#',
-			gradient: 'bg-gradient-to-b from-slate-400 via-slate-500 to-slate-600'
+			gradient: 'bg-gradient-to-b from-green-400 via-green-500 to-green-600'
 		}
 	];
 </script>
