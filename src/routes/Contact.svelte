@@ -59,7 +59,7 @@
 
 		<button
 			type="submit"
-			class="my-effect my-border my-bg p my-shadow mb-4 w-full border-2 px-6 py-3 font-bold"
+			class="my-effect my-border my-bg p my-shadow my-4 w-full border-2 px-6 py-3 font-bold"
 		>
 			Enviar mensaje
 		</button>
