@@ -15,7 +15,7 @@
 		setTimeout(() => {
 			isLoading = false;
 			showSuccess = true;
-		}, 1500);
+		}, 2500);
 	};
 </script>
 
