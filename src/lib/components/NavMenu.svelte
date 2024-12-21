@@ -8,7 +8,7 @@
 
 	const menuItems = [
 		{ href: '/', text: 'Inicio' },
-		{ href: '/blog', text: 'Blog' }
+		{ href: '/practicando', text: 'Practicando' }
 	];
 
 	const toggleMenu = () => (isMenuOpen = !isMenuOpen);
@@ -16,16 +16,16 @@
 	const isCurrentPage = $derived((href: string) => $page.url.pathname === href);
 </script>
 
-<div class="flex items-center justify-between">
+<div class="flex items-center justify-between" id="nav-list">
 	<!-- Desktop Menu -->
 	<div class="hidden items-center gap-6 md:flex">
 		{#each menuItems as item}
 			<a
 				href={item.href}
-				class=" font-bold hover:text-green-500
-			    dark:hover:text-green-500
-			   {isCurrentPage(item.href)
-					? ' text-green-800 underline underline-offset-8 dark:text-green-600'
+				aria-current={isCurrentPage(item.href) ? 'page' : undefined}
+				class="font-bold hover:text-green-500 dark:hover:text-green-500
+			   		{isCurrentPage(item.href)
+					? 'text-green-900  	 dark:text-green-600'
 					: 'text-neutral-500 dark:text-neutral-200'}"
 			>
 				{item.text}
@@ -72,10 +72,10 @@
 			{#each menuItems as item}
 				<a
 					href={item.href}
-					class=" font-bold hover:text-green-500
-			    dark:hover:text-green-500
-			   {isCurrentPage(item.href)
-						? ' text-green-800 underline underline-offset-8 dark:text-green-600'
+					aria-current={isCurrentPage(item.href) ? 'page' : undefined}
+					class="font-bold hover:text-green-500 dark:hover:text-green-500
+			   		{isCurrentPage(item.href)
+						? 'text-green-900  dark:text-green-600'
 						: 'text-neutral-500 dark:text-neutral-200'}"
 					onclick={toggleMenu}
 				>
@@ -85,3 +85,6 @@
 		</div>
 	</div>
 {/if}
+
+<style>
+</style>
