@@ -74,7 +74,7 @@
 	<div
 		id="mobile-menu"
 		class="my-border my-component-bg absolute left-0 right-0 top-24 z-10 -mt-2 border-b-2 pb-4 pt-4 md:hidden"
-		transition:slide={{ duration: 500 }}
+		in:slide={{ duration: 300 }}
 	>
 		<nav class="container mx-auto flex flex-col gap-4 px-4 pb-2">
 			{#each menuItems as item}
