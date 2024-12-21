@@ -2,11 +2,9 @@
 	import '../app.css';
 	import Header from '$lib/components/Header.svelte';
 	import Footer from '$lib/components/Footer.svelte';
-	import { page } from '$app/stores';
-	import { animate } from 'motion';
+	import { onNavigate } from '$app/navigation';
 
 	let { children } = $props();
-	let mainContent: HTMLElement;
 
 	// Configuración global del sitio
 	const siteName = 'Ivan Yarupaitan Rivera | Programador de Aplicaciones Web';
@@ -14,19 +12,15 @@
 		'Portafolio profesional de Ivan Yarupaitan Rivera, programador de aplicaciones web especializado en Svelte, TypeScript, Supabase y desarrollo web moderno.';
 	/* const siteUrl = 'https://ivanyarupaitan.dev'; */
 
-	$effect(() => {
-		if ($page.url.pathname && mainContent) {
-			animate(
-				mainContent,
-				{
-					opacity: [0, 1]
-				},
-				{
-					duration: 1,
-					ease: [0.5, 0, 0.5, 1]
-				}
-			);
-		}
+	onNavigate((navigation) => {
+		if (!document.startViewTransition) return;
+
+		return new Promise((resolve) => {
+			document.startViewTransition(async () => {
+				resolve();
+				await navigation.complete;
+			});
+		});
 	});
 </script>
 
@@ -64,10 +58,13 @@
 	<Header />
 
 	<!-- Contenido principal -->
-	<main class="container mx-auto flex-1 px-4 py-6" bind:this={mainContent}>
+	<main class="container mx-auto flex-1 px-4 py-6">
 		{@render children()}
 	</main>
 
 	<!-- Footer -->
 	<Footer />
 </div>
+
+<style>
+</style>
