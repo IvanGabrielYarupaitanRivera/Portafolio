@@ -58,11 +58,11 @@
 	}
 
 	.my-border {
-		@apply border-green-900;
+		@apply border-green-950;
 	}
 
 	.my-bg {
-		@apply bg-green-500 hover:bg-green-600 dark:bg-green-600 dark:hover:bg-green-500;
+		@apply bg-green-500 hover:bg-green-600 dark:bg-green-700 dark:hover:bg-green-500;
 	}
 
 	.my-component-bg {
@@ -78,7 +78,7 @@
 	}
 
 	.my-stroke {
-		@apply stroke-green-900 dark:stroke-green-100;
+		@apply stroke-green-950 dark:stroke-green-950;
 	}
 
 	.my-span {
@@ -86,6 +86,6 @@
 	}
 
 	.my-shadow {
-		@apply shadow-[5px_5px_0px_rgba(20,83,45,1)];
+		@apply shadow-[5px_5px_0px_rgba(5,46,22,1)];
 	}
 }
