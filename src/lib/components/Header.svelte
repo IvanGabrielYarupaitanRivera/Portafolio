@@ -13,17 +13,3 @@
 		</div>
 	</nav>
 </header>
-
-<style>
-	header {
-		view-transition-name: header;
-	}
-
-	::view-transition-old(header) {
-		animation-duration: 0s;
-	}
-
-	::view-transition-new(header) {
-		animation-duration: 0s;
-	}
-</style>
