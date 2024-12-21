@@ -99,6 +99,5 @@
 	::view-transition-old(nav-indicator),
 	::view-transition-new(nav-indicator) {
 		height: 4px;
-		animation-duration: 0s;
 	}
 </style>
