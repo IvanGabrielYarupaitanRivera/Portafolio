@@ -19,18 +19,26 @@
 <div class="flex items-center justify-between" id="nav-list">
 	<!-- Desktop Menu -->
 	<div class="hidden items-center gap-6 md:flex">
-		{#each menuItems as item}
-			<a
-				href={item.href}
-				aria-current={isCurrentPage(item.href) ? 'page' : undefined}
-				class="font-bold hover:text-green-500 dark:hover:text-green-500
-			   		{isCurrentPage(item.href)
-					? 'text-green-900  	 dark:text-green-600'
-					: 'text-neutral-500 dark:text-neutral-200'}"
-			>
-				{item.text}
-			</a>
-		{/each}
+		<nav class="relative flex gap-6">
+			{#each menuItems as item}
+				<a
+					href={item.href}
+					aria-current={isCurrentPage(item.href) ? 'page' : undefined}
+					class="relative px-1 py-2 font-bold
+                        {isCurrentPage(item.href)
+						? 'text-green-800 dark:text-green-400'
+						: 'text-neutral-500 dark:text-neutral-200'}"
+				>
+					{item.text}
+					{#if isCurrentPage(item.href)}
+						<div
+							class="absolute bottom-0 left-0 h-[4px] w-full bg-green-800"
+							style:view-transition-name="nav-indicator"
+						></div>
+					{/if}
+				</a>
+			{/each}
+		</nav>
 		<ThemeToggle />
 	</div>
 
@@ -68,23 +76,29 @@
 		class="my-border my-component-bg absolute left-0 right-0 top-24 z-10 -mt-2 border-b-2 pb-4 pt-4 md:hidden"
 		transition:slide={{ duration: 500 }}
 	>
-		<div class="container mx-auto flex flex-col gap-4 px-4 pb-2">
+		<nav class="container mx-auto flex flex-col gap-4 px-4 pb-2">
 			{#each menuItems as item}
 				<a
 					href={item.href}
 					aria-current={isCurrentPage(item.href) ? 'page' : undefined}
-					class="font-bold hover:text-green-500 dark:hover:text-green-500
-			   		{isCurrentPage(item.href)
-						? 'text-green-900  dark:text-green-600'
+					class="relative px-1 py-2 font-bold
+				{isCurrentPage(item.href)
+						? 'text-green-800 underline decoration-4 underline-offset-8 dark:text-green-400'
 						: 'text-neutral-500 dark:text-neutral-200'}"
 					onclick={toggleMenu}
 				>
 					{item.text}
 				</a>
 			{/each}
-		</div>
+		</nav>
 	</div>
 {/if}
 
 <style>
+	/* Asegurarse que tanto el elemento antiguo como el nuevo tengan la misma altura */
+	::view-transition-old(nav-indicator),
+	::view-transition-new(nav-indicator) {
+		height: 4px;
+		animation-duration: 0s;
+	}
 </style>
