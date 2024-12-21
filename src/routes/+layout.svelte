@@ -67,4 +67,11 @@
 </div>
 
 <style>
+	:root::view-transition-old(root) {
+		animation-duration: 500ms;
+	}
+
+	:root::view-transition-new(root) {
+		animation-duration: 500ms;
+	}
 </style>
