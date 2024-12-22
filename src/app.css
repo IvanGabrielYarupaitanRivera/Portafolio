@@ -85,6 +85,10 @@ html {
 		@apply stroke-green-950 dark:stroke-green-950;
 	}
 
+	.my-stroke-icon {
+		@apply stroke-neutral-800 dark:stroke-neutral-200;
+	}
+
 	.my-span {
 		@apply text-sky-800 dark:text-sky-400;
 	}
