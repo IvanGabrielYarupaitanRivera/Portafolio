@@ -86,7 +86,7 @@
 						rows="5"
 						required
 						placeholder="Escribe tu mensaje"
-						class="my-border my-shadow p mt-2 w-full border-2 bg-green-100 p-3 focus:outline-none dark:bg-neutral-950"
+						class="my-border my-shadow p mt-2 w-full resize-none border-2 bg-green-100 p-3 focus:outline-none dark:bg-neutral-950"
 					></textarea>
 				</div>
 
