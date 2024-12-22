@@ -32,7 +32,7 @@
 	>
 		{#if showSuccess && !isLoading}
 			<section class="flex flex-col items-center gap-8 p-8 text-center">
-				<span class="text-6xl">🌞</span>
+				<span class="animate-bounce text-6xl">🌞</span>
 				<h3 class="heading-3">¡Gracias por tu mensaje!</h3>
 				<p class="p">Me pondré en contacto contigo lo antes posible</p>
 				<button
