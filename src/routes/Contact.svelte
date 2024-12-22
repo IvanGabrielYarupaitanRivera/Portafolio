@@ -19,7 +19,7 @@
 	};
 </script>
 
-<article class="container mx-auto p-4">
+<article class="p-4">
 	<h2 class="heading-2 my-shadow my-border my-bg mb-12 border-2 px-8 py-4">
 		{showSuccess ? 'Mensaje Enviado con éxito' : '¡Hablemos!'}
 	</h2>
@@ -42,49 +42,53 @@
 				>
 			</section>
 		{:else if !showSuccess}
-			<fieldset>
+			<fieldset class="min-w-full">
 				<legend class="sr-only">Información de contacto</legend>
 
-				<label class="mb-6 block">
-					<span class="p flex items-center gap-2 font-bold">
+				<div class="mb-6 space-y-2">
+					<label for="nombre" class="flex items-center gap-2 font-bold">
 						<User size={20} class="my-stroke" aria-hidden="true" />
-						Nombre
-					</span>
+						<span class="p">Nombre</span>
+					</label>
 					<input
+						id="nombre"
 						type="text"
 						name="nombre"
 						required
 						placeholder="Escribe tu nombre"
 						class="my-border my-shadow p mt-2 w-full border-2 bg-green-100 p-3 focus:outline-none dark:bg-neutral-950"
 					/>
-				</label>
+				</div>
 
-				<label class="mb-6 block">
-					<span class="p flex items-center gap-2 font-bold">
+				<div class="mb-6 space-y-2">
+					<label for="email" class="flex items-center gap-2 font-bold">
 						<Mail size={20} class="my-stroke" aria-hidden="true" />
-						Email
-					</span>
+						<span class="p">Email</span>
+					</label>
 					<input
+						id="email"
 						type="email"
 						name="email"
 						required
 						placeholder="Escribe tu email"
 						class="my-border my-shadow p mt-2 w-full border-2 bg-green-100 p-3 focus:outline-none dark:bg-neutral-950"
 					/>
-				</label>
+				</div>
 
-				<label class="mb-6 block">
-					<span class="p flex items-center gap-2 font-bold">
+				<div class="mb-6 space-y-2">
+					<label for="mensaje" class="flex items-center gap-2 font-bold">
 						<MessageSquare size={20} class="my-stroke" aria-hidden="true" />
-						Mensaje
-					</span>
+						<span class="p">Mensaje</span>
+					</label>
 					<textarea
+						id="mensaje"
 						name="mensaje"
+						rows="5"
 						required
 						placeholder="Escribe tu mensaje"
-						class="my-border my-shadow p mt-2 w-full resize-none border-2 bg-green-100 p-3 focus:outline-none dark:bg-neutral-950"
+						class="my-border my-shadow p mt-2 w-full border-2 bg-green-100 p-3 focus:outline-none dark:bg-neutral-950"
 					></textarea>
-				</label>
+				</div>
 
 				<button
 					type="submit"
