@@ -1,9 +1,13 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
+	import type { ActionResult } from '@sveltejs/kit';
+	import type { ActionData } from './$types';
 	import { Mail, User, MessageSquare } from 'lucide-svelte';
 
 	let isLoading = $state(false);
 	let showSuccess = $state(false);
+
+	let { form }: { form: ActionData } = $props();
 
 	const resetForm = () => {
 		showSuccess = false;
@@ -12,10 +16,19 @@
 
 	const handleSubmit = () => {
 		isLoading = true;
-		setTimeout(() => {
+
+		return async ({ result }: { result: ActionResult }) => {
+			if (result.type === 'success') {
+				console.log('Mensaje enviado con éxito');
+				console.log(form?.message);
+			} else {
+				console.log('Error al enviar el mensaje');
+				console.log(form?.message);
+			}
+
 			isLoading = false;
 			showSuccess = true;
-		}, 2500);
+		};
 	};
 </script>
 
