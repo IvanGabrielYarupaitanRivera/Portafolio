@@ -2,6 +2,7 @@
 	import HeroSection from './HeroSection.svelte';
 	import Projects from './Projects.svelte';
 	import Contact from './Contact.svelte';
+	import type { ActionData } from './$types';
 
 	const pageTitle = 'Ivan Gabriel Yarupaitan Rivera | Programador de aplicaciones web';
 	const pageDescription =
@@ -9,6 +10,8 @@
 
 	const skills = 'Svelte, TypeScript, JavaScript, CSS, HTML, Desarrollo Web, Supabase';
 	const currentLocation = 'Junín, Perú';
+
+	let { form }: { form: ActionData } = $props();
 </script>
 
 <svelte:head>
@@ -39,6 +42,6 @@
 	</section>
 
 	<section class="relative z-10" aria-label="Formulario de contacto" id="contacto">
-		<Contact />
+		<Contact {form} />
 	</section>
 </main>
