@@ -60,7 +60,7 @@
 
 				<div class="mb-6 space-y-2">
 					<label for="nombre" class="flex items-center gap-2 font-bold">
-						<User size={20} class="my-stroke" aria-hidden="true" />
+						<User size={20} class="my-stroke-icon" aria-hidden="true" />
 						<span class="p">Nombre</span>
 					</label>
 					<input
@@ -75,7 +75,7 @@
 
 				<div class="mb-6 space-y-2">
 					<label for="email" class="flex items-center gap-2 font-bold">
-						<Mail size={20} class="my-stroke" aria-hidden="true" />
+						<Mail size={20} class="my-stroke-icon" aria-hidden="true" />
 						<span class="p">Email</span>
 					</label>
 					<input
@@ -90,7 +90,7 @@
 
 				<div class="mb-6 space-y-2">
 					<label for="mensaje" class="flex items-center gap-2 font-bold">
-						<MessageSquare size={20} class="my-stroke" aria-hidden="true" />
+						<MessageSquare size={20} class="my-stroke-icon" aria-hidden="true" />
 						<span class="p">Mensaje</span>
 					</label>
 					<textarea
