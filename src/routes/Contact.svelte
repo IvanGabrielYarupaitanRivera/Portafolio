@@ -1,13 +1,10 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
 	import type { ActionResult } from '@sveltejs/kit';
-	import type { ActionData } from './$types';
 	import { Mail, User, MessageSquare } from 'lucide-svelte';
 
 	let isLoading = $state(false);
 	let showSuccess = $state(false);
-
-	let { form }: { form: ActionData } = $props();
 
 	const resetForm = () => {
 		showSuccess = false;
@@ -20,10 +17,8 @@
 		return async ({ result }: { result: ActionResult }) => {
 			if (result.type === 'success') {
 				console.log('Mensaje enviado con éxito');
-				console.log(form?.message);
 			} else {
 				console.log('Error al enviar el mensaje');
-				console.log(form?.message);
 			}
 
 			isLoading = false;
@@ -66,7 +61,7 @@
 					<input
 						id="nombre"
 						type="text"
-						name="nombre"
+						name="user_name"
 						required
 						placeholder="Escribe tu nombre"
 						class="my-border my-shadow p mt-2 w-full border-2 bg-green-100 p-3 focus:outline-none dark:bg-neutral-950"
@@ -81,7 +76,7 @@
 					<input
 						id="email"
 						type="email"
-						name="email"
+						name="user_email"
 						required
 						placeholder="Escribe tu email"
 						class="my-border my-shadow p mt-2 w-full border-2 bg-green-100 p-3 focus:outline-none dark:bg-neutral-950"
@@ -95,7 +90,7 @@
 					</label>
 					<textarea
 						id="mensaje"
-						name="mensaje"
+						name="message"
 						rows="5"
 						required
 						placeholder="Escribe tu mensaje"
