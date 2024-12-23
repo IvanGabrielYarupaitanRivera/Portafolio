@@ -1,27 +1,38 @@
-# 🚀 Ivan Yarupaitan | Portafolio Personal
+# 🚀 Ivan Yarupaitan | Portfolio Personal
 
-## 📋 Descripción
+## 📋 Acerca del Proyecto
 
-Bienvenido a mi portafolio personal, una página web moderna construida con las últimas tecnologías de desarrollo frontend. Este proyecto muestra mi experiencia profesional, proyectos destacados y habilidades técnicas en desarrollo web.
+Bienvenido a mi portfolio profesional, una aplicación web moderna que representa mi viaje como desarrollador. Este espacio está diseñado para mostrar mi experiencia, proyectos y habilidades técnicas de una manera interactiva y visualmente atractiva.
 
-## 🛠️ Tecnologías
+## 🛠️ Stack Tecnológico
 
-El proyecto está construido utilizando un stack moderno de desarrollo web:
+### Frontend
 
-- **SvelteKit** - Framework web moderno y eficiente
-- **TypeScript** - Tipado estático para JavaScript
-- **TailwindCSS** - Framework CSS utility-first
-- **Vite** - Build tool y dev server ultrarrápido
-- **Motion One** - Librería de animaciones fluidas
+- **SvelteKit** - Framework web progresivo
+- **TypeScript** - Desarrollo tipado y robusto
+- **TailwindCSS** - Estilos modernos y responsivos
+- **Vite** - Build tool y desarrollo optimizado
 
-## 🚀 Características
+### Herramientas de Desarrollo
 
-- ✨ Diseño moderno y minimalista
-- 📱 Totalmente responsive
-- 🎨 Modo claro/oscuro
-- ⚡ Optimizado para rendimiento
-- 🔍 SEO optimizado
-- 🎭 Animaciones suaves
+- **ESLint** - Calidad y consistencia de código
+- **Prettier** - Formateo de código
+- **Git** - Control de versiones
+
+## ✨ Características Principales
+
+### Diseño y Experiencia
+
+- 🎨 Interfaz minimalista y moderna
+- 🌓 Tema claro/oscuro automático
+- 📱 Diseño totalmente responsive
+- 🚀 Optimización de rendimiento
+- 🎭 Animaciones suaves y naturales
+
+### Contenido
+
+- 👨‍💻 Proyectos destacados
+- 📫 Formulario de contacto
 
 ## 📜 Licencia
 
