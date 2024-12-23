@@ -34,7 +34,6 @@
 		"vite": "^6.0.0"
 	},
 	"dependencies": {
-		"@emailjs/browser": "^4.4.1",
 		"@emailjs/nodejs": "^5.0.2",
 		"lucide-svelte": "^0.468.0",
 		"motion": "^11.14.4"
