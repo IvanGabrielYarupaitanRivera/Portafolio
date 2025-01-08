@@ -3,28 +3,52 @@
 
 	const projects = [
 		{
-			title: 'E-commerce Modern',
+			title: 'Sistema de Gestión de Matrículas',
 			description:
-				'Plataforma de comercio electrónico con diseño moderno y minimalista. Integración con Stripe y gestión de inventario en tiempo real.',
-			technologies: ['SvelteKit', 'Supabase', 'Stripe'],
+				'Plataforma integral para gestionar el proceso de matrícula estudiantil, incluyendo registro de estudiantes, asignación de cursos, generación de documentos y pagos en línea. Incluye dashboard administrativo y portal para padres.',
+			technologies: ['React', 'Node.js', 'MongoDB', 'Express', 'Stripe'],
 			link: '#',
-			gradient: 'bg-gradient-to-b from-green-300 via-green-400 to-green-500'
+			gradient: 'bg-gradient-to-b from-blue-300 via-blue-400 to-blue-500'
 		},
 		{
-			title: 'Task Master Pro',
+			title: 'Control de Asistencia Docente',
 			description:
-				'Aplicación de gestión de tareas con características avanzadas de organización y colaboración en tiempo real.',
-			technologies: ['Svelte', 'TypeScript', 'Supabase'],
+				'Sistema automatizado para el registro y control de asistencia del personal docente mediante códigos QR. Incluye generación de reportes, gestión de permisos y cálculo automático de horas laboradas.',
+			technologies: ['Vue.js', 'Firebase', 'Node.js', 'QR Scanner API'],
 			link: '#',
-			gradient: 'bg-gradient-to-b from-blue-400 via-blue-500 to-blue-700'
+			gradient: 'bg-gradient-to-b from-purple-400 via-purple-500 to-purple-700'
 		},
 		{
-			title: 'Weather Dashboard',
+			title: 'Gestión de Biblioteca Escolar',
 			description:
-				'Dashboard del clima con visualizaciones dinámicas y pronósticos detallados utilizando APIs meteorológicas.',
-			technologies: ['JavaScript', 'CSS', 'APIs'],
+				'Sistema completo para administrar el inventario de libros, préstamos, devoluciones y multas. Incluye catálogo en línea, sistema de reservas y notificaciones automáticas.',
+			technologies: ['Next.js', 'PostgreSQL', 'Prisma', 'SendGrid'],
 			link: '#',
-			gradient: 'bg-gradient-to-b from-green-400 via-green-500 to-green-600'
+			gradient: 'bg-gradient-to-b from-yellow-400 via-yellow-500 to-yellow-600'
+		},
+		{
+			title: 'Portal de Comunicación Escuela-Familia',
+			description:
+				'Plataforma de comunicación bidireccional entre docentes y padres de familia. Incluye sistema de mensajería, calendario de eventos, compartición de recursos y seguimiento académico.',
+			technologies: ['React Native', 'Socket.io', 'Express', 'MongoDB'],
+			link: '#',
+			gradient: 'bg-gradient-to-b from-green-300 via-green-400 to-green-600'
+		},
+		{
+			title: 'Sistema de Evaluación Académica',
+			description:
+				'Plataforma para la gestión integral de evaluaciones, incluyendo creación de exámenes, calificación automática, análisis estadístico y generación de boletines de notas.',
+			technologies: ['Angular', 'Django', 'PostgreSQL', 'Chart.js'],
+			link: '#',
+			gradient: 'bg-gradient-to-b from-red-400 via-red-500 to-red-600'
+		},
+		{
+			title: 'Gestor de Horarios Académicos',
+			description:
+				'Aplicación para la generación y gestión automática de horarios escolares, considerando disponibilidad de docentes, aulas y materias. Incluye detección de conflictos y optimización de recursos.',
+			technologies: ['Svelte', 'Python', 'FastAPI', 'SQLite'],
+			link: '#',
+			gradient: 'bg-gradient-to-b from-indigo-400 via-indigo-500 to-indigo-600'
 		}
 	];
 </script>
