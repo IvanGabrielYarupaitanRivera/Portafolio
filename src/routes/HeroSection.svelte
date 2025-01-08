@@ -4,8 +4,8 @@
 
 <section class="relative z-10" aria-labelledby="hero-title">
 	<header class="mb-8 flex justify-center">
-		<figure class="my-bg my-effect my-border my-shadow border-2 p-2">
-			<SquareDashedBottomCode size={50} strokeWidth={1} aria-hidden="true" />
+		<figure class="my-bg my-effect my-border my-shadow border-4 p-2">
+			<SquareDashedBottomCode size={50} strokeWidth={2} aria-hidden="true" />
 		</figure>
 	</header>
 
