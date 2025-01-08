@@ -50,7 +50,7 @@
 				>
 			</section>
 		{:else if !showSuccess}
-			<div class="grid gap-12 lg:grid-cols-2">
+			<div class="grid gap-16 lg:grid-cols-2">
 				<fieldset class="min-w-full">
 					<legend class="sr-only">Información de contacto</legend>
 
@@ -108,7 +108,7 @@
 					</button>
 				</fieldset>
 
-				<div class="my-border my-shadow hidden border-2 md:flex">
+				<div class="my-border my-shadow hidden border-2 lg:flex">
 					<img
 						src="/images/old-phone-contact-form.webp"
 						alt="Teléfono antiguo decorativo junto al formulario de contacto"
