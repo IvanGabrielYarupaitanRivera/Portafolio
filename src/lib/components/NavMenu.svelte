@@ -72,7 +72,7 @@
 			in:slide={{ duration: 300 }}
 			out:slide={{ duration: isCloseMenuByNav ? 500 : 0 }}
 		>
-			<ul class="container mx-auto flex flex-col gap-4 px-4 pb-4">
+			<ul class="container mx-auto flex flex-col gap-4 px-4 pb-4 pt-1">
 				{#each menuItems as item}
 					<li>
 						<a
