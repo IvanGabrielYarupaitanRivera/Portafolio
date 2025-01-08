@@ -50,62 +50,72 @@
 				>
 			</section>
 		{:else if !showSuccess}
-			<fieldset class="min-w-full">
-				<legend class="sr-only">Información de contacto</legend>
+			<div class="grid gap-12 lg:grid-cols-2">
+				<fieldset class="min-w-full">
+					<legend class="sr-only">Información de contacto</legend>
 
-				<div class="mb-6 space-y-2">
-					<label for="nombre" class="flex items-center gap-2 font-bold">
-						<User size={20} class="my-stroke-icon" aria-hidden="true" />
-						<span class="p">Nombre</span>
-					</label>
-					<input
-						id="nombre"
-						type="text"
-						name="user_name"
-						required
-						placeholder="Escribe tu nombre"
-						class="my-border my-shadow p mt-2 w-full border-2 bg-green-100 p-3 focus:outline-none dark:bg-neutral-950"
+					<div class="mb-6 space-y-2">
+						<label for="nombre" class="flex items-center gap-2 font-bold">
+							<User size={20} class="my-stroke-icon" aria-hidden="true" />
+							<span class="p">Nombre</span>
+						</label>
+						<input
+							id="nombre"
+							type="text"
+							name="user_name"
+							required
+							placeholder="Escribe tu nombre"
+							class="my-border my-shadow p mt-2 w-full border-2 bg-green-100 p-3 focus:outline-none dark:bg-neutral-950"
+						/>
+					</div>
+
+					<div class="mb-6 space-y-2">
+						<label for="email" class="flex items-center gap-2 font-bold">
+							<Mail size={20} class="my-stroke-icon" aria-hidden="true" />
+							<span class="p">Email</span>
+						</label>
+						<input
+							id="email"
+							type="email"
+							name="user_email"
+							required
+							placeholder="Escribe tu email"
+							class="my-border my-shadow p mt-2 w-full border-2 bg-green-100 p-3 focus:outline-none dark:bg-neutral-950"
+						/>
+					</div>
+
+					<div class="mb-6 space-y-2">
+						<label for="mensaje" class="flex items-center gap-2 font-bold">
+							<MessageSquare size={20} class="my-stroke-icon" aria-hidden="true" />
+							<span class="p">Mensaje</span>
+						</label>
+						<textarea
+							id="mensaje"
+							name="message"
+							rows="5"
+							required
+							placeholder="Escribe tu mensaje"
+							class="my-border my-shadow p mt-2 w-full resize-none border-2 bg-green-100 p-3 focus:outline-none dark:bg-neutral-950"
+						></textarea>
+					</div>
+
+					<button
+						type="submit"
+						class="my-effect my-border my-bg p my-shadow mb-6 mt-12 flex w-full items-center justify-center overflow-hidden border-2 px-6 py-3 font-bold"
+						disabled={isLoading}
+					>
+						{isLoading ? 'Enviando...' : 'Enviar mensaje'}
+					</button>
+				</fieldset>
+
+				<div class="my-border my-shadow hidden border-2 md:flex">
+					<img
+						src="/images/old-phone-contact-form.webp"
+						alt="Teléfono antiguo decorativo junto al formulario de contacto"
+						class="h-full w-full object-cover object-center"
 					/>
 				</div>
-
-				<div class="mb-6 space-y-2">
-					<label for="email" class="flex items-center gap-2 font-bold">
-						<Mail size={20} class="my-stroke-icon" aria-hidden="true" />
-						<span class="p">Email</span>
-					</label>
-					<input
-						id="email"
-						type="email"
-						name="user_email"
-						required
-						placeholder="Escribe tu email"
-						class="my-border my-shadow p mt-2 w-full border-2 bg-green-100 p-3 focus:outline-none dark:bg-neutral-950"
-					/>
-				</div>
-
-				<div class="mb-6 space-y-2">
-					<label for="mensaje" class="flex items-center gap-2 font-bold">
-						<MessageSquare size={20} class="my-stroke-icon" aria-hidden="true" />
-						<span class="p">Mensaje</span>
-					</label>
-					<textarea
-						id="mensaje"
-						name="message"
-						rows="5"
-						required
-						placeholder="Escribe tu mensaje"
-						class="my-border my-shadow p mt-2 w-full resize-none border-2 bg-green-100 p-3 focus:outline-none dark:bg-neutral-950"
-					></textarea>
-				</div>
-
-				<button
-					type="submit"
-					class="my-effect my-border my-bg p my-shadow mb-6 mt-12 flex w-full items-center justify-center overflow-hidden border-2 px-6 py-3 font-bold"
-					disabled={isLoading}
-				>
-					{isLoading ? 'Enviando...' : 'Enviar mensaje'}
-				</button>
-			</fieldset>
+			</div>
 		{/if}
 	</form>
 </article>
