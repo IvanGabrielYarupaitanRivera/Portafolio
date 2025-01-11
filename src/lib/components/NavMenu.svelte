@@ -68,9 +68,9 @@
 		<nav
 			id="mobile-menu"
 			aria-label="Menú móvil"
-			class="my-border my-component-bg absolute left-0 right-0 top-24 z-10 -mt-2 border-b-2 pb-4 pt-4 md:hidden"
+			class="my-border my-component-bg absolute left-0 right-0 top-24 z-10 -mt-4 border-b-2 pb-4 pt-4 md:hidden"
 			in:slide={{ duration: 300 }}
-			out:slide={{ duration: isCloseMenuByNav ? 500 : 0 }}
+			out:slide={{ duration: isCloseMenuByNav ? 300 : 0 }}
 		>
 			<ul class="container mx-auto flex flex-col gap-4 px-4 pb-4 pt-1">
 				{#each menuItems as item}
