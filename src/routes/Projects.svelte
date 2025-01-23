@@ -1,54 +1,15 @@
 <script lang="ts">
-	import { Circle } from 'lucide-svelte';
+	import { Circle, ExternalLink, Github } from 'lucide-svelte';
 
 	const projects = [
 		{
-			title: 'Sistema de Gestión de Matrículas',
+			title: 'Sistema de Gestión Académica',
 			description:
-				'Plataforma integral para gestionar el proceso de matrícula estudiantil, incluyendo registro de estudiantes, asignación de cursos, generación de documentos y pagos en línea. Incluye dashboard administrativo y portal para padres.',
-			technologies: ['React', 'Node.js', 'MongoDB', 'Express', 'Stripe'],
-			link: '#',
+				'Sistema integral que optimiza la administración educativa, permitiendo a docentes, estudiantes y personal administrativo gestionar información académica en tiempo real. Facilita el seguimiento del rendimiento escolar y mejora la comunicación entre todos los usuarios.',
+			technologies: ['SvelteKit', 'Tailwind CSS', 'Supabase', 'Vercel'],
+			link: 'https://sistema-de-gestion-academica.vercel.app/',
+			github: 'https://github.com/IvanGabrielYarupaitanRivera/SistemaDeGestionAcademica',
 			gradient: 'bg-gradient-to-b from-blue-300 via-blue-400 to-blue-500'
-		},
-		{
-			title: 'Control de Asistencia Docente',
-			description:
-				'Sistema automatizado para el registro y control de asistencia del personal docente mediante códigos QR. Incluye generación de reportes, gestión de permisos y cálculo automático de horas laboradas.',
-			technologies: ['Vue.js', 'Firebase', 'Node.js', 'QR Scanner API'],
-			link: '#',
-			gradient: 'bg-gradient-to-b from-purple-400 via-purple-500 to-purple-700'
-		},
-		{
-			title: 'Gestión de Biblioteca Escolar',
-			description:
-				'Sistema completo para administrar el inventario de libros, préstamos, devoluciones y multas. Incluye catálogo en línea, sistema de reservas y notificaciones automáticas.',
-			technologies: ['Next.js', 'PostgreSQL', 'Prisma', 'SendGrid'],
-			link: '#',
-			gradient: 'bg-gradient-to-b from-yellow-400 via-yellow-500 to-yellow-600'
-		},
-		{
-			title: 'Portal de Comunicación Escuela-Familia',
-			description:
-				'Plataforma de comunicación bidireccional entre docentes y padres de familia. Incluye sistema de mensajería, calendario de eventos, compartición de recursos y seguimiento académico.',
-			technologies: ['React Native', 'Socket.io', 'Express', 'MongoDB'],
-			link: '#',
-			gradient: 'bg-gradient-to-b from-green-300 via-green-400 to-green-600'
-		},
-		{
-			title: 'Sistema de Evaluación Académica',
-			description:
-				'Plataforma para la gestión integral de evaluaciones, incluyendo creación de exámenes, calificación automática, análisis estadístico y generación de boletines de notas.',
-			technologies: ['Angular', 'Django', 'PostgreSQL', 'Chart.js'],
-			link: '#',
-			gradient: 'bg-gradient-to-b from-red-400 via-red-500 to-red-600'
-		},
-		{
-			title: 'Gestor de Horarios Académicos',
-			description:
-				'Aplicación para la generación y gestión automática de horarios escolares, considerando disponibilidad de docentes, aulas y materias. Incluye detección de conflictos y optimización de recursos.',
-			technologies: ['Svelte', 'Python', 'FastAPI', 'SQLite'],
-			link: '#',
-			gradient: 'bg-gradient-to-b from-indigo-400 via-indigo-500 to-indigo-600'
 		}
 	];
 </script>
@@ -56,7 +17,7 @@
 <div class="container mx-auto p-4">
 	<h2 class="heading-2 my-shadow my-border my-bg mb-12 border-2 px-8 py-4">Proyectos Destacados</h2>
 
-	<section class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+	<section class="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
 		{#each projects as project}
 			<article class="my-shadow my-border my-component-bg border-2">
 				<header class="flex flex-row justify-end gap-1 p-2">
@@ -72,6 +33,26 @@
 				<section class="px-8 pb-8 pt-4">
 					<header>
 						<h3 class="heading-3 mb-2">{project.title}</h3>
+						<div class="mb-8 flex w-full gap-4">
+							<a
+								href={project.link}
+								target="_blank"
+								rel="noopener noreferrer"
+								class="my-border my-bg my-shadow flex items-center gap-4 border-2 px-4 py-2"
+							>
+								Ver Proyecto
+								<ExternalLink size={16} />
+							</a>
+							<a
+								href={project.github}
+								target="_blank"
+								rel="noopener noreferrer"
+								class="my-border my-bg my-shadow flex items-center gap-4 border-2 px-4 py-2"
+							>
+								GitHub
+								<Github size={16} />
+							</a>
+						</div>
 					</header>
 
 					<p class="p mb-8">{project.description}</p>
