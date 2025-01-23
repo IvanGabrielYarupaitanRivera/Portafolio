@@ -6,10 +6,7 @@
 	let isMenuOpen = $state(false);
 	let isCloseMenuByNav = $state(false);
 
-	const menuItems = [
-		{ href: '/', text: 'Inicio' },
-		{ href: '/practicando', text: 'Practicando' }
-	];
+	const menuItems = [{ href: '/', text: 'Inicio' }];
 
 	const toggleMenu = () => (isMenuOpen = !isMenuOpen);
 
