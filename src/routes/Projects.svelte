@@ -46,7 +46,7 @@
 								href={project.link}
 								target="_blank"
 								rel="noopener noreferrer"
-								class="my-border my-bg my-shadow flex items-center gap-4 border-2 px-4 py-2"
+								class="my-border my-bg my-shadow flex items-center gap-4 border-2 px-4 py-2 text-sm"
 							>
 								Ver Proyecto
 								<ExternalLink size={16} />
@@ -55,7 +55,7 @@
 								href={project.github}
 								target="_blank"
 								rel="noopener noreferrer"
-								class="my-border my-bg my-shadow flex items-center gap-4 border-2 px-4 py-2"
+								class="my-border my-bg my-shadow flex items-center gap-4 border-2 px-4 py-2 text-sm"
 							>
 								GitHub
 								<Github size={16} />
