@@ -27,6 +27,8 @@
 <link rel="canonical" href={siteUrl} />
 
 <svelte:head>
+	<meta name="google-site-verification" content="mndE_lYl-xwdm2rGrv0dNh783R416LplhRm-VysRK64" />
+
 	<!-- Metadatos básicos -->
 	<meta name="theme-color" content="#000000" />
 
