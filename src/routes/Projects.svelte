@@ -9,7 +9,7 @@
 			technologies: ['SvelteKit', 'Tailwind CSS', 'Supabase', 'Vercel'],
 			link: 'https://sistema-de-gestion-academica.vercel.app/',
 			github: 'https://github.com/IvanGabrielYarupaitanRivera/SistemaDeGestionAcademica',
-			gradient: 'bg-gradient-to-b from-blue-300 via-blue-400 to-blue-500'
+			image: '/images/sistema-de-gestion-academica-basica.webp'
 		}
 	];
 </script>
@@ -26,8 +26,16 @@
 					<Circle class="my-effect fill-red-500 stroke-red-500" size={20}></Circle>
 				</header>
 
-				<figure class="my-border aspect-video border-b-2 border-t-2">
-					<div class="{project.gradient} h h-full w-full"></div>
+				<figure class="my-border relative aspect-video overflow-hidden border-b-2 border-t-2">
+					<img
+						src={project.image}
+						alt={project.title}
+						class="h-full w-full object-cover"
+						loading="lazy"
+						decoding="async"
+						width="800"
+						height="450"
+					/>
 				</figure>
 
 				<section class="px-8 pb-8 pt-4">
