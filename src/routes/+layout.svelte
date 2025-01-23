@@ -24,6 +24,8 @@
 	});
 </script>
 
+<link rel="canonical" href={siteUrl} />
+
 <svelte:head>
 	<!-- Metadatos básicos -->
 	<meta name="theme-color" content="#000000" />
