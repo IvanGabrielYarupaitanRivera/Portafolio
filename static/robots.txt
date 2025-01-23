@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mi-portafolio-ivan.vercel.app/sitemap.xml

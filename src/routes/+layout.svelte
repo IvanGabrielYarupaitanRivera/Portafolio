@@ -10,7 +10,7 @@
 	const siteName = 'Ivan Yarupaitan Rivera | Programador de Aplicaciones Web';
 	const defaultDescription =
 		'Portafolio profesional de Ivan Yarupaitan Rivera, programador de aplicaciones web especializado en Svelte, TypeScript, Supabase y desarrollo web moderno.';
-	/* const siteUrl = 'https://ivanyarupaitan.dev'; */
+	const siteUrl = 'https://mi-portafolio-ivan.vercel.app/';
 
 	onNavigate((navigation) => {
 		if (!document.startViewTransition) return;
@@ -39,18 +39,18 @@
 
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website" />
-	<!-- <meta property="og:url" content={siteUrl} /> -->
+	<meta property="og:url" content={siteUrl} />
 	<meta property="og:title" content={siteName} />
 	<meta property="og:description" content={defaultDescription} />
-	<!-- <meta property="og:image" content={`${siteUrl}/og-image.jpg`} /> -->
+	<meta property="og:image" content={`${siteUrl}/og-image.jpg`} />
 	<meta property="og:site_name" content={siteName} />
 
 	<!-- Twitter -->
 	<meta name="twitter:card" content="summary_large_image" />
-	<!-- <meta name="twitter:url" content={siteUrl} /> -->
+	<meta name="twitter:url" content={siteUrl} />
 	<meta name="twitter:title" content={siteName} />
 	<meta name="twitter:description" content={defaultDescription} />
-	<!-- <meta name="twitter:image" content={`${siteUrl}/og-image.jpg`} /> -->
+	<meta name="twitter:image" content={`${siteUrl}/og-image.jpg`} />
 </svelte:head>
 
 <div class="flex min-h-screen flex-col bg-green-100 dark:bg-neutral-950">
