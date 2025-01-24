@@ -35,6 +35,7 @@
 	},
 	"dependencies": {
 		"@emailjs/nodejs": "^5.0.2",
+		"@vercel/speed-insights": "^1.1.0",
 		"lucide-svelte": "^0.468.0",
 		"motion": "^11.14.4"
 	}
