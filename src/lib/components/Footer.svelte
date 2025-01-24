@@ -1,5 +1,7 @@
 <script>
 	import { Github, LinkedinIcon } from 'lucide-svelte';
+
+	const currentYear = new Date().getFullYear();
 </script>
 
 <footer class="my-component-bg my-border mt-16 border-t-2 px-4 py-6">
@@ -10,6 +12,7 @@
 				target="_blank"
 				rel="noopener noreferrer"
 				aria-label="Visita mi perfil de GitHub"
+				class="hover:scale-110"
 			>
 				<Github class="my-stroke" size={24} />
 				<span class="sr-only">GitHub</span>
@@ -20,13 +23,14 @@
 				target="_blank"
 				rel="noopener noreferrer"
 				aria-label="Visita mi perfil de LinkedIn"
+				class="hover:scale-110"
 			>
 				<LinkedinIcon class="my-stroke" size={24} />
 				<span class="sr-only">LinkedIn</span>
 			</a>
 		</div>
 		<p class="p text-center">
-			© {new Date().getFullYear()} - Creado con
+			© {currentYear} - Creado con
 			<span class="inline-block hover:-translate-y-1">💖</span>
 		</p>
 	</div>
