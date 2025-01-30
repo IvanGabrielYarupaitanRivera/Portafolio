@@ -5,7 +5,7 @@
 		{
 			title: 'Sistema de Gestión Académica',
 			description:
-				'Sistema integral que optimiza la administración educativa, permitiendo a docentes, estudiantes y personal administrativo gestionar información académica en tiempo real. Facilita el seguimiento del rendimiento escolar y mejora la comunicación entre todos los usuarios.',
+				'Sistema de Gestión Académica es una aplicación web académica diseñada para gestionar calificaciones en un entorno escolar ficticio. Los usuarios pueden acceder mediante cuentas demo preconfiguradas (con roles de estudiante o profesor) usando botones dedicados en la pantalla de inicio de sesión, o crear cuentas personalizadas que requieren verificación de correo electrónico. El sistema opera con tres roles diferenciados: administrador, profesor y estudiante, cada uno con permisos específicos.',
 			technologies: ['SvelteKit', 'Tailwind CSS', 'Supabase', 'Vercel'],
 			link: 'https://sistema-de-gestion-academica.vercel.app/',
 			github: 'https://github.com/IvanGabrielYarupaitanRivera/SistemaDeGestionAcademica',
