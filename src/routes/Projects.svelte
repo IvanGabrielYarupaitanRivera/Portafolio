@@ -10,6 +10,15 @@
 			link: 'https://sistema-de-gestion-academica.vercel.app/',
 			github: 'https://github.com/IvanGabrielYarupaitanRivera/SistemaDeGestionAcademica',
 			image: '/images/sistema-de-gestion-academica-basica.webp'
+		},
+		{
+			title: 'Página Web de Peralta Asociados',
+			description:
+				'Diseño y desarrollo integral de la página web corporativa para el estudio jurídico Peralta Asociados de Huancavelica. La implementación se realizó utilizando Astro, un framework moderno que permite generar sitios web estáticos de alto rendimiento. El proyecto destaca por alcanzar la máxima puntuación (100/100) en todas las métricas críticas de Lighthouse de Google: Rendimiento, garantizando tiempos de carga óptimos; Accesibilidad, Mejores Prácticas y SEO, maximizando la visibilidad en buscadores.',
+			technologies: ['Astro', 'Tailwind CSS', 'Netlify'],
+			link: 'https://peraltaasociados.com/',
+			github: 'https://github.com/IvanGabrielYarupaitanRivera/PeraltaAsociados',
+			image: '/images/pagina-web-peralta-asociados.webp'
 		}
 	];
 </script>
