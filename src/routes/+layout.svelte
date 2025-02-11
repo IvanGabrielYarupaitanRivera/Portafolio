@@ -30,7 +30,8 @@
 <link rel="canonical" href={siteUrl} />
 
 <svelte:head>
-	<meta name="google-site-verification" content="mndE_lYl-xwdm2rGrv0dNh783R416LplhRm-VysRK64" />
+	<meta name="google-site-verification" content="b5MzFocA58lCyfnxQLSfHhJQ8ZgCidavKX9YP88bVbw" />
+
 	<meta name="robots" content="index, follow" />
 
 	<!-- Metadatos básicos -->
