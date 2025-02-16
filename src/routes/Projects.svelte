@@ -3,6 +3,15 @@
 
 	const projects = [
 		{
+			title: 'Asistente Legal con Inteligencia Artifical',
+			description:
+				'Desarrollo e implementación de un asistente legal virtual (chatbot) impulsado por Inteligencia Artificial para el estudio jurídico Peralta Asociados. Esta solución tecnológica proporciona asesoramiento legal automatizado las 24/7, procesando consultas en tiempo real mediante embeddings vectoriales en Supabase. Además, enriquece las interacciones proporcionando enlaces a información relevantes. La implementación de búsqueda vectorial optimiza la precisión de las respuestas y mejora significativamente la experiencia del usuario.',
+			technologies: ['SvelteKit', 'Tailwind CSS', 'Supabase Vector', 'OpenRouter'],
+			link: 'https://chat.peraltaasociados.com/',
+			github: 'https://github.com/IvanGabrielYarupaitanRivera/ChatPeraltaAsociados',
+			image: '/images/chatbot-inteligencia-artificial-peralta-asociados.webp'
+		},
+		{
 			title: 'Sistema de Gestión Académica',
 			description:
 				'Sistema de Gestión Académica es una aplicación web académica diseñada para gestionar calificaciones en un entorno escolar ficticio. Los usuarios pueden acceder mediante cuentas demo preconfiguradas (con roles de estudiante o profesor) usando botones dedicados en la pantalla de inicio de sesión, o crear cuentas personalizadas que requieren verificación de correo electrónico. El sistema opera con tres roles diferenciados: administrador, profesor y estudiante, cada uno con permisos específicos.',
