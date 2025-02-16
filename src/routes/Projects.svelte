@@ -5,7 +5,7 @@
 		{
 			title: 'Asistente Legal con Inteligencia Artifical',
 			description:
-				'Desarrollo e implementación de un asistente legal virtual (chatbot) impulsado por Inteligencia Artificial para el estudio jurídico Peralta Asociados. Esta solución tecnológica proporciona asesoramiento legal automatizado las 24/7, procesando consultas en tiempo real mediante embeddings vectoriales en Supabase. Además, enriquece las interacciones proporcionando enlaces a información relevantes. La implementación de búsqueda vectorial optimiza la precisión de las respuestas y mejora significativamente la experiencia del usuario.',
+				'Desarrollo e implementación de un asistente legal virtual (chatbot) impulsado por Inteligencia Artificial para el estudio jurídico Peralta Asociados. Esta solución tecnológica proporciona asesoramiento legal automatizado las 24/7, procesando consultas en tiempo real mediante embeddings vectoriales en Supabase. Además, enriquece las interacciones proporcionando enlaces a información relevante. La implementación de búsqueda vectorial optimiza la precisión de las respuestas y mejora significativamente la experiencia del usuario.',
 			technologies: ['SvelteKit', 'Tailwind CSS', 'Supabase Vector', 'OpenRouter'],
 			link: 'https://chat.peraltaasociados.com/',
 			github: 'https://github.com/IvanGabrielYarupaitanRivera/ChatPeraltaAsociados',
