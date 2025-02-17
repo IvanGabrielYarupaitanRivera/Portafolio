@@ -9,6 +9,8 @@
 
 	const skills = 'Svelte, TypeScript, JavaScript, CSS, HTML, Desarrollo Web, Supabase';
 	const currentLocation = 'Junín, Perú';
+
+	let { form } = $props();
 </script>
 
 <svelte:head>
@@ -39,6 +41,6 @@
 	</section>
 
 	<section class="relative z-10" aria-label="Formulario de contacto" id="contacto">
-		<Contact />
+		<Contact {form} />
 	</section>
 </main>

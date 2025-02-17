@@ -2,34 +2,34 @@
 	import { enhance } from '$app/forms';
 	import type { ActionResult } from '@sveltejs/kit';
 	import { Mail, User, MessageSquare } from 'lucide-svelte';
+	import type { ActionData } from './$types';
 
-	let isLoading = $state(false);
-	let showSuccess = $state(false);
+	let { form }: { form: ActionData } = $props();
+
+	let isSending = $state(false);
 
 	const resetForm = () => {
-		showSuccess = false;
-		isLoading = false;
+		isSending = false;
 	};
 
 	const handleSubmit = () => {
-		isLoading = true;
+		isSending = true;
 
-		return async ({ result }: { result: ActionResult }) => {
+		return async ({ update, result }: { update: () => Promise<void>; result: ActionResult }) => {
+			await update();
+
 			if (result.type === 'success') {
 				console.log('Mensaje enviado con éxito');
 			} else {
 				console.log('Error al enviar el mensaje');
 			}
-
-			isLoading = false;
-			showSuccess = true;
 		};
 	};
 </script>
 
 <article class="p-4">
 	<h2 class="heading-2 my-shadow my-border my-bg mb-12 border-2 px-8 py-4">
-		{showSuccess ? 'Mensaje Enviado con éxito' : '¡Hablemos!'}
+		{form?.success ? 'Mensaje Enviado con éxito' : '¡Hablemos!'}
 	</h2>
 
 	<form
@@ -38,18 +38,31 @@
 		class="my-shadow my-border my-component-bg border-2 px-8 py-8 md:px-16"
 		use:enhance={handleSubmit}
 	>
-		{#if showSuccess && !isLoading}
-			<section class="flex flex-col items-center gap-8 p-8 text-center">
-				<span class="animate-bounce text-6xl">🌞</span>
-				<h3 class="heading-3">¡Gracias por tu mensaje!</h3>
-				<p class="p">Me pondré en contacto contigo lo antes posible</p>
-				<button
-					onclick={resetForm}
-					class="my-effect my-border my-bg p my-shadow border-2 px-6 py-3 font-bold"
-					>Enviar otro mensaje</button
-				>
-			</section>
-		{:else if !showSuccess}
+		{#if form && isSending == true}
+			{#if form.success}
+				<section class="flex flex-col items-center gap-8 p-8 text-center">
+					<span class="animate-bounce text-6xl">🌞</span>
+					<h3 class="heading-3">¡Gracias por tu mensaje!</h3>
+					<p class="p">Me pondré en contacto contigo lo antes posible</p>
+					<button
+						onclick={resetForm}
+						class="my-effect my-border my-bg p my-shadow border-2 px-6 py-3 font-bold"
+						>Enviar otro mensaje</button
+					>
+				</section>
+			{:else}
+				<section class="flex flex-col items-center gap-8 p-8 text-center">
+					<span class="animate-bounce text-6xl">👁️</span>
+					<h3 class="heading-3">¡Ocurrió un error!</h3>
+					<p class="p">{form.message}</p>
+					<button
+						onclick={resetForm}
+						class="my-effect my-border my-bg p my-shadow border-2 px-6 py-3 font-bold"
+						>Intentar de nuevo</button
+					>
+				</section>
+			{/if}
+		{:else}
 			<div class="grid gap-16 lg:grid-cols-2">
 				<fieldset class="min-w-full">
 					<legend class="sr-only">Información de contacto</legend>
@@ -58,6 +71,7 @@
 						<label for="nombre" class="flex items-center gap-2 font-bold">
 							<User size={20} class="my-stroke-icon" aria-hidden="true" />
 							<span class="p">Nombre</span>
+							<span class="text-neutral-600" title="Obligatorio">(*)</span>
 						</label>
 						<input
 							id="nombre"
@@ -73,6 +87,7 @@
 						<label for="email" class="flex items-center gap-2 font-bold">
 							<Mail size={20} class="my-stroke-icon" aria-hidden="true" />
 							<span class="p">Email</span>
+							<span class="text-neutral-600" title="Obligatorio">(*)</span>
 						</label>
 						<input
 							id="email"
@@ -88,6 +103,7 @@
 						<label for="mensaje" class="flex items-center gap-2 font-bold">
 							<MessageSquare size={20} class="my-stroke-icon" aria-hidden="true" />
 							<span class="p">Mensaje</span>
+							<span class="text-neutral-600" title="Obligatorio">(*)</span>
 						</label>
 						<textarea
 							id="mensaje"
@@ -102,9 +118,9 @@
 					<button
 						type="submit"
 						class="my-effect my-border my-bg p my-shadow mb-6 mt-12 flex w-full items-center justify-center overflow-hidden border-2 px-6 py-3 font-bold"
-						disabled={isLoading}
+						disabled={isSending}
 					>
-						{isLoading ? 'Enviando...' : 'Enviar mensaje'}
+						{isSending ? 'Enviando...' : 'Enviar mensaje'}
 					</button>
 				</fieldset>
 
