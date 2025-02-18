@@ -64,6 +64,7 @@
 
 <div class="flex min-h-screen flex-col bg-green-100 dark:bg-neutral-950">
 	<!-- Header con navegación -->
+
 	<Header />
 
 	<!-- Contenido principal -->
