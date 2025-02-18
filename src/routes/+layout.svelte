@@ -4,6 +4,7 @@
 	import Footer from '$lib/components/Footer.svelte';
 	import { onNavigate } from '$app/navigation';
 	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
+	import Pattern from '$lib/components/Pattern.svelte';
 
 	injectSpeedInsights();
 
@@ -62,13 +63,16 @@
 	<meta name="twitter:image" content={`${siteUrl}/og-image.jpg`} />
 </svelte:head>
 
-<div class="flex min-h-screen flex-col bg-green-100 dark:bg-neutral-950">
-	<!-- Header con navegación -->
+<div class="relative flex min-h-screen flex-col bg-green-100 dark:bg-neutral-950">
+	<Pattern />
 
+	<!-- Header con navegación -->
 	<Header />
 
 	<!-- Contenido principal -->
-	<main class="container mx-auto flex flex-1 px-4 py-6">
+	<main class="container mx-auto flex flex-1 py-6">
+		<!-- Patrón de cuadrícula -->
+
 		{@render children()}
 	</main>
 

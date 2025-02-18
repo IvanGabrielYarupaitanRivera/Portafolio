@@ -1,4 +1,5 @@
 <script lang="ts">
+	import PatternSection from '$lib/components/PatternSection.svelte';
 	import { Circle, ExternalLink, Github } from 'lucide-svelte';
 
 	const projects = [
@@ -32,12 +33,17 @@
 	];
 </script>
 
-<div class="container mx-auto p-4">
-	<h2 class="heading-2 my-shadow my-border my-bg mb-12 border-2 px-8 py-4">Proyectos Destacados</h2>
+<div class="container mx-auto">
+	<header class="relative">
+		<PatternSection />
+		<h2 class="heading-2 my-shadow my-border my-bg mb-12 rounded-xl border-2 px-8 py-4">
+			Proyectos Destacados
+		</h2>
+	</header>
 
 	<section class="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
 		{#each projects as project}
-			<article class="my-shadow my-border my-component-bg border-2">
+			<article class="my-shadow my-border my-component-bg rounded-xl border-2">
 				<header class="flex flex-row justify-end gap-1 p-2">
 					<Circle class="my-effect fill-green-500 stroke-green-500" size={20}></Circle>
 					<Circle class="my-effect fill-yellow-500 stroke-yellow-500" size={20}></Circle>

@@ -74,7 +74,7 @@ html {
 	}
 
 	.my-component-bg {
-		@apply bg-white/50 dark:bg-black/50;
+		@apply bg-white/80 backdrop-blur-xl dark:bg-black/50;
 	}
 
 	.my-active-bg {

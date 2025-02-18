@@ -16,7 +16,7 @@
 
 <section class="container sticky top-2 z-30 mx-auto mt-2">
 	<header
-		class="my-shadow my-component-bg my-border ml-3 mr-4 rounded-xl border-2 pb-6 pl-6 pr-8 pt-4 backdrop-blur-xl"
+		class="my-shadow my-component-bg my-border ml-3 mr-4 rounded-xl border-2 pb-6 pl-6 pr-8 pt-4"
 	>
 		<nav class="flex justify-between" aria-label="navegación principal ">
 			<a

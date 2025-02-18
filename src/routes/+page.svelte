@@ -31,16 +31,18 @@
 	/>
 </svelte:head>
 
-<main class="relative flex flex-col gap-16">
-	<section class="relative z-10 pt-16 md:px-36" aria-label="Introducción y presentación">
+<main class="relative ml-3 mr-4 flex flex-col gap-16">
+	<!-- Patrón de cuadrícula de fondo -->
+
+	<section class="mt-16 md:px-36" aria-label="Introducción y presentación">
 		<HeroSection />
 	</section>
 
-	<section class="relative z-10" aria-label="Proyectos destacados" id="proyectos">
+	<section class=" " aria-label="Proyectos destacados" id="proyectos">
 		<Projects />
 	</section>
 
-	<section class="relative z-10" aria-label="Formulario de contacto" id="contacto">
+	<section class="mb-16" aria-label="Formulario de contacto" id="contacto">
 		<Contact {form} />
 	</section>
 </main>
