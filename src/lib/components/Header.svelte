@@ -14,14 +14,14 @@
 	const toggleMenu = () => (showMobileMenu = !showMobileMenu);
 </script>
 
-<section class="container sticky top-2 z-30 mx-auto">
+<section class="container sticky top-2 z-30 mx-auto mt-2">
 	<header
 		class="my-shadow my-component-bg my-border ml-3 mr-4 rounded-xl border-2 pb-6 pl-6 pr-8 pt-4 backdrop-blur-xl"
 	>
 		<nav class="flex justify-between" aria-label="navegación principal ">
 			<a
 				href="/"
-				class="my-border my-bg heading-3 my-effect my-shadow left-0 right-0 top-0 flex items-center rounded-xl border-2 px-4 py-4"
+				class="my-border heading-3 my-shadow left-0 right-0 top-0 flex items-center rounded-xl border-2 bg-green-500 px-4 py-4 hover:bg-green-500"
 			>
 				<span class="leading-[0.6]">Vanchi</span>
 			</a>
@@ -63,7 +63,7 @@
 								showMobileMenu = false;
 							}}
 							href={item.href}
-							class="my-effect : 'text-neutral-500 '} relative block rounded-lg px-4 py-2 font-bold hover:bg-green-600"
+							class="my-effect p relative block rounded-lg px-4 py-2 font-bold"
 						>
 							{item.text}
 						</a>

@@ -23,10 +23,7 @@
 		<ul class="flex gap-6">
 			{#each menuItems as item}
 				<li>
-					<a
-						href={item.href}
-						class="relative px-1 py-2 font-bold text-neutral-500 dark:text-neutral-200"
-					>
+					<a href={item.href} class="my-effect p relative block rounded-lg px-4 py-2 font-bold">
 						{item.text}
 					</a>
 				</li>
