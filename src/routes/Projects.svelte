@@ -1,5 +1,9 @@
 <script lang="ts">
 	import PatternSection from '$lib/components/PatternSection.svelte';
+	import ChatPeraltaAsociadosImage from '$lib/images/chatbot-inteligencia-artificial-peralta-asociados.webp?enhanced';
+	import SistemaDeGestionAcademicaImage from '$lib/images/sistema-de-gestion-academica-basica.webp?enhanced';
+	import PeraltaAsociadosImage from '$lib/images/pagina-web-peralta-asociados.webp?enhanced';
+
 	import { Circle, ExternalLink, Github } from 'lucide-svelte';
 
 	const projects = [
@@ -10,7 +14,7 @@
 			technologies: ['SvelteKit', 'Tailwind CSS', 'Supabase Vector', 'OpenRouter'],
 			link: 'https://chat.peraltaasociados.com/',
 			github: 'https://github.com/IvanGabrielYarupaitanRivera/ChatPeraltaAsociados',
-			image: '/images/chatbot-inteligencia-artificial-peralta-asociados.webp'
+			image: ChatPeraltaAsociadosImage
 		},
 		{
 			title: 'Sistema de Gestión Académica',
@@ -19,7 +23,7 @@
 			technologies: ['SvelteKit', 'Tailwind CSS', 'Supabase', 'Vercel'],
 			link: 'https://sistema-de-gestion-academica.vercel.app/',
 			github: 'https://github.com/IvanGabrielYarupaitanRivera/SistemaDeGestionAcademica',
-			image: '/images/sistema-de-gestion-academica-basica.webp'
+			image: SistemaDeGestionAcademicaImage
 		},
 		{
 			title: 'Página Web de Peralta Asociados',
@@ -28,7 +32,7 @@
 			technologies: ['Astro', 'Tailwind CSS', 'Netlify'],
 			link: 'https://peraltaasociados.com/',
 			github: 'https://github.com/IvanGabrielYarupaitanRivera/PeraltaAsociados',
-			image: '/images/pagina-web-peralta-asociados.webp'
+			image: PeraltaAsociadosImage
 		}
 	];
 </script>
@@ -46,12 +50,12 @@
 			<article class="my-shadow my-border my-component-bg rounded-xl border-2">
 				<header class="flex flex-row justify-end gap-1 p-2">
 					<Circle class="my-effect fill-green-500 stroke-green-500" size={20}></Circle>
-					<Circle class="my-effect fill-yellow-500 stroke-yellow-500" size={20}></Circle>
 					<Circle class="my-effect fill-red-500 stroke-red-500" size={20}></Circle>
+					<Circle class="my-effect fill-yellow-500 stroke-yellow-500" size={20}></Circle>
 				</header>
 
 				<figure class="my-border relative aspect-video overflow-hidden border-b-2 border-t-2">
-					<img
+					<enhanced:img
 						src={project.image}
 						alt={project.title}
 						class="h-full w-full object-cover"

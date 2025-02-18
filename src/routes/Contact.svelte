@@ -4,6 +4,7 @@
 	import { Mail, User, MessageSquare } from 'lucide-svelte';
 	import type { ActionData } from './$types';
 	import PatternSection from '$lib/components/PatternSection.svelte';
+	import ContactImage from '$lib/images/old-phone-contact-form.webp?enhanced';
 
 	let { form }: { form: ActionData } = $props();
 
@@ -129,9 +130,14 @@
 				</fieldset>
 
 				<div class="my-border my-shadow hidden rounded-xl border-2 lg:flex">
-					<img
-						src="/images/old-phone-contact-form.webp"
+					<enhanced:img
+						src={ContactImage}
 						alt="Teléfono antiguo decorativo junto al formulario de contacto"
+						width="600"
+						height="800"
+						loading="lazy"
+						decoding="async"
+						fetchpriority="low"
 						class="h-full w-full rounded-xl object-cover object-center"
 					/>
 				</div>
