@@ -16,6 +16,10 @@ html {
 	scroll-behavior: smooth;
 }
 
+:target {
+	scroll-margin-top: 7rem;
+}
+
 @font-face {
 	font-family: 'Satoshi';
 	src: url('/fonts/Satoshi-Regular.woff2') format('woff2');
@@ -70,7 +74,7 @@ html {
 	}
 
 	.my-component-bg {
-		@apply bg-white dark:bg-black;
+		@apply bg-white/50 dark:bg-black/50;
 	}
 
 	.my-active-bg {
