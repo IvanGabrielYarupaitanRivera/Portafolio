@@ -68,7 +68,7 @@
 	<Header />
 
 	<!-- Contenido principal -->
-	<main class="container mx-auto flex-1 px-4 py-6">
+	<main class="container mx-auto flex flex-1 px-4 py-6">
 		{@render children()}
 	</main>
 
@@ -78,10 +78,10 @@
 
 <style>
 	:root::view-transition-old(root) {
-		animation-duration: 500ms;
+		animation-duration: 300ms;
 	}
 
 	:root::view-transition-new(root) {
-		animation-duration: 500ms;
+		animation-duration: 300ms;
 	}
 </style>

@@ -27,7 +27,7 @@
 	};
 </script>
 
-<article class="p-4">
+<article class="mb-8 p-4">
 	<h2 class="heading-2 my-shadow my-border my-bg mb-12 border-2 px-8 py-4">
 		{form?.success ? 'Mensaje Enviado con éxito' : '¡Hablemos!'}
 	</h2>
