@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { blur, fly } from 'svelte/transition';
 	import NavMenu from './NavMenu.svelte';
-	import { page } from '$app/stores';
 	import { X } from 'lucide-svelte';
 	let isCloseMenuByNav = $state(false);
 
@@ -15,26 +14,28 @@
 	const toggleMenu = () => (showMobileMenu = !showMobileMenu);
 </script>
 
-<header
-	class="my-shadow my-component-bg my-border container sticky top-4 z-20 m-4 mx-auto rounded-xl border-2 pb-6 pl-6 pr-8 pt-4 backdrop-blur-xl"
->
-	<nav class="flex justify-between" aria-label="navegación principal">
-		<a
-			href="/"
-			class="my-border my-bg heading-3 my-effect my-shadow left-0 right-0 top-0 flex items-center rounded-xl border-2 px-4 py-4"
-		>
-			<span class="leading-[0.6]">Vanchi</span>
-		</a>
+<section class="container sticky top-2 z-30 mx-auto">
+	<header
+		class="my-shadow my-component-bg my-border ml-3 mr-4 rounded-xl border-2 pb-6 pl-6 pr-8 pt-4 backdrop-blur-xl"
+	>
+		<nav class="flex justify-between" aria-label="navegación principal ">
+			<a
+				href="/"
+				class="my-border my-bg heading-3 my-effect my-shadow left-0 right-0 top-0 flex items-center rounded-xl border-2 px-4 py-4"
+			>
+				<span class="leading-[0.6]">Vanchi</span>
+			</a>
 
-		<NavMenu mobileMenu={toggleMenu} />
-	</nav>
-</header>
+			<NavMenu mobileMenu={toggleMenu} />
+		</nav>
+	</header>
+</section>
 
 {#if showMobileMenu}
 	<nav
 		id="mobile-menu"
 		aria-label="Menú móvil"
-		class="fixed inset-0 z-20 flex items-center justify-center bg-black/50 backdrop-blur-xl md:hidden"
+		class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-xl md:hidden"
 		transition:blur={{ duration: 300 }}
 	>
 		<div
