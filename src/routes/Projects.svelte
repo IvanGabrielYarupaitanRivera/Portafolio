@@ -74,7 +74,7 @@
 								href={project.link}
 								target="_blank"
 								rel="noopener noreferrer"
-								class="my-border my-bg my-shadow flex items-center gap-4 border-2 px-4 py-2 text-xs"
+								class="my-border my-bg my-shadow flex items-center gap-4 rounded-xl border-2 px-4 py-2 text-xs"
 							>
 								Ver Proyecto
 								<ExternalLink size={16} />
@@ -83,7 +83,7 @@
 								href={project.github}
 								target="_blank"
 								rel="noopener noreferrer"
-								class="my-border my-bg my-shadow flex items-center gap-4 border-2 px-4 py-2 text-xs"
+								class="my-border my-bg my-shadow flex items-center gap-4 rounded-xl border-2 px-4 py-2 text-xs"
 							>
 								GitHub
 								<Github size={16} />
@@ -96,7 +96,7 @@
 					<footer class="flex flex-wrap gap-2">
 						{#each project.technologies as tech}
 							<span
-								class="border-2 border-sky-800 bg-sky-100 px-3 py-1 text-xs font-medium text-sky-800 hover:bg-sky-300 dark:border-sky-100 dark:bg-sky-900 dark:text-sky-100 hover:dark:bg-sky-600"
+								class="rounded-xl border-2 border-sky-800 bg-sky-100 px-3 py-1 text-xs font-medium text-sky-800 shadow-[5px_5px_0px_rgba(7,89,133,1)] hover:bg-sky-300 dark:border-sky-100 dark:bg-sky-900 dark:text-sky-100 hover:dark:bg-sky-600"
 							>
 								{tech}
 							</span>
