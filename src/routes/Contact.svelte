@@ -40,7 +40,7 @@
 	<form
 		method="POST"
 		action="?/send"
-		class="my-shadow my-border my-component-bg rounded-xl border-2 px-8 pb-12 pt-8 md:px-16"
+		class="my-shadow my-border my-component-bg rounded-xl border-2 px-8 pb-6 pt-8 md:px-16 md:pb-12"
 		use:enhance={handleSubmit}
 	>
 		{#if form && isSending == true}
