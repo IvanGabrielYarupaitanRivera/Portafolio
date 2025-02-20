@@ -70,7 +70,7 @@
 	<Header />
 
 	<!-- Contenido principal -->
-	<main class="container mx-auto flex flex-1 py-6">
+	<main class="container z-10 mx-auto flex flex-1 py-6">
 		<!-- Patrón de cuadrícula -->
 
 		{@render children()}

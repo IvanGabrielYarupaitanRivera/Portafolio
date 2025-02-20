@@ -30,9 +30,9 @@
 </script>
 
 <article class="container mx-auto">
-	<header class="relative">
+	<header class="my-shadow my-border my-bg relative mb-12 rounded-xl border-2 px-8 py-4">
 		<PatternSection />
-		<h2 class="heading-2 my-shadow my-border my-bg mb-12 rounded-xl border-2 px-8 py-4">
+		<h2 class="heading-2 relative z-10">
 			{form?.success ? 'Mensaje Enviado con éxito' : '¡Hablemos!'}
 		</h2>
 	</header>

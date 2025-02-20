@@ -4,7 +4,7 @@
 	const currentYear = new Date().getFullYear();
 </script>
 
-<footer class="my-component-bg my-border border-t-2 px-4 py-6">
+<footer class="my-component-bg my-border z-30 border-t-2 px-4 py-6">
 	<div class="mx-auto flex flex-col items-center gap-4">
 		<div class="flex gap-6">
 			<a
