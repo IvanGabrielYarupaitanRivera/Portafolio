@@ -1,5 +1,4 @@
 <script lang="ts">
-	import PatternSection from '$lib/components/PatternSection.svelte';
 	import ChatPeraltaAsociadosImage from '$lib/images/chatbot-inteligencia-artificial-peralta-asociados.webp?enhanced';
 	import SistemaDeGestionAcademicaImage from '$lib/images/sistema-de-gestion-academica-basica.webp?enhanced';
 	import PeraltaAsociadosImage from '$lib/images/pagina-web-peralta-asociados.webp?enhanced';
@@ -39,7 +38,6 @@
 
 <div class="container mx-auto">
 	<header class="my-shadow my-border my-bg relative mb-12 rounded-xl border-2 px-8 py-4">
-		<PatternSection />
 		<h2 class="heading-2 relative">Proyectos Destacados</h2>
 	</header>
 

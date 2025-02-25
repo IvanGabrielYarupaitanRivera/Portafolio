@@ -3,7 +3,6 @@
 	import type { ActionResult } from '@sveltejs/kit';
 	import { Mail, User, MessageSquare } from 'lucide-svelte';
 	import type { ActionData } from './$types';
-	import PatternSection from '$lib/components/PatternSection.svelte';
 	import ContactImage from '$lib/images/old-phone-contact-form.webp?enhanced';
 
 	let { form }: { form: ActionData } = $props();
@@ -31,7 +30,6 @@
 
 <article class="container mx-auto">
 	<header class="my-shadow my-border my-bg relative mb-12 rounded-xl border-2 px-8 py-4">
-		<PatternSection />
 		<h2 class="heading-2 relative z-10">
 			{form?.success ? 'Mensaje Enviado con éxito' : '¡Hablemos!'}
 		</h2>
