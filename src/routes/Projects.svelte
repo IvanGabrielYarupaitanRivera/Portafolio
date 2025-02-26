@@ -7,7 +7,7 @@
 
 	const projects = [
 		{
-			title: 'Asistente Legal con Inteligencia Artifical',
+			title: 'Asistente Legal con Inteligencia Artificial',
 			description:
 				'Desarrollo e implementación de un asistente legal virtual (chatbot) impulsado por Inteligencia Artificial para el estudio jurídico Peralta Asociados. Esta solución tecnológica proporciona asesoramiento legal automatizado las 24/7, procesando consultas en tiempo real mediante embeddings vectoriales en Supabase. Además, enriquece las interacciones proporcionando enlaces a información relevante. La implementación de búsqueda vectorial optimiza la precisión de las respuestas y mejora significativamente la experiencia del usuario.',
 			technologies: ['SvelteKit', 'Tailwind CSS', 'Supabase Vector', 'OpenRouter'],
