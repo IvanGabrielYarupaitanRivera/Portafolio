@@ -17,7 +17,7 @@ html {
 }
 
 :target {
-	scroll-margin-top: 7rem;
+	scroll-margin-top: 9rem;
 }
 
 @font-face {
