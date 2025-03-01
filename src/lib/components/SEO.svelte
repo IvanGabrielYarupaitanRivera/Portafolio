@@ -52,7 +52,30 @@
 			'Vercel',
 			'Netlify',
 			'Astro'
-		]
+		],
+		worksFor: {
+			'@type': 'Organization',
+			name: 'Freelance'
+		},
+		makesOffer: [
+			{
+				'@type': 'Offer',
+				itemOffered: {
+					'@type': 'Service',
+					name: 'Desarrollo Web Frontend',
+					description: 'Creación de interfaces modernas y responsivas con Svelte y TypeScript'
+				}
+			},
+			{
+				'@type': 'Offer',
+				itemOffered: {
+					'@type': 'Service',
+					name: 'Desarrollo Full Stack',
+					description: 'Soluciones web completas con SvelteKit y Supabase'
+				}
+			}
+		],
+		knowsLanguage: ['es', 'en']
 	};
 </script>
 
