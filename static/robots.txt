@@ -1,3 +1,8 @@
 User-agent: *
 Allow: /
+
+# Agregar enlace al sitemap
 Sitemap: https://www.vanchi.pro/sitemap.xml
+
+# Especificar tasa de rastreo
+Crawl-delay: 10
