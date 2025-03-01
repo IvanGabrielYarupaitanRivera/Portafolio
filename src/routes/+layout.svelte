@@ -20,31 +20,11 @@
 			});
 		});
 	});
-
-	const siteSchemaData = JSON.stringify({
-		'@context': 'https://schema.org',
-		'@type': 'WebSite',
-		name: 'Portafolio de Ivan Gabriel Yarupaitan Rivera',
-		url: 'https://www.vanchi.pro/'
-	});
 </script>
 
 <svelte:head>
 	<meta name="google-site-verification" content="b5MzFocA58lCyfnxQLSfHhJQ8ZgCidavKX9YP88bVbw" />
 	<meta name="robots" content="index, follow" />
-
-	<!-- SEO básico -->
-	<meta name="author" content="Ivan Gabriel Yarupaitan Rivera" />
-
-	<!-- Open Graph / Facebook -->
-	<meta property="og:image" content="%sveltekit.assets%/og-image.jpg" />
-
-	<meta name="geo.region" content="PE-JUN" />
-	<meta name="geo.placename" content="Junín" />
-
-	<!-- Twitter -->
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:image" content="%sveltekit.assets%/og-image.jpg" />
 </svelte:head>
 
 <div class="relative flex min-h-screen flex-col bg-green-100 dark:bg-neutral-950">
