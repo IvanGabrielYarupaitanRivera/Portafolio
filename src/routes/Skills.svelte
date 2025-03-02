@@ -183,13 +183,19 @@
 			<button
 				class={frontendSkill ? classActiveSkill.active : classActiveSkill.inactive}
 				onclick={showFrontendSkills}
+				aria-label="Mostrar habilidades de Frontend"
+				role="tab"
+				type="button"
 			>
 				<Code size={18} />
-				<span class="hidden md:flex">Frontend</span>
+				<span class="s hidden md:flex">Frontend</span>
 			</button>
 			<button
 				class={backendSkill ? classActiveSkill.active : classActiveSkill.inactive}
 				onclick={showBackendSkills}
+				aria-label="Mostrar habilidades de Backend"
+				role="tab"
+				type="button"
 			>
 				<Database size={18} />
 				<span class="hidden md:flex">Backend</span>
@@ -197,6 +203,9 @@
 			<button
 				class={deploymentSkill ? classActiveSkill.active : classActiveSkill.inactive}
 				onclick={showDeploymentSkills}
+				aria-label="Mostrar habilidades de Despliegue"
+				role="tab"
+				type="button"
 			>
 				<Rocket size={18} />
 				<span class="hidden md:flex">Deployment</span>
@@ -204,6 +213,9 @@
 			<button
 				class={otherSkill ? classActiveSkill.active : classActiveSkill.inactive}
 				onclick={showOtherSkills}
+				aria-label="Mostrar otras habilidades"
+				role="tab"
+				type="button"
 			>
 				<PocketKnife size={18} />
 				<span class="hidden md:flex">Otras</span>
