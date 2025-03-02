@@ -8,6 +8,7 @@
 
 	const menuItems = [
 		{ href: '#proyectos', text: 'Proyectos' },
+		{ href: '#habilidades', text: 'Habilidades' },
 		{ href: '#contacto', text: 'Contacto' }
 	];
 

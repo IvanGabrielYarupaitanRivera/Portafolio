@@ -3,6 +3,7 @@
 	import HeroSection from './HeroSection.svelte';
 	import Projects from './Projects.svelte';
 	import Contact from './Contact.svelte';
+	import Skills from './Skills.svelte';
 
 	let { form } = $props();
 </script>
@@ -24,6 +25,10 @@
 
 	<section aria-label="Proyectos destacados" id="proyectos">
 		<Projects />
+	</section>
+
+	<section aria-label="Habilidades" id="habilidades">
+		<Skills />
 	</section>
 
 	<section class="mb-16" aria-label="Formulario de contacto" id="contacto">

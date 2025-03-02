@@ -5,10 +5,10 @@
 	let { mobileMenu } = $props();
 
 	let isMenuOpen = $state(false);
-	let isCloseMenuByNav = $state(false);
 
 	const menuItems = [
 		{ href: '#proyectos', text: 'Proyectos' },
+		{ href: '#habilidades', text: 'Habilidades' },
 		{ href: '#contacto', text: 'Contacto' }
 	];
 
