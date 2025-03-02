@@ -185,32 +185,34 @@
 				onclick={showFrontendSkills}
 			>
 				<Code size={18} />
-				Frontend
+				<span class="hidden md:flex">Frontend</span>
 			</button>
 			<button
 				class={backendSkill ? classActiveSkill.active : classActiveSkill.inactive}
 				onclick={showBackendSkills}
 			>
 				<Database size={18} />
-				Backend
+				<span class="hidden md:flex">Backend</span>
 			</button>
 			<button
 				class={deploymentSkill ? classActiveSkill.active : classActiveSkill.inactive}
 				onclick={showDeploymentSkills}
 			>
 				<Rocket size={18} />
-				Deployment
+				<span class="hidden md:flex">Deployment</span>
 			</button>
 			<button
 				class={otherSkill ? classActiveSkill.active : classActiveSkill.inactive}
 				onclick={showOtherSkills}
 			>
 				<PocketKnife size={18} />
-				Otras
+				<span class="hidden md:flex">Otras</span>
 			</button>
 		</nav>
 
-		<section class="my-component-bg my-border my-shadow relative rounded-xl border-2 p-8">
+		<section
+			class="my-component-bg my-border my-shadow relative rounded-xl border-2 px-8 pb-12 pt-8"
+		>
 			<!-- Título dinámico de la sección -->
 			<h3 class="mb-6 text-xl font-bold">
 				{#if frontendSkill}
@@ -232,9 +234,7 @@
 				{:else if otherSkill}
 					<section in:blur class="flex items-center gap-2">
 						<PocketKnife size={20} class="text-green-700" />
-						<span
-							>Herramientas <mark class="bg-transparent text-green-700">Complementarias</mark></span
-						>
+						<span>Herramientas <mark class="bg-transparent text-green-700">Varias</mark></span>
 					</section>
 				{/if}
 			</h3>
@@ -333,76 +333,6 @@
 					{/each}
 				</ul>
 			{/if}
-
-			<!-- Texto descriptivo -->
-			<footer class="mt-10 border-t border-neutral-100 pt-6">
-				<blockquote class="relative flex flex-col gap-4 pl-6 md:pl-8">
-					<!-- Línea decorativa -->
-					<div class="absolute inset-y-0 left-0 flex items-center">
-						<div class="h-full w-2 rounded-full bg-green-500"></div>
-					</div>
-
-					<!-- Contenido dinámico con transición -->
-					{#if frontendSkill}
-						<div in:blur>
-							<h4 class="mb-2 text-base font-bold md:text-lg">Desarrollo Frontend</h4>
-							<p class="text-sm text-gray-700 md:text-base">
-								<strong class="font-semibold text-green-700"
-									>Especializado en interfaces modernas y responsivas
-								</strong>
-								con
-								<span class="font-medium">HTML</span>,
-								<span class="font-medium">JavaScript</span>
-								y
-								<span class="font-medium">TypeScript</span>. Creo experiencias web rápidas y
-								accesibles usando
-								<span class="font-medium">SvelteKit</span> y <span class="font-medium">Astro</span>,
-								con estilos optimizados mediante <span class="font-medium">Tailwind CSS</span>.
-							</p>
-						</div>
-					{:else if backendSkill}
-						<div in:blur>
-							<h4 class="mb-2 text-base font-bold md:text-lg">Servicios Backend</h4>
-							<p class="text-sm text-gray-700 md:text-base">
-								<strong class="font-semibold text-green-700"
-									>Implementación avanzada de Supabase</strong
-								>
-								para crear servicios backend completos. Experiencia en el uso de
-								<span class="font-medium">PostgreSQL</span> y módulos de Supabase como
-								<span class="font-medium">Database</span>, <span class="font-medium">Auth</span>,
-								<span class="font-medium">Realtime</span> y <span class="font-medium">Vector</span> para
-								aplicaciones escalables.
-							</p>
-						</div>
-					{:else if deploymentSkill}
-						<div in:blur>
-							<h4 class="mb-2 text-base font-bold md:text-lg">Plataformas de Despliegue</h4>
-							<p class="text-sm text-gray-700 md:text-base">
-								<strong class="font-semibold text-green-700">Automatización de despliegues</strong>
-								en plataformas como <span class="font-medium">Vercel</span>,
-								<span class="font-medium">Netlify</span>,
-								<span class="font-medium">GitHub Pages</span> y
-								<span class="font-medium">Cloudflare</span>. Configuración de CI/CD para garantizar
-								implementaciones continuas y optimización del rendimiento.
-							</p>
-						</div>
-					{:else if otherSkill}
-						<div in:blur={{ duration: 300 }}>
-							<h4 class="mb-2 text-base font-bold md:text-lg">Herramientas Complementarias</h4>
-							<p class="text-sm text-gray-700 md:text-base">
-								<strong class="font-semibold text-green-700"
-									>Dominio de herramientas esenciales</strong
-								>
-								para un desarrollo completo. Utilizo <span class="font-medium">Figma</span> para
-								diseño UX/UI, implemento estrategias de <span class="font-medium">SEO</span>,
-								integro <span class="font-medium">OpenRouter</span>
-								para IA y gestiono proyectos con <span class="font-medium">GitHub</span> para control
-								de versiones.
-							</p>
-						</div>
-					{/if}
-				</blockquote>
-			</footer>
 		</section>
 	</section>
 </div>
