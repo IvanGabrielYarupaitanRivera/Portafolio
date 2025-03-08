@@ -38,7 +38,7 @@
 	<form
 		method="POST"
 		action="?/send"
-		class="my-shadow my-border my-component-bg rounded-xl border-2 px-8 pb-6 pt-8 md:px-16 md:pb-12"
+		class="my-shadow my-border my-component-bg rounded-xl border-2 px-8 pt-8 pb-6 md:px-16 md:pb-12"
 		use:enhance={handleSubmit}
 	>
 		{#if form && isSending == true}
@@ -82,7 +82,7 @@
 							name="user_name"
 							required
 							placeholder="Escribe tu nombre"
-							class="my-border my-shadow p mt-2 w-full rounded-xl border-2 bg-green-100 p-3 focus:outline-none dark:bg-neutral-950"
+							class="my-border my-shadow p mt-2 w-full rounded-xl border-2 bg-green-100 p-3 focus:outline-none"
 						/>
 					</div>
 
@@ -98,7 +98,7 @@
 							name="user_email"
 							required
 							placeholder="Escribe tu email"
-							class="my-border my-shadow p mt-2 w-full rounded-xl border-2 bg-green-100 p-3 focus:outline-none dark:bg-neutral-950"
+							class="my-border my-shadow p mt-2 w-full rounded-xl border-2 bg-green-100 p-3 focus:outline-none"
 						/>
 					</div>
 
@@ -114,13 +114,13 @@
 							rows="5"
 							required
 							placeholder="Escribe tu mensaje"
-							class="my-border my-shadow p mt-2 w-full resize-none rounded-xl border-2 bg-green-100 p-3 focus:outline-none dark:bg-neutral-950"
+							class="my-border my-shadow p mt-2 w-full resize-none rounded-xl border-2 bg-green-100 p-3 focus:outline-none"
 						></textarea>
 					</div>
 
 					<button
 						type="submit"
-						class="my-effect my-border my-bg p my-shadow mb-6 mt-12 flex w-full items-center justify-center overflow-hidden rounded-xl border-2 px-6 py-3 font-bold"
+						class="my-effect my-border my-bg p my-shadow mt-12 mb-6 flex w-full items-center justify-center overflow-hidden rounded-xl border-2 px-6 py-3 font-bold"
 						disabled={isSending}
 					>
 						{isSending ? 'Enviando...' : 'Enviar mensaje'}

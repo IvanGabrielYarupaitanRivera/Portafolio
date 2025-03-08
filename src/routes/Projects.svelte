@@ -50,7 +50,7 @@
 					<Circle class="my-effect fill-yellow-500 stroke-yellow-500" size={20}></Circle>
 				</header>
 
-				<figure class="my-border relative aspect-video overflow-hidden border-b-2 border-t-2">
+				<figure class="my-border relative aspect-video overflow-hidden border-t-2 border-b-2">
 					<enhanced:img
 						src={project.image}
 						alt={project.title}
@@ -62,7 +62,7 @@
 					/>
 				</figure>
 
-				<section class="px-8 pb-8 pt-4">
+				<section class="px-8 pt-4 pb-8">
 					<header>
 						<h3 class="heading-3 mb-2">{project.title}</h3>
 						<div class="mb-8 flex w-full gap-4">
@@ -92,7 +92,7 @@
 					<footer class="flex flex-wrap gap-2">
 						{#each project.technologies as tech}
 							<span
-								class="rounded-xl border-2 border-sky-800 bg-sky-100 px-3 py-1 text-xs font-medium text-sky-800 shadow-[5px_5px_0px_rgba(7,89,133,1)] hover:bg-sky-300 dark:border-sky-100 dark:bg-sky-900 dark:text-sky-100 hover:dark:bg-sky-600"
+								class="rounded-xl border-2 border-sky-800 bg-sky-100 px-3 py-1 text-xs font-medium text-sky-800 shadow-[5px_5px_0px_rgba(7,89,133,1)] hover:bg-sky-300"
 							>
 								{tech}
 							</span>

@@ -27,14 +27,14 @@
 	<meta name="robots" content="index, follow" />
 </svelte:head>
 
-<div class="relative flex min-h-screen flex-col bg-green-100 dark:bg-neutral-950">
+<div class="relative flex min-h-screen flex-col bg-green-100">
 	<Pattern />
 
 	<!-- Header con navegación -->
 	<Header />
 
 	<!-- Contenido principal -->
-	<main class="container z-10 mx-auto flex flex-1 py-6">
+	<main class="z-10 container mx-auto flex flex-1 py-6">
 		{@render children()}
 	</main>
 
