@@ -39,7 +39,7 @@ function validarMensaje(message: string) {
 	}
 
 	if (mensajeLimpio.length < 10) {
-		throw new Error('El mensaje debe tener al menos 5 caracteres');
+		throw new Error('El mensaje debe tener al menos 10 caracteres');
 	}
 
 	if (mensajeLimpio.length > 500) {
