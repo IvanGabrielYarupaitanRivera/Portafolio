@@ -1,6 +1,11 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import 'tailwindcss';
+
+@theme {
+	--font-sans: Satoshi, sans-serif;
+	--font-cabinet: 'Cabinet Grotesk', sans-serif;
+
+	--color-primary: oklch(0.45 0.22 148); /* Verde personalizado */
+}
 
 * {
 	transition:
@@ -50,19 +55,19 @@ html {
 
 @layer components {
 	.heading-1 {
-		@apply text-pretty font-cabinet text-5xl font-extrabold text-neutral-950 md:text-6xl dark:text-neutral-50;
+		@apply font-cabinet text-5xl font-extrabold text-pretty text-neutral-950 md:text-6xl;
 	}
 
 	.heading-2 {
-		@apply text-pretty font-cabinet text-3xl font-bold text-neutral-950 md:text-4xl dark:text-neutral-50;
+		@apply font-cabinet text-3xl font-bold text-pretty text-neutral-950 md:text-4xl;
 	}
 
 	.heading-3 {
-		@apply text-pretty font-cabinet text-xl font-bold text-neutral-950 md:text-2xl dark:text-neutral-50;
+		@apply font-cabinet text-xl font-bold text-pretty text-neutral-950 md:text-2xl;
 	}
 
 	.p {
-		@apply text-pretty text-base text-neutral-800 md:text-lg dark:text-neutral-200;
+		@apply text-base text-pretty text-neutral-800 md:text-lg;
 	}
 
 	.my-border {
@@ -70,31 +75,31 @@ html {
 	}
 
 	.my-bg {
-		@apply bg-green-500 hover:bg-green-600 dark:bg-green-700 dark:hover:bg-green-500;
+		@apply bg-green-500 hover:bg-green-600;
 	}
 
 	.my-component-bg {
-		@apply bg-white/80 backdrop-blur-xl dark:bg-black/50;
+		@apply bg-white/80 backdrop-blur-xl;
 	}
 
 	.my-active-bg {
-		@apply bg-sky-500 hover:bg-sky-600 dark:bg-sky-700 dark:hover:bg-sky-600;
+		@apply bg-sky-500 hover:bg-sky-600;
 	}
 
 	.my-effect {
-		@apply hover:-translate-y-0.5 hover:translate-x-0.5 active:translate-x-0 active:translate-y-0;
+		@apply hover:translate-x-0.5 hover:-translate-y-0.5 active:translate-x-0 active:translate-y-0;
 	}
 
 	.my-stroke {
-		@apply stroke-green-950 dark:stroke-green-950;
+		@apply stroke-green-950;
 	}
 
 	.my-stroke-icon {
-		@apply stroke-neutral-800 dark:stroke-neutral-200;
+		@apply stroke-neutral-800;
 	}
 
 	.my-span {
-		@apply text-sky-800 dark:text-sky-400;
+		@apply text-sky-800;
 	}
 
 	.my-shadow {
