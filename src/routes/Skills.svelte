@@ -165,9 +165,9 @@
 
 	const classActiveSkill = {
 		active:
-			'my-border my-bg my-shadow flex items-center gap-2 rounded-xl border-2 px-4 py-3 font-bold',
+			'my-border my-bg my-shadow flex items-center gap-2 rounded-xl border-2 px-4 py-3 font-bold cursor-pointer',
 		inactive:
-			'my-border bg-white my-shadow flex items-center gap-2 rounded-xl border-2 px-4 py-3 font-bold'
+			'my-border bg-white my-shadow flex items-center gap-2 rounded-xl border-2 px-4 py-3 font-bold cursor-pointer'
 	};
 </script>
 
@@ -219,7 +219,7 @@
 		</nav>
 
 		<section
-			class="my-component-bg my-border my-shadow relative rounded-xl border-2 px-8 pb-12 pt-8"
+			class="my-component-bg my-border my-shadow relative rounded-xl border-2 px-8 pt-8 pb-12"
 		>
 			<!-- Título dinámico de la sección -->
 			<h3 class="mb-6 text-xl font-bold">
