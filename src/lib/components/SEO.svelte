@@ -5,7 +5,7 @@
 		keywords,
 		url,
 		type,
-		image = '%sveltekit.assets%/og-image.jpg'
+		image = 'https://www.vanchi.pro/og-image.jpg'
 	}: {
 		title: string;
 		description: string;
