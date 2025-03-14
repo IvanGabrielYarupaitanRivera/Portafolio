@@ -49,7 +49,7 @@
 					<p class="p">Me pondré en contacto contigo lo antes posible</p>
 					<button
 						onclick={resetForm}
-						class="my-effect my-border my-bg p my-shadow rounded-xl border-2 px-6 py-3 font-bold"
+						class=" my-border my-bg p my-shadow rounded-xl border-2 px-6 py-3 font-bold"
 						>Enviar otro mensaje</button
 					>
 				</section>
@@ -60,7 +60,7 @@
 					<p class="p">{form.message}</p>
 					<button
 						onclick={resetForm}
-						class="my-effect my-border my-bg p my-shadow rounded-xl border-2 px-6 py-3 font-bold"
+						class=" my-border my-bg p my-shadow rounded-xl border-2 px-6 py-3 font-bold"
 						>Intentar de nuevo</button
 					>
 				</section>
@@ -120,7 +120,7 @@
 
 					<button
 						type="submit"
-						class="my-effect my-border my-bg p my-shadow mt-12 mb-6 flex w-full items-center justify-center overflow-hidden rounded-xl border-2 px-6 py-3 font-bold"
+						class=" my-border my-bg p my-shadow mt-12 mb-6 flex w-full items-center justify-center overflow-hidden rounded-xl border-2 px-6 py-3 font-bold"
 						disabled={isSending}
 					>
 						{isSending ? 'Enviando...' : 'Enviar mensaje'}

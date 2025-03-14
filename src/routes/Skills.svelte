@@ -258,7 +258,7 @@
 					{#each skillGroups[0].skills as skill}
 						<li>
 							<article
-								class="my-effect my-shadow my-border flex flex-col items-center rounded-xl border-2 p-4 text-center"
+								class="my-shadow my-border my-effect flex cursor-pointer flex-col items-center rounded-xl border-2 p-4 text-center"
 							>
 								<header class="mb-6 flex h-10 w-10 md:h-16 md:w-16">
 									<img src={skill.logo} alt={skill.name} aria-hidden="true" class="w-full" />
@@ -281,7 +281,7 @@
 					{#each skillGroups[1].skills as skill}
 						<li>
 							<article
-								class="my-effect my-shadow my-border flex flex-col items-center rounded-xl border-2 p-4 text-center"
+								class="my-shadow my-border my-effect flex flex-col items-center rounded-xl border-2 p-4 text-center"
 							>
 								<header class="mb-6 flex h-10 w-10 md:h-16 md:w-16">
 									<img src={skill.logo} alt={skill.name} aria-hidden="true" class="w-full" />
@@ -304,7 +304,7 @@
 					{#each skillGroups[2].skills as skill}
 						<li>
 							<article
-								class="my-effect my-shadow my-border flex flex-col items-center rounded-xl border-2 p-4 text-center"
+								class="my-shadow my-border my-effect flex flex-col items-center rounded-xl border-2 p-4 text-center"
 							>
 								<header class="mb-6 flex h-10 w-10 md:h-16 md:w-16">
 									<img src={skill.logo} alt={skill.name} aria-hidden="true" class="w-full" />
@@ -327,7 +327,7 @@
 					{#each skillGroups[3].skills as skill}
 						<li>
 							<article
-								class="my-effect my-shadow my-border flex flex-col items-center rounded-xl border-2 p-4 text-center"
+								class="my-shadow my-border my-effect flex flex-col items-center rounded-xl border-2 p-4 text-center"
 							>
 								<header class="mb-6 flex h-10 w-10 md:h-16 md:w-16">
 									<img src={skill.logo} alt={skill.name} aria-hidden="true" class="w-full" />

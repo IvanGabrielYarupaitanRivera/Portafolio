@@ -4,7 +4,7 @@
 
 <section class="relative" aria-labelledby="hero-title">
 	<header class="mb-8 flex justify-center">
-		<figure class="my-bg my-effect my-border my-shadow rounded-xl border-4 p-2 text-green-950">
+		<figure class="my-bg my-border my-shadow rounded-xl border-4 p-2 text-green-950">
 			<Bot size={50} strokeWidth={2} aria-hidden="true" />
 		</figure>
 	</header>
@@ -23,14 +23,14 @@
 		<nav class="flex flex-wrap justify-center gap-4" aria-label="Navegación principal">
 			<a
 				href="#proyectos"
-				class="my-effect my-border my-bg p my-shadow rounded-xl border-2 px-6 py-3 font-bold"
+				class="  my-border my-bg p my-shadow rounded-xl border-2 px-6 py-3 font-bold"
 				role="button"
 			>
 				Ver Proyectos
 			</a>
 			<a
 				href="#contacto"
-				class="my-border p my-effect my-shadow my-active-bg rounded-xl border-2 px-6 py-3 font-bold"
+				class="my-border p my-shadow my-active-bg rounded-xl border-2 px-6 py-3 font-bold"
 				role="button"
 			>
 				Contáctame

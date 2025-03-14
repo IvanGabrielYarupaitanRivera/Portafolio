@@ -15,14 +15,14 @@
 	const toggleMenu = () => (showMobileMenu = !showMobileMenu);
 </script>
 
-<section class="container sticky top-2 z-30 mx-auto mt-2">
+<section class="sticky top-2 z-30 container mx-auto mt-2">
 	<header
-		class="my-shadow my-component-bg my-border ml-3 mr-4 rounded-xl border-2 pb-6 pl-6 pr-8 pt-4"
+		class="my-shadow my-component-bg my-border mr-4 ml-3 rounded-xl border-2 pt-4 pr-8 pb-6 pl-6"
 	>
 		<nav class="flex justify-between" aria-label="navegación principal ">
 			<a
 				href="/"
-				class="my-border heading-3 my-shadow left-0 right-0 top-0 flex items-center rounded-xl border-2 bg-green-500 px-4 py-4 hover:bg-green-500"
+				class="my-border heading-3 my-shadow top-0 right-0 left-0 flex items-center rounded-xl border-2 bg-green-500 px-4 py-4 hover:bg-green-500"
 			>
 				<span class="leading-[0.6]">Vanchi</span>
 			</a>
@@ -46,7 +46,7 @@
 		>
 			<button
 				type="button"
-				class="my-effect my-bg my-border my-shadow absolute -right-6 -top-6 rounded-xl border-2 p-2"
+				class=" my-bg my-border my-shadow absolute -top-6 -right-6 rounded-xl border-2 p-2"
 				aria-label="Cerrar menú"
 				onclick={() => {
 					toggleMenu();
@@ -64,7 +64,7 @@
 								showMobileMenu = false;
 							}}
 							href={item.href}
-							class="my-effect p relative block rounded-lg px-4 py-2 font-bold"
+							class="p relative block rounded-lg px-4 py-2 font-bold"
 						>
 							{item.text}
 						</a>

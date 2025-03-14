@@ -45,9 +45,9 @@
 		{#each projects as project}
 			<article class="my-shadow my-border my-component-bg rounded-xl border-2">
 				<header class="flex flex-row justify-end gap-1 p-2">
-					<Circle class="my-effect fill-green-500 stroke-green-500" size={20}></Circle>
-					<Circle class="my-effect fill-red-500 stroke-red-500" size={20}></Circle>
-					<Circle class="my-effect fill-yellow-500 stroke-yellow-500" size={20}></Circle>
+					<Circle class="fill-green-500 stroke-green-500" size={20}></Circle>
+					<Circle class="fill-red-500 stroke-red-500" size={20}></Circle>
+					<Circle class="fill-yellow-500 stroke-yellow-500" size={20}></Circle>
 				</header>
 
 				<figure class="my-border relative aspect-video overflow-hidden border-t-2 border-b-2">

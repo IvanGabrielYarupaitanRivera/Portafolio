@@ -23,7 +23,7 @@
 		<ul class="flex gap-6">
 			{#each menuItems as item}
 				<li>
-					<a href={item.href} class="my-effect p relative block rounded-lg px-4 py-2 font-bold">
+					<a href={item.href} class="p relative block rounded-lg px-4 py-2 font-bold">
 						{item.text}
 					</a>
 				</li>
@@ -35,7 +35,7 @@
 	<div class="flex items-center md:hidden">
 		<button
 			type="button"
-			class="my-border my-effect my-shadow my-bg rounded-xl border-2 p-2"
+			class="my-border my-shadow my-bg rounded-xl border-2 p-2"
 			aria-expanded={isMenuOpen}
 			aria-label={isMenuOpen ? 'Cerrar menú principal' : 'Abrir menú principal'}
 			onclick={mobileMenu}

@@ -3,46 +3,17 @@
 @theme {
 	--font-sans: Satoshi, sans-serif;
 	--font-cabinet: 'Cabinet Grotesk', sans-serif;
-
-	--color-primary: oklch(0.45 0.22 148); /* Verde personalizado */
-}
-
-* {
-	transition:
-		background-color 1s ease-out,
-		color 1s ease-out,
-		border 1s ease-out,
-		transform 0.4s ease-out,
-		box-shadow 1s ease-out,
-		stroke 0.4s ease-out;
 }
 
 html {
 	scroll-behavior: smooth;
-}
-
-:target {
-	scroll-margin-top: 9rem;
+	scroll-padding-top: 9rem;
 }
 
 @font-face {
 	font-family: 'Satoshi';
 	src: url('/fonts/Satoshi-Regular.woff2') format('woff2');
 	font-weight: 400;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'Satoshi';
-	src: url('/fonts/Satoshi-Medium.woff2') format('woff2');
-	font-weight: 500;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'Satoshi';
-	src: url('/fonts/Satoshi-Bold.woff2') format('woff2');
-	font-weight: 700;
 	font-display: swap;
 }
 
@@ -75,7 +46,7 @@ html {
 	}
 
 	.my-bg {
-		@apply bg-green-500 hover:bg-green-600;
+		@apply bg-green-500 transition-colors duration-700 ease-out hover:bg-green-600;
 	}
 
 	.my-component-bg {
@@ -83,15 +54,15 @@ html {
 	}
 
 	.my-active-bg {
-		@apply bg-sky-500 hover:bg-sky-600;
-	}
-
-	.my-effect {
-		@apply hover:translate-x-0.5 hover:-translate-y-0.5 active:translate-x-0 active:translate-y-0;
+		@apply bg-sky-500 transition-colors duration-700 ease-out hover:bg-sky-600;
 	}
 
 	.my-stroke {
 		@apply stroke-green-950;
+	}
+
+	.my-effect {
+		@apply transition-transform duration-700 ease-out hover:translate-x-1 hover:-translate-y-1;
 	}
 
 	.my-stroke-icon {
