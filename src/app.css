@@ -37,6 +37,10 @@ html {
 		@apply font-cabinet text-xl font-bold text-pretty text-neutral-950 md:text-2xl;
 	}
 
+	.heading-4 {
+		@apply font-cabinet text-lg font-bold text-pretty text-neutral-900 md:text-xl;
+	}
+
 	.p {
 		@apply text-base text-pretty text-neutral-800 md:text-lg;
 	}
