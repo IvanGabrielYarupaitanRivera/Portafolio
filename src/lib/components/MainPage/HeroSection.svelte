@@ -22,7 +22,7 @@
 				</h1>
 			</div>
 
-			<p class="p max-w-prose text-pretty">
+			<p class="p mx-auto max-w-xs md:max-w-md lg:max-w-lg">
 				<strong>Desarrollador web</strong> freelance que crea
 				<strong>sitios y aplicaciones web</strong>
 				profesionales para impulsar tu negocio con soluciones de <strong>desarrollo web</strong> a medida.
@@ -32,22 +32,24 @@
 		<nav class="mt-2 flex flex-wrap justify-center gap-4 md:mt-4" aria-label="Navegación principal">
 			<a
 				href="#servicios"
-				class="my-border my-bg p my-shadow rounded-xl border-2 px-6 py-3 font-bold"
-				role="button"
+				class="my-border my-bg p my-shadow rounded-xl border-2 px-6 py-3 font-bold focus:ring-2 focus:ring-green-700 focus:ring-offset-2 focus:outline-none"
 			>
 				Ver Servicios
 			</a>
 			<a
 				href="#contacto"
-				class="my-border p my-shadow my-active-bg rounded-xl border-2 px-6 py-3 font-bold"
-				role="button"
+				class="my-border my-active-bg p my-shadow rounded-xl border-2 px-6 py-3 font-bold focus:ring-2 focus:ring-blue-700 focus:ring-offset-2 focus:outline-none"
 			>
 				Solicitar Presupuesto
 			</a>
 		</nav>
 
 		<a href="#servicios" aria-label="Ver mis servicios de desarrollo web">
-			<ChevronDown size={25} aria-hidden="true" class="my-stroke mt-12 animate-bounce md:mt-16" />
+			<ChevronDown
+				size={25}
+				aria-hidden="true"
+				class="my-stroke mt-12 animate-bounce   motion-reduce:animate-none md:mt-16"
+			/>
 		</a>
 	</main>
 </section>
