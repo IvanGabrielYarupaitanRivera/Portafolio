@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Seo from '$lib/components/SEO.svelte';
 	import HeroSection from '$lib/components/MainPage/HeroSection.svelte';
+	import Services from '$lib/components/MainPage/Services.svelte';
 	import Projects from '$lib/components/MainPage/Projects.svelte';
 	import Contact from '$lib/components/MainPage/Contact.svelte';
 	import Skills from '$lib/components/MainPage/Skills.svelte';
@@ -21,6 +22,10 @@
 
 	<section class="mt-16 md:px-36" aria-label="Introducción y presentación">
 		<HeroSection />
+	</section>
+
+	<section aria-label="Servicios ofrecidos" id="servicios">
+		<Services />
 	</section>
 
 	<section aria-label="Proyectos destacados" id="proyectos">
