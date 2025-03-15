@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { SquareDashedBottomCode, ChevronDown, Bot } from 'lucide-svelte';
+	import { ChevronDown, Bot } from 'lucide-svelte';
 </script>
 
 <section class="relative" aria-labelledby="hero-title">
