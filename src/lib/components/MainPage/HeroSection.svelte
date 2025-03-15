@@ -1,19 +1,7 @@
 <script lang="ts">
-	import { Code, ChevronDown, Globe, Bot } from 'lucide-svelte';
+	import { ChevronDown, Bot } from 'lucide-svelte';
 
 	const mainKeyword = $state('Desarrollo Web');
-
-	const secondaryKeywords = $state(['Diseño Web', 'Programación Web', 'Full Stack', 'Páginas Web']);
-
-	let currentIndex = $state(0);
-
-	$effect(() => {
-		const interval = setInterval(() => {
-			currentIndex = (currentIndex + 1) % secondaryKeywords.length;
-		}, 2500);
-
-		return () => clearInterval(interval);
-	});
 </script>
 
 <section class="relative" aria-labelledby="hero-title">
@@ -24,21 +12,21 @@
 	</header>
 
 	<main class="flex flex-col items-center gap-8 text-center">
-		<header class="flex flex-col gap-2">
-			<h1 id="hero-title" class="heading-1">
-				Servicios de
-				<span class="my-span"> {mainKeyword}</span>
-			</h1>
+		<header class="relative flex flex-col gap-12">
+			<div class="relative">
+				<h1 id="hero-title" class="heading-1 relative z-10">
+					Servicios de
+					<span class="my-span relative font-black">
+						{mainKeyword}
+						<span class="absolute -bottom-1 left-0 -z-10 h-3 w-full bg-sky-300"></span>
+					</span>
+				</h1>
+			</div>
 
-			<p class="m-0 p-0 text-xl font-bold">
-				Especializado en
-				<span class="my-span">{secondaryKeywords[currentIndex]}</span>
-			</p>
-
-			<p class="p max-w-prose">
-				Desarrollador web freelance especializado en crear sitios y aplicaciones web profesionales
-				que impulsan tu negocio. Ofrezco soluciones completas de desarrollo web y programación a
-				medida.
+			<p class="p max-w-prose text-pretty">
+				<strong>Desarrollador web</strong> freelance que crea
+				<strong>sitios y aplicaciones web</strong>
+				profesionales para impulsar tu negocio con soluciones de <strong>desarrollo web</strong> a medida.
 			</p>
 		</header>
 
