@@ -171,7 +171,32 @@
 			'Netlify',
 			'Astro'
 		],
-		knowsLanguage: ['es', 'en']
+		knowsLanguage: ['es', 'en'],
+		geo: {
+			'@type': 'GeoCoordinates',
+			latitude: -12.041545380185886,
+			longitude: -75.19187545630611
+		},
+		logo: 'https://vanchi.pro/logo.png',
+		additionalType: [
+			'http://www.productontology.org/id/Web_development',
+			'http://www.productontology.org/id/Software_development'
+		],
+		isicV4: '6201',
+		amenityFeature: [
+			{
+				'@type': 'LocationFeatureSpecification',
+				name: 'Servicios Remotos',
+				value: true
+			},
+			{
+				'@type': 'LocationFeatureSpecification',
+				name: 'Reuniones virtuales',
+				value: true
+			}
+		],
+		paymentAccepted: 'Transferencia bancaria, Yape, Efectivo',
+		serviceType: ['Desarrollo Web', 'Desarrollo Full Stack', 'Diseño UI/UX']
 	};
 </script>
 
