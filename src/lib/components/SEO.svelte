@@ -17,19 +17,89 @@
 
 	const schema = {
 		'@context': 'https://schema.org',
-		'@type': 'Person',
-		name: 'Ivan Gabriel Yarupaitan Rivera',
+		'@type': 'ProfessionalService',
+		'@id': url,
+		name: 'Ivan Gabriel Yarupaitan Rivera - Servicios de Desarrollo Web',
 		alternateName: 'Vanchi',
 		jobTitle: 'Programador de aplicaciones web',
 		url: url,
 		image: image,
 		description: description,
-		knowsAbout: keywords.split(', '),
+		priceRange: '$$',
+		telephone: '+51985942670',
+		email: 'ivangyr321@gmail.com',
+		address: {
+			'@type': 'PostalAddress',
+			addressRegion: 'Junín',
+			addressCountry: 'PE'
+		},
+		founder: {
+			'@type': 'Person',
+			name: 'Ivan Gabriel Yarupaitan Rivera',
+			jobTitle: 'Desarrollador Web Full Stack',
+			knowsAbout: [
+				'Svelte',
+				'SvelteKit',
+				'TypeScript',
+				'JavaScript',
+				'CSS',
+				'HTML',
+				'Supabase',
+				'Frontend',
+				'UI/UX',
+				'Tailwind',
+				'Vercel',
+				'Netlify',
+				'Astro'
+			]
+		},
 		sameAs: [
 			'https://github.com/IvanGabrielYarupaitanRivera',
 			'https://www.linkedin.com/in/ivan-yarupaitan-rivera/',
-			'https://www.facebook.com/ivan.yarupaitan'
+			'https://www.facebook.com/vanchi.programador'
 		],
+		hasOfferCatalog: {
+			'@type': 'OfferCatalog',
+			name: 'Servicios de Desarrollo Web Profesional',
+			itemListElement: [
+				{
+					'@type': 'Offer',
+					itemOffered: {
+						'@type': 'Service',
+						name: 'Desarrollo de Páginas Web',
+						description:
+							'Creación de páginas web modernas, responsivas y optimizadas para SEO y conversión de clientes'
+					}
+				},
+				{
+					'@type': 'Offer',
+					itemOffered: {
+						'@type': 'Service',
+						name: 'Desarrollo de Aplicaciones Web',
+						description:
+							'Aplicaciones web interactivas y funcionales con tecnologías modernas para negocios y startups'
+					}
+				},
+				{
+					'@type': 'Offer',
+					itemOffered: {
+						'@type': 'Service',
+						name: 'Desarrollo Full Stack',
+						description:
+							'Soluciones web completas desde el frontend hasta el backend con las tecnologías más modernas del mercado'
+					}
+				},
+				{
+					'@type': 'Offer',
+					itemOffered: {
+						'@type': 'Service',
+						name: 'Diseño y Programación Web',
+						description:
+							'Interfaces atractivas y código optimizado para una experiencia de usuario excepcional y máxima velocidad de carga'
+					}
+				}
+			]
+		},
 		workLocation: {
 			'@type': 'Place',
 			address: {
@@ -37,6 +107,54 @@
 				addressRegion: 'Junín',
 				addressCountry: 'PE'
 			}
+		},
+		areaServed: [
+			{
+				'@type': 'City',
+				name: 'Huancayo',
+				containedInPlace: {
+					'@type': 'AdministrativeArea',
+					name: 'Junín',
+					containedInPlace: {
+						'@type': 'Country',
+						name: 'Perú'
+					}
+				}
+			},
+			{
+				'@type': 'City',
+				name: 'Huancavelica',
+				containedInPlace: {
+					'@type': 'AdministrativeArea',
+					name: 'Huancavelica',
+					containedInPlace: {
+						'@type': 'Country',
+						name: 'Perú'
+					}
+				}
+			},
+			{
+				'@type': 'Country',
+				name: 'Perú'
+			},
+			{
+				'@type': 'GeoCircle',
+				name: 'Virtual - Servicios remotos en todo el mundo',
+				description:
+					'Servicios disponibles internacionalmente de forma remota para clientes en cualquier ubicación'
+			}
+		],
+		openingHoursSpecification: [
+			{
+				'@type': 'OpeningHoursSpecification',
+				dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+				opens: '00:00',
+				closes: '23:59'
+			}
+		],
+		worksFor: {
+			'@type': 'Organization',
+			name: 'Freelance - Servicios independientes de desarrollo'
 		},
 		skills: [
 			'Svelte',
@@ -52,28 +170,6 @@
 			'Vercel',
 			'Netlify',
 			'Astro'
-		],
-		worksFor: {
-			'@type': 'Organization',
-			name: 'Freelance'
-		},
-		makesOffer: [
-			{
-				'@type': 'Offer',
-				itemOffered: {
-					'@type': 'Service',
-					name: 'Desarrollo Web Frontend',
-					description: 'Creación de interfaces modernas y responsivas con Svelte y TypeScript'
-				}
-			},
-			{
-				'@type': 'Offer',
-				itemOffered: {
-					'@type': 'Service',
-					name: 'Desarrollo Full Stack',
-					description: 'Soluciones web completas con SvelteKit y Supabase'
-				}
-			}
 		],
 		knowsLanguage: ['es', 'en']
 	};
@@ -95,7 +191,10 @@
 	<meta property="og:type" content={type} />
 	<meta property="og:image" content={image} />
 	<meta property="og:locale" content="es_PE" />
-	<meta property="og:site_name" content="Ivan Gabriel Yarupaitan Rivera | Desarrollador Web" />
+	<meta
+		property="og:site_name"
+		content="Servicios de Desarrollo Web | Ivan Gabriel Yarupaitan Rivera"
+	/>
 
 	<!-- Twitter -->
 	<meta name="twitter:url" content={url} />
