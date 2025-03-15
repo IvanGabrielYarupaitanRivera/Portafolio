@@ -2,7 +2,7 @@
 	import { enhance } from '$app/forms';
 	import type { ActionResult } from '@sveltejs/kit';
 	import { Mail, User, MessageSquare } from 'lucide-svelte';
-	import type { ActionData } from './$types';
+	import type { ActionData } from '../../../routes/$types';
 	import ContactImage from '$lib/images/old-phone-contact-form.webp?enhanced';
 
 	let { form }: { form: ActionData } = $props();
