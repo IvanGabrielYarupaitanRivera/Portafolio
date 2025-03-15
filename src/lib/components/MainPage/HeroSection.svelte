@@ -1,13 +1,15 @@
 <script lang="ts">
 	import { Code, ChevronDown, Globe, Bot } from 'lucide-svelte';
 
-	const keywords = $state(['Desarrollo Web', 'Diseño Web', 'Full Stack', 'Páginas Web']);
+	const mainKeyword = $state('Desarrollo Web');
+
+	const secondaryKeywords = $state(['Diseño Web', 'Programación Web', 'Full Stack', 'Páginas Web']);
 
 	let currentIndex = $state(0);
 
 	$effect(() => {
 		const interval = setInterval(() => {
-			currentIndex = (currentIndex + 1) % keywords.length;
+			currentIndex = (currentIndex + 1) % secondaryKeywords.length;
 		}, 2500);
 
 		return () => clearInterval(interval);
@@ -24,8 +26,14 @@
 	<main class="flex flex-col items-center gap-8 text-center">
 		<header class="flex flex-col gap-2">
 			<h1 id="hero-title" class="heading-1">
-				Servicios de <span class="my-span">{keywords[currentIndex]}</span>
+				Servicios de
+				<span class="my-span"> {mainKeyword}</span>
 			</h1>
+
+			<p class="m-0 p-0 text-xl font-bold">
+				Especializado en
+				<span class="my-span">{secondaryKeywords[currentIndex]}</span>
+			</p>
 
 			<p class="p max-w-prose">
 				Desarrollador web freelance especializado en crear sitios y aplicaciones web profesionales
@@ -50,21 +58,6 @@
 				Solicitar Presupuesto
 			</a>
 		</nav>
-
-		<div class="mt-8 flex flex-wrap justify-center gap-3">
-			<span class="rounded-full bg-green-100 px-3 py-1 text-sm font-medium text-green-950"
-				>Desarrollo Web</span
-			>
-			<span class="rounded-full bg-sky-100 px-3 py-1 text-sm font-medium text-sky-900"
-				>Diseño Web</span
-			>
-			<span class="rounded-full bg-green-100 px-3 py-1 text-sm font-medium text-green-950"
-				>Programación Web</span
-			>
-			<span class="rounded-full bg-sky-100 px-3 py-1 text-sm font-medium text-sky-900"
-				>Full Stack</span
-			>
-		</div>
 
 		<a href="#servicios" aria-label="Ver mis servicios de desarrollo web">
 			<ChevronDown size={25} aria-hidden="true" class="my-stroke mt-16 animate-bounce" />
