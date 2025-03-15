@@ -1,9 +1,9 @@
 <script lang="ts">
 	import Seo from '$lib/components/SEO.svelte';
-	import HeroSection from './HeroSection.svelte';
-	import Projects from './Projects.svelte';
-	import Contact from './Contact.svelte';
-	import Skills from './Skills.svelte';
+	import HeroSection from '$lib/components/MainPage/HeroSection.svelte';
+	import Projects from '$lib/components/MainPage/Projects.svelte';
+	import Contact from '$lib/components/MainPage/Contact.svelte';
+	import Skills from '$lib/components/MainPage/Skills.svelte';
 
 	let { form } = $props();
 </script>
