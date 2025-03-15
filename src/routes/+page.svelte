@@ -9,14 +9,14 @@
 </script>
 
 <Seo
-	title="Vanchi | Programador de aplicaciones web"
-	description="Portafolio profesional de Ivan Yarupaitan Rivera, programador de aplicaciones web especializado en SvelteKit, TypeScript, Supabase y desarrollo web moderno."
-	keywords="Svelte, SvelteKit, TypeScript, JavaScript, CSS, HTML, Supabase, Frontend, Full Stack, Backend, UI/UX, Tailwind, Ivan Yarupaitan Rivera, Desarrollador Web, Programador, Ingeniero de Sistemas,  Huancayo, Huancavelica, Perú, Aplicaciones Web, Diseño Web, Freelance, Portafolio Digital"
+	title="Servicios de Desarrollo Web y Full Stack | Ivan Gabriel Yarupaitan Rivera"
+	description="Desarrollo profesional de páginas web y aplicaciones. Servicios especializados en diseño web, programación frontend y desarrollo full stack con SvelteKit, TypeScript y Supabase. Soluciones web a medida para empresas y particulares."
+	keywords="desarrollo web, desarrollador web, desarrollos web, programador web, diseño y desarrollo web, desarrollo full stack, desarrollador full stack, desarrollo de páginas web, aplicaciones web, servicios de desarrollo web, agencia de desarrollo web, desarrollo de aplicaciones web, programación web, empresa de desarrollo web, desarrollo web full stack"
 	url="https://www.vanchi.pro/"
 	type="website"
 />
 
-<main class="relative ml-3 mr-4 flex flex-col gap-16">
+<main class="relative mr-4 ml-3 flex flex-col gap-16">
 	<!-- Patrón de cuadrícula de fondo -->
 
 	<section class="mt-16 md:px-36" aria-label="Introducción y presentación">
