@@ -11,14 +11,13 @@
 		</figure>
 	</header>
 
-	<main class="flex flex-col items-center gap-8 text-center">
-		<header class="relative flex flex-col gap-12">
+	<main class="flex flex-col items-center gap-8 py-4 text-center md:gap-14">
+		<header class="relative flex flex-col gap-6">
 			<div class="relative">
 				<h1 id="hero-title" class="heading-1 relative z-10">
 					Servicios de
 					<span class="my-span relative font-black">
 						{mainKeyword}
-						<span class="absolute -bottom-1 left-0 -z-10 h-3 w-full bg-sky-300"></span>
 					</span>
 				</h1>
 			</div>
@@ -30,7 +29,7 @@
 			</p>
 		</header>
 
-		<nav class="flex flex-wrap justify-center gap-4" aria-label="Navegación principal">
+		<nav class="mt-2 flex flex-wrap justify-center gap-4 md:mt-4" aria-label="Navegación principal">
 			<a
 				href="#servicios"
 				class="my-border my-bg p my-shadow rounded-xl border-2 px-6 py-3 font-bold"
@@ -48,7 +47,7 @@
 		</nav>
 
 		<a href="#servicios" aria-label="Ver mis servicios de desarrollo web">
-			<ChevronDown size={25} aria-hidden="true" class="my-stroke mt-16 animate-bounce" />
+			<ChevronDown size={25} aria-hidden="true" class="my-stroke mt-12 animate-bounce md:mt-16" />
 		</a>
 	</main>
 </section>
