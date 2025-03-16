@@ -16,7 +16,7 @@
 	const testimonials = $state([
 		{
 			id: 1,
-			name: 'Ciro Gabriel Yarupaitan Rivera',
+			name: 'Ciro Gabriel Yarupaitan Peralta',
 			position: 'Fundador de Peralta Asociados',
 			company: 'Estudio Jurídico Peralta Asociados',
 			avatar: CiroYarupaitanPeralta,
@@ -56,8 +56,11 @@
 	</div>
 
 	<p class="p mx-auto max-w-2xl">
-		Opiniones reales de clientes satisfechos con soluciones de <strong>desarrollo web</strong> y
-		<strong>aplicaciones personalizadas</strong> que han impulsado sus negocios.
+		Opiniones reales de clientes satisfechos con soluciones de <strong>desarrollo web</strong>,
+		<span class="font-medium">diseño de sitios web</span>
+		que han impulsado sus negocios. Estos testimonios reflejan mi compromiso con la
+		<span class="font-medium">programación web</span>
+		enfocado en resultados medibles para cada proyecto.
 	</p>
 </header>
 
