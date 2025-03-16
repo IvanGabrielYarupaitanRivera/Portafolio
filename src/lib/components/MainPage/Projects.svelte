@@ -83,14 +83,15 @@
 <!-- Encabezado de sección -->
 <header class="mb-16 text-center" aria-labelledby="projects-title">
 	<div class="relative mb-6 inline-block">
-		<h2 id="projects-title" class="heading-2 relative z-10">
-			Proyectos <span class="my-span">Destacados</span>
+		<h2 id="projects-title" class="heading-2 relative z-10 mx-4">
+			Proyectos
+			<span class="my-span underline decoration-blue-500/30 decoration-10 underline-offset-1">
+				Destacados
+			</span>
 		</h2>
-
-		<div class="absolute bottom-1 left-0 -z-10 h-3 w-full bg-sky-200" aria-hidden="true"></div>
 	</div>
 
-	<p class="p mx-auto max-w-2xl">
+	<p class="p mx-auto max-w-sm md:max-w-2xl">
 		Soluciones digitales <strong>desarrolladas a medida</strong> con resultados comprobables para
 		diversos sectores. Cada proyecto combina
 		<span class="font-medium">diseño atractivo</span>,
@@ -119,7 +120,7 @@
 					{:else if category.id === 'ia'}
 						<Brain size={18} aria-hidden="true" />
 					{/if}
-					<span class={category.id === activeFilter ? '' : 'hidden md:inline'}>
+					<span class="hidden md:flex">
 						{category.label}
 					</span>
 				</button>

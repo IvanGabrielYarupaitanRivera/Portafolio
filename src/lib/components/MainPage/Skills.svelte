@@ -187,7 +187,7 @@
 				type="button"
 			>
 				<Code size={18} />
-				<span class="s hidden md:flex">Frontend</span>
+				<span class="hidden md:flex">Frontend</span>
 			</button>
 			<button
 				class={backendSkill ? classActiveSkill.active : classActiveSkill.inactive}

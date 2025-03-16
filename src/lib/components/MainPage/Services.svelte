@@ -56,14 +56,15 @@
 <!-- Encabezado de sección -->
 <header class="mb-16 text-center" aria-labelledby="services-title">
 	<div class="relative mb-6 inline-block">
-		<h2 id="services-title" class="heading-2 relative z-10">
-			Servicios de <span class="my-span">Desarrollo Web</span>
+		<h2 id="services-title" class="heading-2 relative z-10 mx-4">
+			Servicios de
+			<span class="my-span underline decoration-blue-500/30 decoration-10 underline-offset-1">
+				Desarrollo Web
+			</span>
 		</h2>
-
-		<div class="absolute bottom-1 left-0 -z-10 h-3 w-full bg-sky-200" aria-hidden="true"></div>
 	</div>
 
-	<p class="p mx-auto max-w-2xl">
+	<p class="p mx-auto max-w-sm md:max-w-2xl">
 		Ofrezco <strong>soluciones digitales completas</strong> y personalizadas con enfoque en
 		<span class="font-medium">calidad</span>, <span class="font-medium">rendimiento</span> y
 		<span class="font-medium">experiencia de usuario</span>. Cada proyecto recibe atención dedicada
