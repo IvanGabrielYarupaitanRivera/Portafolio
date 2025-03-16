@@ -2,6 +2,7 @@
 	import Seo from '$lib/components/SEO.svelte';
 	import HeroSection from '$lib/components/MainPage/HeroSection.svelte';
 	import Services from '$lib/components/MainPage/Services.svelte';
+	import Projects2 from '$lib/components/MainPage/Projects2.svelte';
 	import Projects from '$lib/components/MainPage/Projects.svelte';
 	import Contact from '$lib/components/MainPage/Contact.svelte';
 	import Skills from '$lib/components/MainPage/Skills.svelte';
@@ -26,6 +27,10 @@
 
 	<section aria-label="Servicios ofrecidos" id="servicios">
 		<Services />
+	</section>
+
+	<section aria-label="Proyectos" id="proyectos">
+		<Projects2 />
 	</section>
 
 	<section aria-label="Proyectos destacados" id="proyectos">
