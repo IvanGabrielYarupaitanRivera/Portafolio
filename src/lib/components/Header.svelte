@@ -46,7 +46,7 @@
 		>
 			<button
 				type="button"
-				class=" my-bg my-border my-shadow absolute -top-6 -right-6 rounded-xl border-2 p-2"
+				class=" my-bg my-transition my-border my-shadow absolute -top-6 -right-6 rounded-xl border-2 p-2"
 				aria-label="Cerrar menú"
 				onclick={() => {
 					toggleMenu();

@@ -165,14 +165,16 @@
 
 	const classActiveSkill = {
 		active:
-			'my-border my-bg my-shadow flex items-center gap-2 rounded-xl border-2 px-4 py-3 font-bold cursor-pointer',
+			'my-border my-bg my-transition my-shadow flex items-center gap-2 rounded-xl border-2 px-4 py-3 font-bold cursor-pointer',
 		inactive:
 			'my-border bg-white my-shadow flex items-center gap-2 rounded-xl border-2 px-4 py-3 font-bold cursor-pointer'
 	};
 </script>
 
 <div class="container mx-auto">
-	<header class="my-shadow my-border my-bg relative mb-12 rounded-xl border-2 px-8 py-6">
+	<header
+		class="my-shadow my-border my-bg my-transition relative mb-12 rounded-xl border-2 px-8 py-6"
+	>
 		<h2 class="heading-2 relative">Habilidades</h2>
 	</header>
 
@@ -258,7 +260,7 @@
 					{#each skillGroups[0].skills as skill}
 						<li>
 							<article
-								class="my-shadow my-border my-effect flex cursor-pointer flex-col items-center rounded-xl border-2 p-4 text-center"
+								class="my-shadow my-border my-effect my-transition flex cursor-pointer flex-col items-center rounded-xl border-2 p-4 text-center"
 							>
 								<header class="mb-6 flex h-10 w-10 md:h-16 md:w-16">
 									<img src={skill.logo} alt={skill.name} aria-hidden="true" class="w-full" />
@@ -281,7 +283,7 @@
 					{#each skillGroups[1].skills as skill}
 						<li>
 							<article
-								class="my-shadow my-border my-effect flex flex-col items-center rounded-xl border-2 p-4 text-center"
+								class="my-shadow my-border my-effect my-transition flex flex-col items-center rounded-xl border-2 p-4 text-center"
 							>
 								<header class="mb-6 flex h-10 w-10 md:h-16 md:w-16">
 									<img src={skill.logo} alt={skill.name} aria-hidden="true" class="w-full" />
@@ -304,7 +306,7 @@
 					{#each skillGroups[2].skills as skill}
 						<li>
 							<article
-								class="my-shadow my-border my-effect flex flex-col items-center rounded-xl border-2 p-4 text-center"
+								class="my-shadow my-border my-effect my-transition flex flex-col items-center rounded-xl border-2 p-4 text-center"
 							>
 								<header class="mb-6 flex h-10 w-10 md:h-16 md:w-16">
 									<img src={skill.logo} alt={skill.name} aria-hidden="true" class="w-full" />
@@ -327,7 +329,7 @@
 					{#each skillGroups[3].skills as skill}
 						<li>
 							<article
-								class="my-shadow my-border my-effect flex flex-col items-center rounded-xl border-2 p-4 text-center"
+								class="my-shadow my-border my-effect my-transition flex flex-col items-center rounded-xl border-2 p-4 text-center"
 							>
 								<header class="mb-6 flex h-10 w-10 md:h-16 md:w-16">
 									<img src={skill.logo} alt={skill.name} aria-hidden="true" class="w-full" />

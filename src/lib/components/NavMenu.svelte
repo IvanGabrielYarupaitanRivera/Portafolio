@@ -35,7 +35,7 @@
 	<div class="flex items-center md:hidden">
 		<button
 			type="button"
-			class="my-border my-shadow my-bg rounded-xl border-2 p-2"
+			class="my-border my-shadow my-bg my-transition rounded-xl border-2 p-2"
 			aria-expanded={isMenuOpen}
 			aria-label={isMenuOpen ? 'Cerrar menú principal' : 'Abrir menú principal'}
 			onclick={mobileMenu}

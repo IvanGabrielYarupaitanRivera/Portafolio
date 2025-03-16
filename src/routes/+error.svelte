@@ -10,7 +10,7 @@
 		</p>
 		<a
 			href="/"
-			class="my-border my-bg my-shadow inline-block cursor-pointer rounded-xl border-2 px-6 py-3 font-bold text-neutral-950"
+			class="my-border my-bg my-transition my-shadow inline-block cursor-pointer rounded-xl border-2 px-6 py-3 font-bold text-neutral-950"
 		>
 			Volver al inicio
 		</a>

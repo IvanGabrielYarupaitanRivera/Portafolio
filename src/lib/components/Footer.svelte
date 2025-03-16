@@ -80,7 +80,7 @@
 								target="_blank"
 								rel="noopener noreferrer"
 								aria-label={`Visita mi perfil de ${link.name}`}
-								class="my-border my-shadow my-effect flex h-10 w-10 items-center justify-center rounded-lg border-2 md:h-12 md:w-12"
+								class="my-border my-shadow my-effect my-transition flex h-10 w-10 items-center justify-center rounded-lg border-2 md:h-12 md:w-12"
 							>
 								<link.icon size={18} class="my-stroke-icon stroke-1" aria-hidden="true" />
 							</a>

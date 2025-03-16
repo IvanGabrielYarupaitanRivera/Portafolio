@@ -29,7 +29,9 @@
 </script>
 
 <article class="container mx-auto">
-	<header class="my-shadow my-border my-bg relative mb-12 rounded-xl border-2 px-8 py-4">
+	<header
+		class="my-shadow my-border my-bg my-transition relative mb-12 rounded-xl border-2 px-8 py-4"
+	>
 		<h2 class="heading-2 relative z-10">
 			{form?.success ? 'Mensaje Enviado con éxito' : '¡Hablemos!'}
 		</h2>
@@ -49,7 +51,7 @@
 					<p class="p">Me pondré en contacto contigo lo antes posible</p>
 					<button
 						onclick={resetForm}
-						class=" my-border my-bg p my-shadow rounded-xl border-2 px-6 py-3 font-bold"
+						class=" my-border my-bg my-transition p my-shadow rounded-xl border-2 px-6 py-3 font-bold"
 						>Enviar otro mensaje</button
 					>
 				</section>
@@ -60,7 +62,7 @@
 					<p class="p">{form.message}</p>
 					<button
 						onclick={resetForm}
-						class=" my-border my-bg p my-shadow rounded-xl border-2 px-6 py-3 font-bold"
+						class=" my-border my-bg my-transition p my-shadow rounded-xl border-2 px-6 py-3 font-bold"
 						>Intentar de nuevo</button
 					>
 				</section>
@@ -120,7 +122,7 @@
 
 					<button
 						type="submit"
-						class=" my-border my-bg p my-shadow mt-12 mb-6 flex w-full items-center justify-center overflow-hidden rounded-xl border-2 px-6 py-3 font-bold"
+						class=" my-border my-bg my-transition p my-shadow mt-12 mb-6 flex w-full items-center justify-center overflow-hidden rounded-xl border-2 px-6 py-3 font-bold"
 						disabled={isSending}
 					>
 						{isSending ? 'Enviando...' : 'Enviar mensaje'}

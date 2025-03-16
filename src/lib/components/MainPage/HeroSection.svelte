@@ -6,7 +6,7 @@
 
 <section class="relative" aria-labelledby="hero-title">
 	<header class="mb-8 flex justify-center">
-		<figure class="my-bg my-border my-shadow rounded-xl border-4 p-2 text-green-950">
+		<figure class="my-bg my-transition my-border my-shadow rounded-xl border-4 p-2 text-green-950">
 			<Bot size={50} strokeWidth={2} aria-hidden="true" />
 		</figure>
 	</header>
@@ -32,13 +32,13 @@
 		<nav class="mt-2 flex flex-wrap justify-center gap-4 md:mt-4" aria-label="Navegación principal">
 			<a
 				href="#servicios"
-				class="my-border my-bg p my-shadow rounded-xl border-2 px-6 py-3 font-bold focus:ring-2 focus:ring-green-700 focus:ring-offset-2 focus:outline-none"
+				class="my-border my-bg my-transition p my-shadow rounded-xl border-2 px-6 py-3 font-bold focus:ring-2 focus:ring-green-700 focus:ring-offset-2 focus:outline-none"
 			>
 				Ver Servicios
 			</a>
 			<a
 				href="#contacto"
-				class="my-border my-active-bg p my-shadow rounded-xl border-2 px-6 py-3 font-bold focus:ring-2 focus:ring-blue-700 focus:ring-offset-2 focus:outline-none"
+				class="my-border my-active-bg my-transition p my-shadow rounded-xl border-2 px-6 py-3 font-bold focus:ring-2 focus:ring-blue-700 focus:ring-offset-2 focus:outline-none"
 			>
 				Solicitar Presupuesto
 			</a>

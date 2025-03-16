@@ -77,18 +77,18 @@
 	{#each services as service}
 		<li>
 			<article
-				class="my-border my-shadow my-effect rounded-xl border-2 bg-white p-6 transition-all duration-300"
+				class="my-border my-shadow my-effect my-transition rounded-xl border-2 bg-white p-6 transition-all duration-300"
 				id={`service-${service.id}`}
 			>
 				<header class="mb-4 flex items-center">
-					<figure class="my-bg flex-shrink-0 rounded-xl p-3">
+					<figure class="my-bg my-transition flex-shrink-0 rounded-xl p-3">
 						<service.icon size={40} strokeWidth={2} class="text-green-950" aria-hidden="true" />
 					</figure>
 					<h3 class="heading-3 ml-4">{service.title}</h3>
 				</header>
 
 				<!-- Separador visual -->
-				<hr class="my-bg mb-4 h-1 w-16 border-none" aria-hidden="true" />
+				<hr class="my-bg my-transition mb-4 h-1 w-16 border-none" aria-hidden="true" />
 
 				<!-- Descripción del servicio -->
 				<section class="mb-6">
@@ -101,7 +101,7 @@
 				<footer class="mt-4">
 					<a
 						href="#contacto"
-						class="my-border my-shadow my-bg group inline-flex items-center rounded-lg border-2 px-4 py-2 font-bold text-green-950 focus:ring-2 focus:ring-offset-2 focus:outline-none"
+						class="my-border my-shadow my-bg my-transition group inline-flex items-center rounded-lg border-2 px-4 py-2 font-bold text-green-950 focus:ring-2 focus:ring-offset-2 focus:outline-none"
 						aria-label={`Solicitar servicio de ${service.title}`}
 					>
 						<span>Solicitar servicio</span>

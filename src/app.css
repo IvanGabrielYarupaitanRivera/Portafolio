@@ -50,7 +50,7 @@ html {
 	}
 
 	.my-bg {
-		@apply bg-green-500 transition-colors duration-700 ease-out hover:bg-green-600;
+		@apply bg-green-500 hover:bg-green-600;
 	}
 
 	.my-component-bg {
@@ -66,11 +66,15 @@ html {
 	}
 
 	.my-effect {
-		@apply transition-transform duration-700 ease-out hover:translate-x-1 hover:-translate-y-1;
+		@apply hover:translate-x-1 hover:-translate-y-1;
 	}
 
 	.my-stroke-icon {
 		@apply stroke-neutral-800;
+	}
+
+	.my-transition {
+		@apply transition-all duration-700 ease-out;
 	}
 
 	.my-span {
