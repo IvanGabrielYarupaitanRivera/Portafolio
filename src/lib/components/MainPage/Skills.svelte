@@ -21,7 +21,7 @@
 	import UxUi from '$lib/logos/ux-ui.svg';
 	import Seo from '$lib/logos/seo.svg';
 
-	import { blur, fade } from 'svelte/transition';
+	import { blur } from 'svelte/transition';
 
 	// Datos de habilidades actualizados con logos y categorías
 	const skillGroups = [

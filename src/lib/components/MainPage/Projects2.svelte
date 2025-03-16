@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { ExternalLink, Github, BookOpen } from 'lucide-svelte';
+	import { ExternalLink, Github, BookOpen, Globe, AppWindow, Brain, Layout } from 'lucide-svelte';
 	import ChatPeraltaAsociadosImage from '$lib/images/chatbot-inteligencia-artificial-peralta-asociados.webp?enhanced';
 	import SistemaDeGestionAcademicaImage from '$lib/images/sistema-de-gestion-academica-basica.webp?enhanced';
 	import PeraltaAsociadosImage from '$lib/images/pagina-web-peralta-asociados.webp?enhanced';
@@ -57,6 +57,7 @@
 
 	// Estado para filtro activo
 	let activeFilter = $state('todos');
+	let version = $state(0);
 
 	// Proyectos filtrados basados en el filtro activo
 	const filteredProjects = $derived(
@@ -67,13 +68,14 @@
 
 	const classFilterActive = {
 		actived:
-			'my-border text-sm my-shadow rounded-lg border-2 px-4 py-2 font-bold my-bg text-white cursor-pointer',
+			'my-border my-bg my-shadow flex items-center gap-2 rounded-xl border-2 px-4 py-3 font-bold cursor-pointer',
 		default:
-			'my-border text-sm my-shadow rounded-lg border-2 px-4 py-2 font-bold bg-white text-green-950 hover:bg-green-50 cursor-pointer'
+			'my-border bg-white my-shadow flex items-center gap-2 rounded-xl border-2 px-4 py-3 font-bold cursor-pointer'
 	};
 
 	// Función para cambiar filtro
 	function setFilter(filterId: string) {
+		version++;
 		activeFilter = filterId;
 	}
 </script>
@@ -107,9 +109,19 @@
 					class={activeFilter === category.id
 						? classFilterActive.actived
 						: classFilterActive.default}
-					aria-current={activeFilter === category.id ? 'page' : undefined}
 				>
-					{category.label}
+					{#if category.id === 'todos'}
+						<Layout size={18} aria-hidden="true" />
+					{:else if category.id === 'web'}
+						<Globe size={18} aria-hidden="true" />
+					{:else if category.id === 'aplicaciones'}
+						<AppWindow size={18} aria-hidden="true" />
+					{:else if category.id === 'ia'}
+						<Brain size={18} aria-hidden="true" />
+					{/if}
+					<span class={category.id === activeFilter ? '' : 'hidden md:inline'}>
+						{category.label}
+					</span>
 				</button>
 			</li>
 		{/each}
@@ -118,10 +130,10 @@
 
 <!-- Grid de proyectos -->
 <ul id="projects-grid" class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-10" role="list">
-	{#each filteredProjects as project}
-		<li>
+	{#each filteredProjects as project (project.id + '-' + version)}
+		<li in:blur>
 			<article
-				class="my-border my-shadow my-effect overflow-hidden rounded-xl border-2 bg-white"
+				class="my-border my-shadow overflow-hidden rounded-xl border-2 bg-white"
 				id={`project-${project.id}`}
 			>
 				<!-- Imagen del proyecto -->
@@ -142,11 +154,12 @@
 				<div class="p-6">
 					<header class="mb-4">
 						<div class="mb-1">
-							<span
+							<mark
 								class="inline-block rounded bg-sky-100 px-2 py-1 text-xs font-medium text-sky-800"
+								title="Categoría del proyecto"
 							>
 								{project.industry}
-							</span>
+							</mark>
 						</div>
 						<h3 class="heading-3">{project.title}</h3>
 					</header>
@@ -157,34 +170,36 @@
 						</p>
 
 						<!-- Resultados del proyecto -->
-						<div class="mt-3 flex items-start gap-2">
-							<BookOpen size={18} class="mt-1 flex-shrink-0 text-green-600" aria-hidden="true" />
-							<p class="text-sm font-medium text-green-800">
+						<aside class="mt-3 flex items-center gap-2" aria-labelledby={`results-${project.id}`}>
+							<BookOpen size={18} class="mt-1 text-green-600" aria-hidden="true" />
+							<p id={`results-${project.id}`} class="text-sm font-medium text-green-800">
 								{project.results}
 							</p>
-						</div>
+						</aside>
 					</section>
 
 					<!-- Enlaces del proyecto -->
-					<footer class="mt-6 flex flex-wrap gap-3">
-						<a
-							href={project.link}
-							target="_blank"
-							rel="noopener noreferrer"
-							class="my-border my-bg my-shadow flex items-center gap-2 rounded-xl border-2 px-4 py-2 text-xs font-bold text-green-950 transition-all duration-300 hover:-translate-y-1 focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:outline-none"
-						>
-							Ver Proyecto
-							<ExternalLink size={16} aria-hidden="true" />
-						</a>
-						<a
-							href={project.github}
-							target="_blank"
-							rel="noopener noreferrer"
-							class="my-border my-bg my-shadow flex items-center gap-2 rounded-xl border-2 px-4 py-2 text-xs font-bold text-green-950 transition-all duration-300 hover:-translate-y-1 focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:outline-none"
-						>
-							Ver Código
-							<Github size={16} aria-hidden="true" />
-						</a>
+					<footer class="mt-6">
+						<nav class="flex flex-wrap gap-3" aria-label="Enlaces del proyecto">
+							<a
+								href={project.link}
+								target="_blank"
+								rel="noopener noreferrer"
+								class="my-border my-bg my-shadow my-effect flex items-center gap-2 rounded-xl border-2 px-4 py-2 text-xs font-bold text-green-950 focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:outline-none"
+							>
+								<span>Ver Proyecto</span>
+								<ExternalLink size={16} aria-hidden="true" />
+							</a>
+							<a
+								href={project.github}
+								target="_blank"
+								rel="noopener noreferrer"
+								class="my-border my-bg my-shadow my-effect flex items-center gap-2 rounded-xl border-2 px-4 py-2 text-xs font-bold text-green-950 focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:outline-none"
+							>
+								<span>Ver Código</span>
+								<Github size={16} aria-hidden="true" />
+							</a>
+						</nav>
 					</footer>
 				</div>
 			</article>
@@ -196,9 +211,8 @@
 <div class="mt-12 text-center">
 	<a
 		href="#contacto"
-		class="my-border my-shadow my-bg inline-flex items-center rounded-xl border-2 px-6 py-3 font-bold text-green-950 transition-all duration-300 hover:-translate-y-1 focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:outline-none"
+		class="my-border my-shadow my-active-bg inline-flex items-center rounded-xl border-2 px-6 py-3 font-bold text-green-950 transition-all duration-300 hover:-translate-y-1 focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:outline-none"
 	>
 		<span>¿Necesitas un proyecto similar?</span>
-		<span class="ml-2 text-xl" aria-hidden="true">→</span>
 	</a>
 </div>
