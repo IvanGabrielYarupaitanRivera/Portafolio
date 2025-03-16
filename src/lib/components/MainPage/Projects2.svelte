@@ -1,0 +1,204 @@
+<script lang="ts">
+	import { ExternalLink, Github, BookOpen } from 'lucide-svelte';
+	import ChatPeraltaAsociadosImage from '$lib/images/chatbot-inteligencia-artificial-peralta-asociados.webp?enhanced';
+	import SistemaDeGestionAcademicaImage from '$lib/images/sistema-de-gestion-academica-basica.webp?enhanced';
+	import PeraltaAsociadosImage from '$lib/images/pagina-web-peralta-asociados.webp?enhanced';
+	import { blur } from 'svelte/transition';
+
+	const projects = $state([
+		{
+			id: 1,
+			title: 'Página Web de Peralta Asociados',
+			industry: 'Servicios Legales',
+			description:
+				'Diseño y desarrollo de sitio web corporativo con rendimiento optimizado, alcanzando la puntuación máxima (100/100) en todas las métricas de Lighthouse.',
+			results: 'Incrementó contactos de clientes potenciales en un 35%',
+			technologies: ['Astro', 'Tailwind CSS', 'Netlify'],
+			link: 'https://peraltaasociados.com/',
+			github: 'https://github.com/IvanGabrielYarupaitanRivera/PeraltaAsociados',
+			image: PeraltaAsociadosImage,
+			category: 'web'
+		},
+		{
+			id: 2,
+			title: 'Asistente Legal con Inteligencia Artificial',
+			industry: 'Servicios Legales',
+			description:
+				'Desarrollo de un chatbot legal con IA que proporciona asesoramiento automatizado 24/7, utilizando embeddings vectoriales para respuestas precisas y relevantes.',
+			results: 'Aumentó en un 40% la atención de consultas sin intervención humana',
+			technologies: ['SvelteKit', 'Tailwind CSS', 'Supabase Vector', 'OpenRouter'],
+			link: 'https://chat.peraltaasociados.com/',
+			github: 'https://github.com/IvanGabrielYarupaitanRivera/ChatPeraltaAsociados',
+			image: ChatPeraltaAsociadosImage,
+			category: 'ia'
+		},
+		{
+			id: 3,
+			title: 'Sistema de Gestión Académica',
+			industry: 'Educación',
+			description:
+				'Aplicación web académica para gestión de calificaciones con roles diferenciados (administrador, profesor y estudiante) y verificación de usuarios.',
+			results: 'Entorno Ficticio: Proyecto para demostrar habilidades de desarrollo',
+			technologies: ['SvelteKit', 'Tailwind CSS', 'Supabase', 'Vercel'],
+			link: 'https://sistema-de-gestion-academica.vercel.app/',
+			github: 'https://github.com/IvanGabrielYarupaitanRivera/SistemaDeGestionAcademica',
+			image: SistemaDeGestionAcademicaImage,
+			category: 'aplicaciones'
+		}
+	]);
+
+	// Categorías de filtrado
+	const categories = $state([
+		{ id: 'todos', label: 'Todos los proyectos' },
+		{ id: 'web', label: 'Sitios Web' },
+		{ id: 'aplicaciones', label: 'Aplicaciones Web' },
+		{ id: 'ia', label: 'Integración con IA' }
+	]);
+
+	// Estado para filtro activo
+	let activeFilter = $state('todos');
+
+	// Proyectos filtrados basados en el filtro activo
+	const filteredProjects = $derived(
+		activeFilter === 'todos'
+			? projects
+			: projects.filter((project) => project.category === activeFilter)
+	);
+
+	const classFilterActive = {
+		actived:
+			'my-border text-sm my-shadow rounded-lg border-2 px-4 py-2 font-bold my-bg text-white cursor-pointer',
+		default:
+			'my-border text-sm my-shadow rounded-lg border-2 px-4 py-2 font-bold bg-white text-green-950 hover:bg-green-50 cursor-pointer'
+	};
+
+	// Función para cambiar filtro
+	function setFilter(filterId: string) {
+		activeFilter = filterId;
+	}
+</script>
+
+<!-- Encabezado de sección -->
+<header class="mb-16 text-center" aria-labelledby="projects-title">
+	<div class="relative mb-6 inline-block">
+		<h2 id="projects-title" class="heading-2 relative z-10">
+			Proyectos <span class="my-span">Destacados</span>
+		</h2>
+
+		<div class="absolute bottom-1 left-0 -z-10 h-3 w-full bg-sky-200" aria-hidden="true"></div>
+	</div>
+
+	<p class="p mx-auto max-w-2xl">
+		Soluciones digitales <strong>desarrolladas a medida</strong> con resultados comprobables para
+		diversos sectores. Cada proyecto combina
+		<span class="font-medium">diseño atractivo</span>,
+		<span class="font-medium">código optimizado</span> y
+		<span class="font-medium">funcionalidad efectiva</span>.
+	</p>
+</header>
+
+<!-- Filtros de categoría -->
+<nav class="mb-12" aria-label="Filtros de proyectos">
+	<ul class="flex flex-wrap justify-center gap-4" role="list">
+		{#each categories as category}
+			<li>
+				<button
+					onclick={() => setFilter(category.id)}
+					class={activeFilter === category.id
+						? classFilterActive.actived
+						: classFilterActive.default}
+					aria-current={activeFilter === category.id ? 'page' : undefined}
+				>
+					{category.label}
+				</button>
+			</li>
+		{/each}
+	</ul>
+</nav>
+
+<!-- Grid de proyectos -->
+<ul id="projects-grid" class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-10" role="list">
+	{#each filteredProjects as project}
+		<li>
+			<article
+				class="my-border my-shadow my-effect overflow-hidden rounded-xl border-2 bg-white"
+				id={`project-${project.id}`}
+			>
+				<!-- Imagen del proyecto -->
+				<figure class="relative aspect-[16/9] w-full overflow-hidden">
+					<enhanced:img
+						src={project.image}
+						alt={`Vista previa del proyecto ${project.title}`}
+						class="h-full w-full object-cover"
+						loading="lazy"
+						decoding="async"
+						width="800"
+						height="450"
+					/>
+					<figcaption class="sr-only">{project.title} - {project.industry}</figcaption>
+				</figure>
+
+				<!-- Contenido del proyecto -->
+				<div class="p-6">
+					<header class="mb-4">
+						<div class="mb-1">
+							<span
+								class="inline-block rounded bg-sky-100 px-2 py-1 text-xs font-medium text-sky-800"
+							>
+								{project.industry}
+							</span>
+						</div>
+						<h3 class="heading-3">{project.title}</h3>
+					</header>
+
+					<section class="mb-6">
+						<p class="p">
+							{project.description}
+						</p>
+
+						<!-- Resultados del proyecto -->
+						<div class="mt-3 flex items-start gap-2">
+							<BookOpen size={18} class="mt-1 flex-shrink-0 text-green-600" aria-hidden="true" />
+							<p class="text-sm font-medium text-green-800">
+								{project.results}
+							</p>
+						</div>
+					</section>
+
+					<!-- Enlaces del proyecto -->
+					<footer class="mt-6 flex flex-wrap gap-3">
+						<a
+							href={project.link}
+							target="_blank"
+							rel="noopener noreferrer"
+							class="my-border my-bg my-shadow flex items-center gap-2 rounded-xl border-2 px-4 py-2 text-xs font-bold text-green-950 transition-all duration-300 hover:-translate-y-1 focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:outline-none"
+						>
+							Ver Proyecto
+							<ExternalLink size={16} aria-hidden="true" />
+						</a>
+						<a
+							href={project.github}
+							target="_blank"
+							rel="noopener noreferrer"
+							class="my-border my-bg my-shadow flex items-center gap-2 rounded-xl border-2 px-4 py-2 text-xs font-bold text-green-950 transition-all duration-300 hover:-translate-y-1 focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:outline-none"
+						>
+							Ver Código
+							<Github size={16} aria-hidden="true" />
+						</a>
+					</footer>
+				</div>
+			</article>
+		</li>
+	{/each}
+</ul>
+
+<!-- CTA final -->
+<div class="mt-12 text-center">
+	<a
+		href="#contacto"
+		class="my-border my-shadow my-bg inline-flex items-center rounded-xl border-2 px-6 py-3 font-bold text-green-950 transition-all duration-300 hover:-translate-y-1 focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:outline-none"
+	>
+		<span>¿Necesitas un proyecto similar?</span>
+		<span class="ml-2 text-xl" aria-hidden="true">→</span>
+	</a>
+</div>

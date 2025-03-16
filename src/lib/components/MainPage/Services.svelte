@@ -53,80 +53,78 @@
 	let activeCard = $state<number | null>(null);
 </script>
 
-<section class="container mx-auto">
-	<!-- Encabezado de sección -->
-	<header class="mb-16 text-center" aria-labelledby="services-title">
-		<div class="relative mb-6 inline-block">
-			<h2 id="services-title" class="heading-2 relative z-10">
-				Servicios de <span class="my-span">Desarrollo Web</span>
-			</h2>
+<!-- Encabezado de sección -->
+<header class="mb-16 text-center" aria-labelledby="services-title">
+	<div class="relative mb-6 inline-block">
+		<h2 id="services-title" class="heading-2 relative z-10">
+			Servicios de <span class="my-span">Desarrollo Web</span>
+		</h2>
 
-			<div class="absolute bottom-1 left-0 -z-10 h-3 w-full bg-sky-200" aria-hidden="true"></div>
-		</div>
+		<div class="absolute bottom-1 left-0 -z-10 h-3 w-full bg-sky-200" aria-hidden="true"></div>
+	</div>
 
-		<p class="p mx-auto max-w-2xl">
-			Ofrezco <strong>soluciones digitales completas</strong> y personalizadas con enfoque en
-			<span class="font-medium">calidad</span>, <span class="font-medium">rendimiento</span> y
-			<span class="font-medium">experiencia de usuario</span>. Cada proyecto recibe atención
-			dedicada para obtener resultados excepcionales.
-		</p>
-	</header>
+	<p class="p mx-auto max-w-2xl">
+		Ofrezco <strong>soluciones digitales completas</strong> y personalizadas con enfoque en
+		<span class="font-medium">calidad</span>, <span class="font-medium">rendimiento</span> y
+		<span class="font-medium">experiencia de usuario</span>. Cada proyecto recibe atención dedicada
+		para obtener resultados excepcionales.
+	</p>
+</header>
 
-	<!-- Cuadrícula de servicios -->
-	<ul class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-10" role="list">
-		{#each services as service}
-			<li>
-				<article
-					class="my-border my-shadow my-effect rounded-xl border-2 bg-white p-6 transition-all duration-300"
-					id={`service-${service.id}`}
-				>
-					<header class="mb-4 flex items-center">
-						<figure class="my-bg flex-shrink-0 rounded-xl p-3">
-							<service.icon size={40} strokeWidth={2} class="text-green-950" aria-hidden="true" />
-						</figure>
-						<h3 class="heading-3 ml-4">{service.title}</h3>
-					</header>
+<!-- Cuadrícula de servicios -->
+<ul class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-10" role="list">
+	{#each services as service}
+		<li>
+			<article
+				class="my-border my-shadow my-effect rounded-xl border-2 bg-white p-6 transition-all duration-300"
+				id={`service-${service.id}`}
+			>
+				<header class="mb-4 flex items-center">
+					<figure class="my-bg flex-shrink-0 rounded-xl p-3">
+						<service.icon size={40} strokeWidth={2} class="text-green-950" aria-hidden="true" />
+					</figure>
+					<h3 class="heading-3 ml-4">{service.title}</h3>
+				</header>
 
-					<!-- Separador visual -->
-					<hr class="my-bg mb-4 h-1 w-16 border-none" aria-hidden="true" />
+				<!-- Separador visual -->
+				<hr class="my-bg mb-4 h-1 w-16 border-none" aria-hidden="true" />
 
-					<!-- Descripción del servicio -->
-					<section class="mb-6">
-						<p class="p">
-							{service.description}
-						</p>
-					</section>
+				<!-- Descripción del servicio -->
+				<section class="mb-6">
+					<p class="p">
+						{service.description}
+					</p>
+				</section>
 
-					<!-- Micro-CTA -->
-					<footer class="mt-4">
-						<a
-							href="#contacto"
-							class="my-border my-shadow my-bg group inline-flex items-center rounded-lg border-2 px-4 py-2 font-bold text-green-950 focus:ring-2 focus:ring-offset-2 focus:outline-none"
-							aria-label={`Solicitar servicio de ${service.title}`}
+				<!-- Micro-CTA -->
+				<footer class="mt-4">
+					<a
+						href="#contacto"
+						class="my-border my-shadow my-bg group inline-flex items-center rounded-lg border-2 px-4 py-2 font-bold text-green-950 focus:ring-2 focus:ring-offset-2 focus:outline-none"
+						aria-label={`Solicitar servicio de ${service.title}`}
+					>
+						<span>Solicitar servicio</span>
+						<span
+							class="ml-3 text-base transition-transform duration-300 group-hover:translate-x-1"
+							aria-hidden="true">→</span
 						>
-							<span>Solicitar servicio</span>
-							<span
-								class="ml-3 text-base transition-transform duration-300 group-hover:translate-x-1"
-								aria-hidden="true">→</span
-							>
-						</a>
-					</footer>
+					</a>
+				</footer>
 
-					<!-- Tags de keywords visibles para SEO -->
-					<section class="mt-4" aria-labelledby={`keywords-${service.id}`}>
-						<h4 class="sr-only" id={`keywords-${service.id}`}>Palabras clave relacionadas</h4>
-						<ul class="flex flex-wrap gap-2" role="list">
-							{#each service.keywords as keyword}
-								<li>
-									<span class="px-2 text-xs text-green-800">
-										{keyword}
-									</span>
-								</li>
-							{/each}
-						</ul>
-					</section>
-				</article>
-			</li>
-		{/each}
-	</ul>
-</section>
+				<!-- Tags de keywords visibles para SEO -->
+				<section class="mt-4" aria-labelledby={`keywords-${service.id}`}>
+					<h4 class="sr-only" id={`keywords-${service.id}`}>Palabras clave relacionadas</h4>
+					<ul class="flex flex-wrap gap-2" role="list">
+						{#each service.keywords as keyword}
+							<li>
+								<span class="px-2 text-xs text-green-800">
+									{keyword}
+								</span>
+							</li>
+						{/each}
+					</ul>
+				</section>
+			</article>
+		</li>
+	{/each}
+</ul>
