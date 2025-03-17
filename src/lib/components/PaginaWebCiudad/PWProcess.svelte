@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { MessageSquare, Palette, Code, Rocket } from 'lucide-svelte';
-	import { onMount } from 'svelte';
 
 	// Propiedades con sintaxis de Svelte 5
 	let { city = 'Huancayo' } = $props();
@@ -79,9 +78,8 @@
 		<ol class="relative space-y-16" role="list">
 			{#each steps as step, i (step.id)}
 				<li class={`relative flex flex-col ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
-					<!-- Círculo conector (solo visible en desktop) -->
 					<div
-						class={`absolute top-0 left-1/2 hidden h-10 w-10 -translate-x-1/2 -translate-y-1/2 rounded-full ${step.borderColor} border-4 bg-white md:block`}
+						class={`absolute top-0 left-1/2 hidden h-10 w-10 -translate-x-1/2 translate-y-15 rounded-full ${step.borderColor} border-2 bg-white md:block`}
 						aria-hidden="true"
 					></div>
 
@@ -120,7 +118,7 @@
 								<h4 id={`process-step-${step.id}-description`} class="sr-only">
 									Descripción del paso {step.id}
 								</h4>
-								<p>{step.description}</p>
+								<p class="p">{step.description}</p>
 							</section>
 						</article>
 					</div>
@@ -130,14 +128,18 @@
 	</div>
 </section>
 
-<!-- CTA enriquecido -->
 <footer class="mt-16 text-center">
-	<p class="mb-4 text-gray-600">¿Listo para impulsar tu presencia web en {city}?</p>
+	<p class="p mb-4">¿Listo para impulsar tu presencia web en {city}?</p>
+
 	<a
 		href="#contacto"
-		class="my-border my-bg my-shadow inline-flex items-center rounded-xl border-2 px-6 py-3 font-bold text-green-950 transition-all duration-300 hover:-translate-y-1 focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:outline-none"
+		class="my-border my-shadow my-bg my-transition group inline-flex items-center rounded-lg border-2 px-4 py-2 font-bold text-green-950 focus:ring-2 focus:ring-offset-2 focus:outline-none"
 	>
-		<span>Comenzar tu proyecto web</span>
-		<span class="ml-2 text-xl" aria-hidden="true">→</span>
+		<span>Solicitar información</span>
+		<span
+			class="ml-3 text-base transition-transform duration-300 group-hover:translate-x-1"
+			aria-hidden="true"
+			>→
+		</span>
 	</a>
 </footer>
