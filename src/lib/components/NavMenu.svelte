@@ -13,23 +13,19 @@
 	]);
 </script>
 
-<header class="  ">
+<header>
 	<!-- Desktop Menu -->
-	<div class="hidden h-full items-center gap-6 md:flex">
+	<nav class="hidden h-full items-center gap-6 md:flex">
 		<ul class="flex gap-6">
 			{#each menuItems as item}
 				<li>
-					<a
-						href={item.href}
-						class="p relative block rounded-lg px-4 py-2 font-bold"
-						role="menuitem"
-					>
+					<a href={item.href} class="p relative block rounded-lg px-4 py-2 font-bold">
 						{item.text}
 					</a>
 				</li>
 			{/each}
 		</ul>
-	</div>
+	</nav>
 
 	<!-- Mobile Controls -->
 	<div class="flex items-center md:hidden">
