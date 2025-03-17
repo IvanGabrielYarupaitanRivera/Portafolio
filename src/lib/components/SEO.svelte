@@ -5,7 +5,13 @@
 		keywords,
 		url,
 		type,
-		image = 'https://www.vanchi.pro/og-image.jpg'
+		image = 'https://www.vanchi.pro/og-image.jpg',
+		city,
+		region,
+		country = 'Perú',
+		countryCode = 'PE',
+		latitude,
+		longitude
 	}: {
 		title: string;
 		description: string;
@@ -13,13 +19,26 @@
 		url: string;
 		type: string;
 		image?: string;
+		city: string;
+		region: string;
+		country?: string;
+		countryCode?: string;
+		latitude: string;
+		longitude: string;
 	} = $props();
+
+	const locationData = $derived({
+		formattedCity: city + ', ' + region,
+		geoRegion: `${countryCode}-${region.substring(0, 3).toUpperCase()}`
+	});
 
 	const schema = {
 		'@context': 'https://schema.org',
 		'@type': 'ProfessionalService',
 		'@id': url,
-		name: 'Ivan Gabriel Yarupaitan Rivera - Servicios de Desarrollo Web',
+		name: city
+			? `Ivan Gabriel Yarupaitan Rivera - Desarrollo Web en ${city}`
+			: 'Ivan Gabriel Yarupaitan Rivera - Servicios de Desarrollo Web',
 		alternateName: 'Vanchi',
 		jobTitle: 'Programador de aplicaciones web',
 		url: url,
@@ -30,8 +49,9 @@
 		email: 'ivangyr321@gmail.com',
 		address: {
 			'@type': 'PostalAddress',
-			addressRegion: 'Junín',
-			addressCountry: 'PE'
+			addressLocality: city,
+			addressRegion: region,
+			addressCountry: countryCode
 		},
 		founder: {
 			'@type': 'Person',
@@ -54,19 +74,22 @@
 			]
 		},
 		sameAs: [
-			'https://github.com/IvanGabrielYarupaitanRivera',
+			'https://github.com/IvanGabrielYarupaitanRivera/',
 			'https://www.linkedin.com/in/ivan-yarupaitan-rivera/',
-			'https://www.facebook.com/vanchi.programador'
+			'https://www.facebook.com/vanchi.desarrollador/',
+			'https://www.instagram.com/vanchi.desarrollador/'
 		],
 		hasOfferCatalog: {
 			'@type': 'OfferCatalog',
-			name: 'Servicios de Desarrollo Web Profesional',
+			name: city
+				? `Servicios de Desarrollo Web en ${city}`
+				: 'Servicios de Desarrollo Web Profesional',
 			itemListElement: [
 				{
 					'@type': 'Offer',
 					itemOffered: {
 						'@type': 'Service',
-						name: 'Desarrollo de Páginas Web',
+						name: city ? `Desarrollo de Páginas Web en ${city}` : 'Desarrollo de Páginas Web',
 						description:
 							'Creación de páginas web modernas, responsivas y optimizadas para SEO y conversión de clientes'
 					}
@@ -75,7 +98,9 @@
 					'@type': 'Offer',
 					itemOffered: {
 						'@type': 'Service',
-						name: 'Desarrollo de Aplicaciones Web',
+						name: city
+							? `Desarrollo de Aplicaciones Web en ${city}`
+							: 'Desarrollo de Aplicaciones Web',
 						description:
 							'Aplicaciones web interactivas y funcionales con tecnologías modernas para negocios y startups'
 					}
@@ -84,7 +109,7 @@
 					'@type': 'Offer',
 					itemOffered: {
 						'@type': 'Service',
-						name: 'Desarrollo Full Stack',
+						name: city ? `Desarrollo Full Stack para ${city}` : 'Desarrollo Full Stack',
 						description:
 							'Soluciones web completas desde el frontend hasta el backend con las tecnologías más modernas del mercado'
 					}
@@ -93,7 +118,7 @@
 					'@type': 'Offer',
 					itemOffered: {
 						'@type': 'Service',
-						name: 'Diseño y Programación Web',
+						name: city ? `Diseño y Programación Web para ${city}` : 'Diseño y Programación Web',
 						description:
 							'Interfaces atractivas y código optimizado para una experiencia de usuario excepcional y máxima velocidad de carga'
 					}
@@ -104,8 +129,9 @@
 			'@type': 'Place',
 			address: {
 				'@type': 'PostalAddress',
-				addressRegion: 'Junín',
-				addressCountry: 'PE'
+				addressLocality: city,
+				addressRegion: region,
+				addressCountry: countryCode
 			}
 		},
 		areaServed: [
@@ -174,8 +200,8 @@
 		knowsLanguage: ['es', 'en'],
 		geo: {
 			'@type': 'GeoCoordinates',
-			latitude: -12.041545380185886,
-			longitude: -75.19187545630611
+			latitude: latitude,
+			longitude: longitude
 		},
 		logo: 'https://vanchi.pro/logo.png',
 		additionalType: [
@@ -206,8 +232,10 @@
 	<link rel="canonical" href={url} />
 	<meta name="keywords" content={keywords} />
 	<meta name="author" content="Ivan Gabriel Yarupaitan Rivera" />
-	<meta name="geo.region" content="PE-JUN" />
-	<meta name="geo.placename" content="Junín" />
+	<meta name="geo.region" content={locationData.geoRegion} />
+	<meta name="geo.placename" content={locationData.formattedCity} />
+	<meta name="geo.position" content={`${latitude};${longitude}`} />
+	<meta name="ICBM" content={`${latitude}, ${longitude}`} />
 
 	<!-- Open Graph -->
 	<meta property="og:title" content={title} />
@@ -218,7 +246,7 @@
 	<meta property="og:locale" content="es_PE" />
 	<meta
 		property="og:site_name"
-		content="Servicios de Desarrollo Web | Ivan Gabriel Yarupaitan Rivera"
+		content="Servicios de Desarrollo Web ${` en ${city} `} | Ivan Gabriel Yarupaitan Rivera"
 	/>
 
 	<!-- Twitter -->

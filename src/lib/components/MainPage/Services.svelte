@@ -107,8 +107,9 @@
 						<span>Solicitar servicio</span>
 						<span
 							class="ml-3 text-base transition-transform duration-300 group-hover:translate-x-1"
-							aria-hidden="true">→</span
-						>
+							aria-hidden="true"
+							>→
+						</span>
 					</a>
 				</footer>
 

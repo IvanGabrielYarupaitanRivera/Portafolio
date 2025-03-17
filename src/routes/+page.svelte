@@ -15,6 +15,10 @@
 	keywords="desarrollo web, desarrollador web, desarrollos web, programador web, diseño y desarrollo web, desarrollo full stack, desarrollador full stack, desarrollo de páginas web, aplicaciones web, servicios de desarrollo web, agencia de desarrollo web, desarrollo de aplicaciones web, programación web, empresa de desarrollo web, desarrollo web full stack"
 	url="https://www.vanchi.pro/"
 	type="website"
+	city="Huancayo"
+	region="Junín"
+	latitude="-12.041545380185886"
+	longitude="-75.19187545630611"
 />
 
 <main class="relative mr-4 ml-3 flex flex-col gap-48">
