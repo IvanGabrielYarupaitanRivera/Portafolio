@@ -11,7 +11,7 @@
 </script>
 
 <Seo
-	title="Servicios de Desarrollo Web y Full Stack | Ivan Gabriel Yarupaitan Rivera"
+	title="Servicios de Desarrollo Web y Full Stack"
 	description="Desarrollo profesional de páginas web y aplicaciones. Servicios especializados en diseño web, programación frontend y desarrollo full stack con SvelteKit, TypeScript y Supabase. Soluciones web a medida para empresas y particulares."
 	keywords="desarrollo web, desarrollador web, desarrollos web, programador web, diseño y desarrollo web, desarrollo full stack, desarrollador full stack, desarrollo de páginas web, aplicaciones web, servicios de desarrollo web, agencia de desarrollo web, desarrollo de aplicaciones web, programación web, empresa de desarrollo web, desarrollo web full stack"
 	url="https://www.vanchi.pro/"
