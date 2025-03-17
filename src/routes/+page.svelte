@@ -18,7 +18,7 @@
 	type="website"
 />
 
-<main class="relative mr-4 ml-3 flex flex-col gap-16">
+<main class="relative mr-4 ml-3 flex flex-col gap-48">
 	<!-- Patrón de cuadrícula de fondo -->
 
 	<section class="mt-16 md:px-36" aria-label="Introducción y presentación">
@@ -35,10 +35,6 @@
 
 	<section aria-label="Testimonios" id="testimonios">
 		<Testimonials />
-	</section>
-
-	<section aria-label="Habilidades" id="habilidades">
-		<Skills />
 	</section>
 
 	<section class="mb-16" aria-label="Formulario de contacto" id="contacto">
