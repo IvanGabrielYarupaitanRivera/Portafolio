@@ -7,23 +7,29 @@
 
 	let { form }: { form: ActionData } = $props();
 
-	let isSending = $state(false);
+	let formStatus = $state({
+		isSending: false,
+		wasReset: false
+	});
 
-	const resetForm = () => {
-		isSending = false;
-	};
+	const displayState = $derived({
+		showForm: !form || formStatus.wasReset,
+		showSuccess: form?.success === true && !formStatus.isSending && !formStatus.wasReset,
+		showError: form?.success === false && !formStatus.isSending && !formStatus.wasReset
+	});
+
+	function resetForm() {
+		formStatus.wasReset = true;
+	}
 
 	const handleSubmit = () => {
-		isSending = true;
+		formStatus.isSending = true;
+		formStatus.wasReset = false;
 
 		return async ({ update, result }: { update: () => Promise<void>; result: ActionResult }) => {
 			await update();
 
-			if (result.type === 'success') {
-				console.log('Mensaje enviado con éxito');
-			} else {
-				console.log('Error al enviar el mensaje');
-			}
+			formStatus.isSending = false;
 		};
 	};
 </script>
@@ -39,15 +45,24 @@
 	</div>
 
 	<p class="p mx-auto max-w-sm md:max-w-2xl">
-		{#if form?.success && isSending == true}
-			Gracias por contactarme. Me pondré en contacto contigo lo antes posible para discutir tu
-			proyecto de
-			<strong>desarrollo web</strong> o <strong>aplicación personalizada</strong>.
-		{:else}
-			Cuéntame sobre tu idea y cómo puedo ayudarte con
-			<strong>desarrollo web profesional</strong>, <strong>aplicaciones a medida</strong> o
-			<span class="font-medium">integración de inteligencia artificial</span>. Tu visión digital
-			está a un mensaje de distancia.
+		{#if displayState.showForm}
+			Cuéntame sobre tu proyecto y cómo puedo ayudarte con
+			<strong>desarrollo web profesional</strong>, <strong>aplicaciones personalizadas</strong> o
+			<strong>integración de inteligencia artificial</strong>. Estoy especializado en crear
+			<span class="font-medium">soluciones digitales a medida</span> que impulsan tu negocio.
+		{:else if displayState.showSuccess}
+			¡Gracias por contactarme! Revisaré tu mensaje y me pondré en contacto contigo en las próximas
+			24-48 horas para conversar sobre tu proyecto de <strong>desarrollo web</strong> o
+			<strong>aplicación personalizada</strong>.
+		{:else if displayState.showError}
+			Lo siento, ha ocurrido un problema al enviar tu mensaje. Por favor, inténtalo nuevamente o
+			contáctame directamente a través de <a
+				href="https://wa.me/51985942670"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="font-medium text-green-700 underline hover:text-green-900"
+				>WhatsApp (+51 985942670)</a
+			>.
 		{/if}
 	</p>
 </header>
@@ -58,31 +73,7 @@
 	class="my-shadow my-border my-component-bg rounded-xl border-2 px-8 pt-8 pb-6 md:px-16 md:pb-12"
 	use:enhance={handleSubmit}
 >
-	{#if form && isSending == true}
-		{#if form.success}
-			<section class="flex flex-col items-center gap-8 p-8 text-center">
-				<span class="animate-bounce text-6xl">🌞</span>
-				<h3 class="heading-3">¡Gracias por tu mensaje!</h3>
-				<p class="p">Me pondré en contacto contigo lo antes posible</p>
-				<button
-					onclick={resetForm}
-					class=" my-border my-bg my-transition p my-shadow cursor-pointer rounded-xl border-2 px-6 py-3 font-bold"
-					>Enviar otro mensaje</button
-				>
-			</section>
-		{:else if !form.success}
-			<section class="flex flex-col items-center gap-8 p-8 text-center">
-				<span class="animate-bounce text-6xl">👁️</span>
-				<h3 class="heading-3">¡Ocurrió un error!</h3>
-				<p class="p">{form.message}</p>
-				<button
-					onclick={resetForm}
-					class="my-border my-bg my-transition p my-shadow cursor-pointer rounded-xl border-2 px-6 py-3 font-bold"
-					>Intentar de nuevo</button
-				>
-			</section>
-		{/if}
-	{:else}
+	{#if displayState.showForm}
 		<div class="grid gap-16 lg:grid-cols-2">
 			<fieldset class="min-w-full">
 				<legend class="sr-only">Información de contacto</legend>
@@ -140,9 +131,9 @@
 				<button
 					type="submit"
 					class=" my-border my-bg my-transition p my-shadow mt-12 mb-6 flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-xl border-2 px-6 py-3 font-bold"
-					disabled={isSending}
+					disabled={formStatus.isSending}
 				>
-					{isSending ? 'Enviando...' : 'Enviar mensaje'}
+					{formStatus.isSending ? 'Enviando...' : 'Enviar mensaje'}
 				</button>
 			</fieldset>
 
@@ -159,6 +150,28 @@
 				/>
 			</div>
 		</div>
+	{:else if displayState.showSuccess}
+		<section class="flex flex-col items-center gap-8 p-8 text-center">
+			<span class="animate-bounce text-6xl">🌞</span>
+			<h3 class="heading-3">¡Gracias por tu mensaje!</h3>
+			<p class="p">Me pondré en contacto contigo lo antes posible</p>
+			<button
+				onclick={resetForm}
+				class=" my-border my-bg my-transition p my-shadow cursor-pointer rounded-xl border-2 px-6 py-3 font-bold"
+				>Enviar otro mensaje</button
+			>
+		</section>
+	{:else if displayState.showError}
+		<section class="flex flex-col items-center gap-8 p-8 text-center">
+			<span class="animate-bounce text-6xl">👁️</span>
+			<h3 class="heading-3">¡Ocurrió un error!</h3>
+			<p class="p">{form?.message}</p>
+			<button
+				onclick={resetForm}
+				class="my-border my-bg my-transition p my-shadow cursor-pointer rounded-xl border-2 px-6 py-3 font-bold"
+				>Intentar de nuevo</button
+			>
+		</section>
 	{/if}
 </form>
 
