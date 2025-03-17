@@ -26,7 +26,7 @@
 		formStatus.isSending = true;
 		formStatus.wasReset = false;
 
-		return async ({ update, result }: { update: () => Promise<void>; result: ActionResult }) => {
+		return async ({ update }: { update: () => Promise<void> }) => {
 			await update();
 
 			formStatus.isSending = false;
@@ -123,7 +123,7 @@
 						maxlength="500"
 						minlength="10"
 						required
-						placeholder="Escribe tu mensaje"
+						placeholder="Escribe tu mensaje (mínimo 10 caracteres)"
 						class="my-border my-shadow p mt-2 w-full resize-none rounded-xl border-2 bg-green-100 p-3 focus:outline-none"
 					></textarea>
 				</div>
@@ -152,22 +152,30 @@
 		</div>
 	{:else if displayState.showSuccess}
 		<section class="flex flex-col items-center gap-8 p-8 text-center">
-			<span class="animate-bounce text-6xl">🌞</span>
+			<span
+				class="animate-bounce text-6xl"
+				role="img"
+				aria-label="Emoji de sol sonriente indicando éxito">🌞</span
+			>
 			<h3 class="heading-3">¡Gracias por tu mensaje!</h3>
 			<p class="p">Me pondré en contacto contigo lo antes posible</p>
 			<button
 				onclick={resetForm}
+				type="button"
 				class=" my-border my-bg my-transition p my-shadow cursor-pointer rounded-xl border-2 px-6 py-3 font-bold"
 				>Enviar otro mensaje</button
 			>
 		</section>
 	{:else if displayState.showError}
 		<section class="flex flex-col items-center gap-8 p-8 text-center">
-			<span class="animate-bounce text-6xl">👁️</span>
+			<span class="animate-bounce text-6xl" role="img" aria-label="Emoji de ojo indicando error"
+				>👁️</span
+			>
 			<h3 class="heading-3">¡Ocurrió un error!</h3>
 			<p class="p">{form?.message}</p>
 			<button
 				onclick={resetForm}
+				type="button"
 				class="my-border my-bg my-transition p my-shadow cursor-pointer rounded-xl border-2 px-6 py-3 font-bold"
 				>Intentar de nuevo</button
 			>
