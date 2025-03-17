@@ -1,18 +1,21 @@
 <script lang="ts">
-	import { blur, fly } from 'svelte/transition';
+	import { blur } from 'svelte/transition';
 	import NavMenu from './NavMenu.svelte';
 	import { X } from 'lucide-svelte';
-	let isCloseMenuByNav = $state(false);
 
+	let isCloseMenuByNav = $state(false);
 	let showMobileMenu = $state(false);
 
-	const menuItems = [
+	const menuItems = $state([
+		{ href: '#servicios', text: 'Servicios' },
 		{ href: '#proyectos', text: 'Proyectos' },
-		{ href: '#habilidades', text: 'Habilidades' },
+		{ href: '#testimonios', text: 'Testimonios' },
 		{ href: '#contacto', text: 'Contacto' }
-	];
+	]);
 
-	const toggleMenu = () => (showMobileMenu = !showMobileMenu);
+	function toggleMenu() {
+		showMobileMenu = !showMobileMenu;
+	}
 </script>
 
 <section class="sticky top-2 z-30 container mx-auto mt-2">
@@ -22,7 +25,8 @@
 		<nav class="flex justify-between" aria-label="navegación principal ">
 			<a
 				href="/"
-				class="my-border heading-3 my-shadow top-0 right-0 left-0 flex items-center rounded-xl border-2 bg-green-500 px-4 py-4 hover:bg-green-500"
+				class="my-border heading-3 my-shadow my-bg my-transition top-0 right-0 left-0 flex items-center rounded-xl border-2 px-4 py-4"
+				aria-label="Página principal - Vanchi"
 			>
 				<span class="leading-[0.6]">Vanchi</span>
 			</a>
@@ -37,12 +41,12 @@
 		id="mobile-menu"
 		aria-label="Menú móvil"
 		class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-xl md:hidden"
-		transition:blur={{ duration: 300 }}
+		transition:blur
 	>
 		<div
 			class="my-shadow my-border relative rounded-xl border-2 bg-white"
-			in:fly={{ y: -50, duration: 300 }}
-			out:fly={{ y: -50, duration: isCloseMenuByNav ? 300 : 0 }}
+			in:blur={{ duration: 300 }}
+			out:blur={{ duration: isCloseMenuByNav ? 300 : 0 }}
 		>
 			<button
 				type="button"

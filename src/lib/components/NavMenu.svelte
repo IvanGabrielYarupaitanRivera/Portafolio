@@ -1,20 +1,16 @@
 <script lang="ts">
 	import { Menu, X } from 'lucide-svelte';
-	import { page } from '$app/stores';
 
 	let { mobileMenu } = $props();
 
 	let isMenuOpen = $state(false);
 
-	const menuItems = [
+	const menuItems = $state([
+		{ href: '#servicios', text: 'Servicios' },
 		{ href: '#proyectos', text: 'Proyectos' },
-		{ href: '#habilidades', text: 'Habilidades' },
+		{ href: '#testimonios', text: 'Testimonios' },
 		{ href: '#contacto', text: 'Contacto' }
-	];
-
-	const toggleMenu = () => (isMenuOpen = !isMenuOpen);
-
-	const isCurrentPage = $derived((href: string) => $page.url.pathname === href);
+	]);
 </script>
 
 <header class="  ">
@@ -23,7 +19,11 @@
 		<ul class="flex gap-6">
 			{#each menuItems as item}
 				<li>
-					<a href={item.href} class="p relative block rounded-lg px-4 py-2 font-bold">
+					<a
+						href={item.href}
+						class="p relative block rounded-lg px-4 py-2 font-bold"
+						role="menuitem"
+					>
 						{item.text}
 					</a>
 				</li>
@@ -41,9 +41,9 @@
 			onclick={mobileMenu}
 		>
 			{#if isMenuOpen}
-				<X size={30} strokeWidth={2} class="my-stroke" />
+				<X size={30} strokeWidth={2} class="my-stroke" aria-hidden="true" />
 			{:else}
-				<Menu size={30} strokeWidth={2} class="my-stroke" />
+				<Menu size={30} strokeWidth={2} class="my-stroke" aria-hidden="true" />
 			{/if}
 		</button>
 	</div>
