@@ -103,7 +103,7 @@
 
 <!-- Lista de FAQs -->
 <section class="mx-auto max-w-3xl">
-	<dl class="divide-y divide-gray-200">
+	<dl>
 		{#each faqs as faq (faq.id)}
 			<div class="py-4">
 				<dt class="relative">

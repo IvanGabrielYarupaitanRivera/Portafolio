@@ -11,20 +11,16 @@
 			title: 'Consulta y análisis',
 			description: `Analizamos las necesidades específicas de su negocio en ${city} y definimos objetivos claros para su página web.`,
 			icon: 'MessageSquare',
-			borderColor: 'border-blue-400',
-			iconBg: 'bg-blue-100',
-			iconColor: 'text-blue-700',
-			bgImage: '/images/process/analysis-bg.webp'
+			iconBg: 'bg-green-100',
+			iconColor: 'text-green-700'
 		},
 		{
 			id: 2,
 			title: 'Diseño personalizado',
 			description: `Creamos mockups y prototipos adaptados a la identidad de su marca y al mercado local de ${city}.`,
 			icon: 'Palette',
-			borderColor: 'border-purple-400',
-			iconBg: 'bg-purple-100',
-			iconColor: 'text-purple-700',
-			bgImage: '/images/process/design-bg.webp'
+			iconBg: 'bg-green-100',
+			iconColor: 'text-green-700'
 		},
 		{
 			id: 3,
@@ -32,20 +28,16 @@
 			description:
 				'Implementamos su sitio web con código limpio y optimizado para velocidad de carga.',
 			icon: 'Code',
-			borderColor: 'border-green-400',
 			iconBg: 'bg-green-100',
-			iconColor: 'text-green-700',
-			bgImage: '/images/process/development-bg.webp'
+			iconColor: 'text-green-700'
 		},
 		{
 			id: 4,
 			title: 'SEO local y lanzamiento',
 			description: `Optimizamos su página web para posicionarse en búsquedas locales en ${city} y la lanzamos al público.`,
 			icon: 'Rocket',
-			borderColor: 'border-red-400',
-			iconBg: 'bg-red-100',
-			iconColor: 'text-red-700',
-			bgImage: '/images/process/launch-bg.webp'
+			iconBg: 'bg-green-100',
+			iconColor: 'text-green-700'
 		}
 	]);
 </script>
@@ -70,7 +62,7 @@
 <section class="container mx-auto" aria-labelledby="process-title">
 	<div class="relative">
 		<div
-			class="absolute top-0 left-1/2 hidden h-full w-0.5 -translate-x-1/2 bg-black/10 md:block"
+			class="my-bg absolute top-0 left-1/2 hidden h-full w-0.5 -translate-x-1/2 md:block"
 			aria-hidden="true"
 		></div>
 
@@ -79,14 +71,14 @@
 			{#each steps as step, i (step.id)}
 				<li class={`relative flex flex-col ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
 					<div
-						class={`absolute top-0 left-1/2 hidden h-10 w-10 -translate-x-1/2 translate-y-15 rounded-full ${step.borderColor} border-2 bg-white md:block`}
+						class="absolute top-0 left-1/2 hidden h-10 w-10 -translate-x-1/2 translate-y-15 rounded-full border-2 border-green-600 bg-green-100 md:block"
 						aria-hidden="true"
 					></div>
 
 					<!-- Contenido del paso -->
 					<div class="md:w-1/2 md:px-8">
 						<article
-							class={`my-shadow rounded-xl border-2 ${step.borderColor} bg-white p-6`}
+							class="my-shadow my-border rounded-xl border-2 bg-white p-6"
 							id={`process-step-${step.id}`}
 						>
 							<header class="mb-4 flex items-center">

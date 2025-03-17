@@ -27,7 +27,7 @@
 		{
 			id: 2,
 			title: 'Páginas Web para Negocios',
-			description: `Páginas web profesionales para empresas de ${city} que buscan destacar en internet. Resalta tus productos y servicios con un diseño atractivo y funcional.`,
+			description: `Páginas web profesionales para empresas de ${city} que buscan destacar en internet. Resalta tus servicios con un diseño atractivo.`,
 			icon: Store,
 			features: [
 				'Catálogo de productos o servicios',
