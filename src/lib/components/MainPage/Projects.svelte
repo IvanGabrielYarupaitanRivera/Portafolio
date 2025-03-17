@@ -110,6 +110,8 @@
 					class={activeFilter === category.id
 						? classFilterActive.actived
 						: classFilterActive.default}
+					aria-label={`Filtrar por ${category.label}`}
+					type="button"
 				>
 					{#if category.id === 'todos'}
 						<Layout size={18} aria-hidden="true" />
