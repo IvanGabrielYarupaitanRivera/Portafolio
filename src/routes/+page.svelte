@@ -5,7 +5,6 @@
 	import Testimonials from '$lib/components/MainPage/Testimonials.svelte';
 	import Projects from '$lib/components/MainPage/Projects.svelte';
 	import Contact from '$lib/components/MainPage/Contact.svelte';
-	import Skills from '$lib/components/MainPage/Skills.svelte';
 
 	let { form } = $props();
 </script>
