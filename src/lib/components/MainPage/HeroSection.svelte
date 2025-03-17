@@ -36,12 +36,6 @@
 			>
 				Ver Servicios
 			</a>
-			<a
-				href="#contacto"
-				class="my-border my-active-bg my-transition p my-shadow rounded-xl border-2 px-6 py-3 font-bold focus:ring-2 focus:ring-blue-700 focus:ring-offset-2 focus:outline-none"
-			>
-				Solicitar Presupuesto
-			</a>
 		</nav>
 
 		<a href="#servicios" aria-label="Ver mis servicios de desarrollo web">
