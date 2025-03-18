@@ -3,6 +3,7 @@
 	import Header from '$lib/components/PaginaWebCiudad/Header/Header.svelte';
 	import PwHero from '$lib/components/PaginaWebCiudad/PWHero.svelte';
 	import PwServices from '$lib/components/PaginaWebCiudad/PWServices.svelte';
+	import PwSectorCards from '$lib/components/PaginaWebCiudad/PWSectorCards.svelte';
 	import PWFaq from '$lib/components/PaginaWebCiudad/PWFAQ.svelte';
 	import Contact from '$lib/components/MainPage/Contact.svelte';
 	import PwProcess from '$lib/components/PaginaWebCiudad/PWProcess.svelte';
@@ -31,7 +32,11 @@
 		</section>
 
 		<section aria-label="Servicios ofrecidos" id="servicios">
-			<PwServices city="Huancayo" showSectors={true} />
+			<PwServices city="Huancayo" />
+		</section>
+
+		<section aria-label="Sectores atendidos" id="sectores">
+			<PwSectorCards city="Huancayo" />
 		</section>
 
 		<section aria-label="Proceso de desarrollo" id="proceso">

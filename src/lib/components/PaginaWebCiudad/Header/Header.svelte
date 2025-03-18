@@ -8,6 +8,7 @@
 
 	const menuItems = $state([
 		{ href: '#servicios', text: 'Servicios' },
+		{ href: '#sectores', text: 'Sectores' },
 		{ href: '#proceso', text: 'Proceso' },
 		{ href: '#FAQ', text: 'FAQ' },
 		{ href: '#contacto', text: 'Contacto' }
@@ -24,7 +25,7 @@
 	>
 		<nav class="flex justify-between" aria-label="navegación principal ">
 			<a
-				href="/"
+				href="/pagina-web-huancayo"
 				class="my-border heading-3 my-shadow my-bg my-transition top-0 right-0 left-0 flex items-center rounded-xl border-2 px-4 py-4"
 				aria-label="Página principal - Vanchi"
 			>

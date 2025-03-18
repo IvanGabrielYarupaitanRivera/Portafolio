@@ -16,7 +16,7 @@
 <header>
 	<!-- Desktop Menu -->
 	<nav class="hidden h-full items-center gap-6 md:flex">
-		<ul class="flex gap-6">
+		<ul class="flex gap-1">
 			{#each menuItems as item}
 				<li>
 					<a href={item.href} class="p relative block rounded-lg px-4 py-2 font-bold">

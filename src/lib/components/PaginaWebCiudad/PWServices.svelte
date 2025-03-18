@@ -3,11 +3,9 @@
 
 	// Props para hacer componente reutilizable en diferentes ciudades
 	let {
-		city,
-		showSectors
+		city
 	}: {
 		city: string;
-		showSectors: boolean;
 	} = $props();
 
 	// Estado para servicios específicos de páginas web
@@ -59,34 +57,6 @@
 				'Metadata optimizada',
 				'Carga rápida'
 			]
-		}
-	]);
-
-	// Sectores empresariales para páginas web localizadas
-	const businessSectors = $state([
-		{
-			id: 1,
-			name: `Restaurantes y Cafés de ${city}`,
-			icon: '🍽️',
-			benefits: ['Menú digital']
-		},
-		{
-			id: 2,
-			name: `Hoteles y Hospedajes en ${city}`,
-			icon: '🏨',
-			benefits: ['Galería de habitaciones']
-		},
-		{
-			id: 3,
-			name: `Consultorios y Clínicas en ${city}`,
-			icon: '⚕️',
-			benefits: ['Testimonio de pacientes']
-		},
-		{
-			id: 4,
-			name: `Tiendas y Comercios de ${city}`,
-			icon: '🛍️',
-			benefits: ['Catálogo de productos']
 		}
 	]);
 </script>
@@ -161,65 +131,3 @@
 		</li>
 	{/each}
 </ul>
-
-{#if showSectors}
-	<section class="mt-24" aria-labelledby="sectors-title">
-		<header class="mb-12 text-center">
-			<h2 id="sectors-title" class="heading-2 mb-4">
-				Páginas Web para Cada Sector en <span class="my-span">{city}</span>
-			</h2>
-			<p class="p mx-auto max-w-sm md:max-w-2xl">
-				Soluciones web adaptadas a las necesidades específicas de diferentes sectores empresariales
-				en {city} y alrededores.
-			</p>
-		</header>
-
-		<ul class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4" role="list">
-			{#each businessSectors as sector (sector.id)}
-				<li>
-					<article
-						class="my-border my-shadow my-effect my-transition h-full rounded-xl border-2 bg-white p-6 text-center"
-					>
-						<header>
-							<span class="mb-4 block text-4xl" role="img" aria-label={`Ícono de ${sector.name}`}>
-								{sector.icon}
-							</span>
-							<h3 class="mb-3 text-lg font-bold">{sector.name}</h3>
-						</header>
-
-						<section aria-labelledby={`benefits-${sector.id}`}>
-							<h4 id={`benefits-${sector.id}`} class="sr-only">Beneficios para {sector.name}</h4>
-							<ul class="mt-4 space-y-3 text-sm" aria-label={`Características para ${sector.name}`}>
-								{#each sector.benefits as benefit, i}
-									<li class="flex items-center text-green-800">
-										<span
-											class="mr-2 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-green-100"
-											aria-hidden="true"
-										>
-											<Check size={12} class="text-green-600" strokeWidth={3} />
-										</span>
-										<span class="font-medium">{benefit}</span>
-									</li>
-								{/each}
-							</ul>
-						</section>
-
-						<footer class="mt-6 text-center">
-							<a
-								href="#contacto"
-								class="my-border my-shadow my-active-bg my-transition group inline-flex items-center rounded-lg border-2 px-4 py-2 font-bold text-green-950 focus:ring-2 focus:ring-offset-2 focus:outline-none"
-								aria-label={`Solicitar más información sobre páginas web para ${sector.name}`}
-							>
-								<span>Más información</span>
-								<span
-									class="ml-3 text-base transition-transform duration-300 group-hover:translate-x-1"
-									aria-hidden="true">→</span
-								>
-							</a>
-						</footer>
-					</article>
-				</li>
-			{/each}
-		</ul>
-	</section>
-{/if}
