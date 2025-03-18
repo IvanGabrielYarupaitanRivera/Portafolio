@@ -130,7 +130,7 @@
 </ul>
 
 <div class="mt-12 text-center">
-	<p class="mb-6 text-gray-600">
+	<p class="text-gring-gray-600 mx-auto mb-6 max-w-md">
 		¿Perteneces a un sector diferente? Creamos <strong>páginas web en {city}</strong> adaptadas a cualquier
 		tipo de negocio.
 	</p>
