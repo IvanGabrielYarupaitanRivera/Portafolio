@@ -20,6 +20,8 @@
 	region="Junín"
 	latitude="-12.041545380185886"
 	longitude="-75.19187545630611"
+	image="https://www.vanchi.pro/og-image.jpg"
+	altImage="Servicios de Desarrollo Web y Full Stack"
 />
 
 <Header />

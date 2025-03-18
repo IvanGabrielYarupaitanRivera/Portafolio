@@ -5,7 +5,10 @@
 		keywords,
 		url,
 		type,
-		image = 'https://www.vanchi.pro/og-image.jpg',
+		image,
+		altImage,
+		additionalImages = [],
+		altAdditionalImages = [],
 		city,
 		region,
 		country = 'Perú',
@@ -18,7 +21,10 @@
 		keywords: string;
 		url: string;
 		type: string;
-		image?: string;
+		image: string;
+		altImage: string;
+		additionalImages?: string[];
+		altAdditionalImages?: string[];
 		city: string;
 		region: string;
 		country?: string;
@@ -32,7 +38,15 @@
 		geoRegion: `${countryCode}-${region.substring(0, 3).toUpperCase()}`
 	});
 
-	const schema = {
+	const schemaImages = $derived([
+		{ url: image, alt: altImage },
+		...additionalImages.map((img, i) => ({
+			url: img,
+			alt: altAdditionalImages[i]
+		}))
+	]);
+
+	const schema = $derived({
 		'@context': 'https://schema.org',
 		'@type': 'ProfessionalService',
 		'@id': url,
@@ -42,7 +56,11 @@
 		alternateName: 'Vanchi',
 		jobTitle: 'Programador de aplicaciones web',
 		url: url,
-		image: image,
+		image: schemaImages.map((img) => ({
+			'@type': 'ImageObject',
+			url: img.url,
+			description: img.alt
+		})),
 		description: description,
 		priceRange: '$$',
 		telephone: '+51985942670',
@@ -223,7 +241,7 @@
 		],
 		paymentAccepted: 'Transferencia bancaria, Yape, Efectivo',
 		serviceType: ['Desarrollo Web', 'Desarrollo Full Stack', 'Diseño UI/UX']
-	};
+	});
 </script>
 
 <svelte:head>
@@ -243,6 +261,7 @@
 	<meta property="og:description" content={description} />
 	<meta property="og:type" content={type} />
 	<meta property="og:image" content={image} />
+	<meta property="og:image:alt" content={altImage} />
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
 	<meta property="og:locale" content="es_PE" />
@@ -257,6 +276,7 @@
 	<meta name="twitter:description" content={description} />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:image" content={image} />
+	<meta name="twitter:image:alt" content={altImage} />
 
 	<!-- Schema.org -->
 	{@html `<script type="application/ld+json">${JSON.stringify(schema)}</script>`}

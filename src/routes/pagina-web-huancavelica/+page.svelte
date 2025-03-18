@@ -21,6 +21,18 @@
 	region="Huancavelica"
 	latitude="-12.78351904906107"
 	longitude="-74.96961627671286"
+	image="https://www.vanchi.pro/images/pagina-web/pagina-web-huancavelica.webp"
+	altImage="Diseño de Página Web y Páginas Web en Huancavelica"
+	additionalImages={[
+		'https://www.vanchi.pro/images/pagina-web/paginas-web-huancavelica.webp',
+		'https://www.vanchi.pro/images/pagina-web/diseño-pagina-web-huancavelica.webp',
+		'https://www.vanchi.pro/images/pagina-web/crear-paginas-web-huancavelica.webp'
+	]}
+	altAdditionalImages={[
+		'Páginas Web en Huancavelica',
+		'Diseño de Página Web en Huancavelica',
+		'Crear Páginas Web en Huancavelica'
+	]}
 />
 
 <Header homeLink="/pagina-web-huancavelica" />

@@ -21,6 +21,18 @@
 	region="Junín"
 	latitude="-12.041545380185886"
 	longitude="-75.19187545630611"
+	image="https://www.vanchi.pro/images/pagina-web/pagina-web-huancayo.webp"
+	altImage="Diseño de Página Web y Páginas Web en Huancayo"
+	additionalImages={[
+		'https://www.vanchi.pro/images/pagina-web/paginas-web-huancayo.webp',
+		'https://www.vanchi.pro/images/pagina-web/diseño-pagina-web-huancayo.webp',
+		'https://www.vanchi.pro/images/pagina-web/crear-paginas-web-huancayo.webp'
+	]}
+	altAdditionalImages={[
+		'Páginas Web en Huancayo',
+		'Diseño de Página Web en Huancayo',
+		'Crear Páginas Web en Huancayo'
+	]}
 />
 
 <Header homeLink="/pagina-web-huancayo" />
