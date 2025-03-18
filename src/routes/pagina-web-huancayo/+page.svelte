@@ -12,8 +12,8 @@
 </script>
 
 <Seo
-	title="Diseño y Creación de Páginas Web en Huancayo"
-	description="Desarrollo profesional de páginas web en Huancayo. Páginas web modernas y optimizadas para empresas, negocios y emprendedores de Junín."
+	title="Diseño de Página Web y Páginas Web en Huancayo | Desarrollo Profesional"
+	description="Creación de página web personalizada y desarrollo de páginas web profesionales en Huancayo. Soluciones digitales a medida para empresas, negocios y emprendedores locales con diseño optimizado y resultados garantizados."
 	keywords="pagina web huancayo, paginas web huancayo, diseño pagina web huancayo, crear pagina web huancayo, pagina web para negocio huancayo"
 	url="https://www.vanchi.pro/pagina-web-huancayo"
 	type="website"

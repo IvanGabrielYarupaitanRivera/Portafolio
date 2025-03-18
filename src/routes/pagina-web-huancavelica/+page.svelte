@@ -12,8 +12,8 @@
 </script>
 
 <Seo
-	title="Diseño y Creación de Páginas Web en Huancavelica"
-	description="Desarrollo profesional de páginas web en Huancavelica. Páginas web modernas y optimizadas para empresas, negocios y emprendedores de Huancavelica."
+	title="Diseño de Página Web y Páginas Web en Huancavelica | Desarrollo Profesional"
+	description="Creación de página web personalizada y desarrollo de páginas web profesionales en Huancavelica. Soluciones digitales a medida para empresas, negocios y emprendedores locales con diseño optimizado y resultados garantizados."
 	keywords="pagina web huancavelica, paginas web huancavelica, diseño pagina web huancavelica, crear pagina web huancavelica, pagina web para negocio huancavelica"
 	url="https://www.vanchi.pro/pagina-web-huancavelica"
 	type="website"
