@@ -23,7 +23,7 @@
 	longitude="-74.96961627671286"
 />
 
-<Header />
+<Header homeLink="/pagina-web-huancavelica" />
 
 <main class="z-10 container mx-auto flex flex-1 py-6">
 	<article class="relative mr-4 ml-3 flex flex-col gap-48">

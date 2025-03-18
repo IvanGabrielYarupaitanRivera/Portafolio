@@ -6,6 +6,8 @@
 	let isCloseMenuByNav = $state(false);
 	let showMobileMenu = $state(false);
 
+	let { homeLink }: { homeLink: string } = $props();
+
 	const menuItems = $state([
 		{ href: '#servicios', text: 'Servicios' },
 		{ href: '#sectores', text: 'Sectores' },
@@ -25,7 +27,7 @@
 	>
 		<nav class="flex justify-between" aria-label="navegación principal ">
 			<a
-				href="/pagina-web-huancayo"
+				href={homeLink}
 				class="my-border heading-3 my-shadow my-bg my-transition top-0 right-0 left-0 flex items-center rounded-xl border-2 px-4 py-4"
 				aria-label="Página principal - Vanchi"
 			>
