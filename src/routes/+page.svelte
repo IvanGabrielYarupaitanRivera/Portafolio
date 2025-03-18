@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Seo from '$lib/components/SEO.svelte';
+	import Header from '$lib/components/MainPage/Header/Header.svelte';
 	import HeroSection from '$lib/components/MainPage/HeroSection.svelte';
 	import Services from '$lib/components/MainPage/Services.svelte';
 	import Testimonials from '$lib/components/MainPage/Testimonials.svelte';
@@ -21,26 +22,28 @@
 	longitude="-75.19187545630611"
 />
 
-<main class="relative mr-4 ml-3 flex flex-col gap-48">
-	<!-- Patrón de cuadrícula de fondo -->
+<Header />
 
-	<section class="mt-16 md:px-36" aria-label="Introducción y presentación">
-		<HeroSection />
-	</section>
+<main class="z-10 container mx-auto flex flex-1 py-6">
+	<article class="relative mr-4 ml-3 flex flex-col gap-48">
+		<section class="mt-16 md:px-36" aria-label="Introducción y presentación">
+			<HeroSection />
+		</section>
 
-	<section aria-label="Servicios ofrecidos" id="servicios">
-		<Services />
-	</section>
+		<section aria-label="Servicios ofrecidos" id="servicios">
+			<Services />
+		</section>
 
-	<section aria-label="Proyectos destacados" id="proyectos">
-		<Projects />
-	</section>
+		<section aria-label="Proyectos destacados" id="proyectos">
+			<Projects />
+		</section>
 
-	<section aria-label="Testimonios" id="testimonios">
-		<Testimonials />
-	</section>
+		<section aria-label="Testimonios" id="testimonios">
+			<Testimonials />
+		</section>
 
-	<section class="mb-16" aria-label="Formulario de contacto" id="contacto">
-		<Contact {form} />
-	</section>
+		<section class="mb-16" aria-label="Formulario de contacto" id="contacto">
+			<Contact {form} />
+		</section>
+	</article>
 </main>

@@ -1,11 +1,9 @@
 <script lang="ts">
 	import Seo from '$lib/components/SEO.svelte';
-
+	import Header from '$lib/components/PaginaWebCiudad/Header/Header.svelte';
 	import PwHero from '$lib/components/PaginaWebCiudad/PWHero.svelte';
 	import PwServices from '$lib/components/PaginaWebCiudad/PWServices.svelte';
 	import PWFaq from '$lib/components/PaginaWebCiudad/PWFAQ.svelte';
-	import PwProjects from '$lib/components/PaginaWebCiudad/PWProjects.svelte';
-	import PwTestimonials from '$lib/components/PaginaWebCiudad/PWTestimonials.svelte';
 	import Contact from '$lib/components/MainPage/Contact.svelte';
 	import PwProcess from '$lib/components/PaginaWebCiudad/PWProcess.svelte';
 
@@ -24,34 +22,28 @@
 	longitude="-75.19187545630611"
 />
 
-<main class="relative mr-4 ml-3 flex flex-col gap-48">
-	<!-- Patrón de cuadrícula de fondo -->
+<Header />
 
-	<section class="mt-16 md:px-36" aria-label="Introducción y presentación">
-		<PwHero city="Huancayo" />
-	</section>
+<main class="z-10 container mx-auto flex flex-1 py-6">
+	<article class="relative mr-4 ml-3 flex flex-col gap-48">
+		<section class="mt-16 md:px-36" aria-label="Introducción y presentación">
+			<PwHero city="Huancayo" />
+		</section>
 
-	<section aria-label="Servicios ofrecidos" id="servicios">
-		<PwServices city="Huancayo" showSectors={true} />
-	</section>
+		<section aria-label="Servicios ofrecidos" id="servicios">
+			<PwServices city="Huancayo" showSectors={true} />
+		</section>
 
-	<section aria-label="Proceso de desarrollo" id="proceso">
-		<PwProcess city="Huancayo" />
-	</section>
+		<section aria-label="Proceso de desarrollo" id="proceso">
+			<PwProcess city="Huancayo" />
+		</section>
 
-	<section aria-label="Preguntas Frecuentes" id="FAQ">
-		<PWFaq city="Huancayo" />
-	</section>
+		<section aria-label="Preguntas Frecuentes" id="FAQ">
+			<PWFaq city="Huancayo" />
+		</section>
 
-	<section aria-label="Proyectos destacados" id="proyectos">
-		<PwProjects />
-	</section>
-
-	<section aria-label="Testimonios" id="testimonios">
-		<PwTestimonials />
-	</section>
-
-	<section class="mb-16" aria-label="Formulario de contacto" id="contacto">
-		<Contact {form} />
-	</section>
+		<section class="mb-16" aria-label="Formulario de contacto" id="contacto">
+			<Contact {form} />
+		</section>
+	</article>
 </main>

@@ -1,6 +1,5 @@
 <script lang="ts">
 	import '../app.css';
-	import Header from '$lib/components/Header.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import { onNavigate } from '$app/navigation';
 	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
@@ -30,13 +29,8 @@
 <div class="relative flex min-h-screen flex-col bg-green-100">
 	<Pattern />
 
-	<!-- Header con navegación -->
-	<Header />
-
 	<!-- Contenido principal -->
-	<main class="z-10 container mx-auto flex flex-1 py-6">
-		{@render children()}
-	</main>
+	{@render children()}
 
 	<!-- Footer -->
 	<Footer />

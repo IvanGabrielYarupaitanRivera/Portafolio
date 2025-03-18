@@ -31,9 +31,9 @@
 
 	// Estadísticas de confianza
 	const stats = $state([
-		{ value: '1+', label: 'Proyectos completados', icon: Users },
+		{ value: '+1', label: 'Proyecto completado', icon: Users },
 		{ value: '100%', label: 'Satisfacción de clientes', icon: ThumbsUp },
-		{ value: '1', label: 'Año de experiencia', icon: Award }
+		{ value: '+6', label: 'Meses de experiencia', icon: Award }
 	]);
 
 	// Función para generar estrellas de calificación
