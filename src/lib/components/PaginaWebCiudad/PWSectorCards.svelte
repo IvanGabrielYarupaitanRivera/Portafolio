@@ -1,5 +1,11 @@
 <script lang="ts">
 	import { Check } from 'lucide-svelte';
+	import Restaurant from '$lib/icons/sector/RestaurantIcon.svelte';
+	import Legal from '$lib/icons/sector/LegalIcon.svelte';
+	import Health from '$lib/icons/sector/HealthIcon.svelte';
+	import Freelancer from '$lib/icons/sector/FreelancerIcon.svelte';
+	import Store from '$lib/icons/sector/StoreIcon.svelte';
+	import Hotel from '$lib/icons/sector/HotelIcon.svelte';
 
 	// Propiedades con sintaxis de Svelte 5
 	let { city = 'Huancayo' }: { city: string } = $props();
@@ -9,7 +15,7 @@
 		{
 			id: 1,
 			name: `Restaurantes y Cafés en ${city}`,
-			icon: '🍽️',
+			icon: Restaurant,
 			benefits: [
 				`Diseño de página web en ${city} con menú digital interactivo para restaurantes`,
 				`Creación de páginas web optimizadas para búsquedas locales en ${city}`
@@ -18,7 +24,7 @@
 		{
 			id: 2,
 			name: `Estudios Jurídicos de ${city}`,
-			icon: '⚖️',
+			icon: Legal,
 			benefits: [
 				`Página web para negocio jurídico en ${city} con perfil de abogados`,
 				'Secciones especializadas por áreas de práctica legal con formularios de contacto'
@@ -27,7 +33,7 @@
 		{
 			id: 3,
 			name: `Consultorios y Clínicas en ${city}`,
-			icon: '⚕️',
+			icon: Health,
 			benefits: [
 				`Hacer página web en ${city} con información de servicios médicos`,
 				'Perfiles detallados de los doctores especialistas y sus tratamientos respectivos'
@@ -36,7 +42,7 @@
 		{
 			id: 4,
 			name: `Emprendedores y Freelancers`,
-			icon: '💼',
+			icon: Freelancer,
 			benefits: [
 				`Creación de páginas web profesionales para emprendedores de ${city}`,
 				'Portafolios online con proyectos destacados incluyendo un formulario de contacto'
@@ -45,7 +51,7 @@
 		{
 			id: 5,
 			name: `Tiendas y Comercios de ${city}`,
-			icon: '🛍️',
+			icon: Store,
 			benefits: [
 				`Página web para negocio comercial en ${city} con catálogo de productos`,
 				'Optimización SEO local para atraer clientes que estén buscando tus productos'
@@ -54,7 +60,7 @@
 		{
 			id: 6,
 			name: `Hoteles y Hospedajes en ${city}`,
-			icon: '🏨',
+			icon: Hotel,
 			benefits: [
 				'Galería de habitaciones incluyendo imágenes y descripciones detalladas',
 				`Crear página web en ${city} con información turística local para visitantes`
@@ -87,10 +93,10 @@
 			<article
 				class="my-border my-shadow my-effect my-transition h-full rounded-xl border-2 bg-white p-6 text-center"
 			>
-				<header>
-					<span class="mb-4 block text-4xl" role="img" aria-label={`Ícono de ${sector.name}`}>
-						{sector.icon}
-					</span>
+				<header class="flex flex-col items-center gap-4">
+					<figure class="my-bg my-transition rounded-xl p-3" aria-label={`Ícono de ${sector.name}`}>
+						<sector.icon size={40} color="currentColor" class="text-green-950" />
+					</figure>
 					<h3 class="mb-3 text-lg font-bold">{sector.name}</h3>
 				</header>
 
@@ -111,10 +117,10 @@
 					</ul>
 				</section>
 
-				<footer class="mt-6 text-center">
+				<footer class="mt-8 text-center">
 					<a
 						href="#contacto"
-						class="my-border my-shadow my-active-bg my-transition group inline-flex items-center rounded-lg border-2 px-4 py-2 font-bold text-green-950 focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:outline-none"
+						class="my-border my-shadow my-bg my-transition group inline-flex items-center rounded-lg border-2 px-4 py-2 font-bold text-green-950 focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:outline-none"
 						aria-label={`Solicitar más información sobre páginas web para ${sector.name}`}
 					>
 						<span>Solicitar información</span>
@@ -129,7 +135,7 @@
 	{/each}
 </ul>
 
-<div class="mt-12 text-center">
+<div class="mt-24 text-center">
 	<p class="text-gring-gray-600 mx-auto mb-6 max-w-md">
 		¿Perteneces a un sector diferente? Creamos <strong>páginas web en {city}</strong> adaptadas a cualquier
 		tipo de negocio.
