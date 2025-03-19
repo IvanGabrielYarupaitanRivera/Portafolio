@@ -4,9 +4,9 @@
 	import PwHero from '$lib/components/PaginaWebCiudad/PWHero.svelte';
 	import PwServices from '$lib/components/PaginaWebCiudad/PWServices.svelte';
 	import PwSectorCards from '$lib/components/PaginaWebCiudad/PWSectorCards.svelte';
+	import PwProcess from '$lib/components/PaginaWebCiudad/PWProcess.svelte';
 	import PWFaq from '$lib/components/PaginaWebCiudad/PWFAQ.svelte';
 	import Contact from '$lib/components/MainPage/Contact.svelte';
-	import PwProcess from '$lib/components/PaginaWebCiudad/PWProcess.svelte';
 
 	let { form } = $props();
 </script>
