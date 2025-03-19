@@ -121,11 +121,13 @@
 </section>
 
 <footer class="mt-16 text-center">
-	<p class="p mb-4">¿Listo para impulsar tu presencia web en {city}?</p>
+	<p class="mx-auto mb-6 max-w-md text-gray-600">
+		¿Listo para impulsar tu presencia web en {city}?
+	</p>
 
 	<a
 		href="#contacto"
-		class="my-border my-shadow my-bg my-transition group inline-flex items-center rounded-lg border-2 px-4 py-2 font-bold text-green-950 focus:ring-2 focus:ring-offset-2 focus:outline-none"
+		class="my-border my-shadow my-bg my-transition group inline-flex items-center rounded-lg border-2 px-4 py-2 font-bold text-green-950 focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:outline-none"
 	>
 		<span>Solicitar información</span>
 		<span
