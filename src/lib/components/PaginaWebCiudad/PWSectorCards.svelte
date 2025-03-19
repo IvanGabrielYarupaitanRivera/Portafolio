@@ -102,9 +102,9 @@
 
 				<section aria-labelledby={`benefits-${sector.id}`}>
 					<h4 id={`benefits-${sector.id}`} class="sr-only">Beneficios para {sector.name}</h4>
-					<ul class="mt-4 space-y-3 text-sm" aria-label={`Características para ${sector.name}`}>
+					<ul class="mt-4 space-y-1 text-sm" aria-label={`Características para ${sector.name}`}>
 						{#each sector.benefits as benefit, i}
-							<li class="flex items-start text-green-800">
+							<li class="flex items-start">
 								<span
 									class="mt-1 mr-2 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-green-100"
 									aria-hidden="true"
@@ -126,8 +126,9 @@
 						<span>Solicitar información</span>
 						<span
 							class="ml-3 text-base transition-transform duration-300 group-hover:translate-x-1"
-							aria-hidden="true">→</span
-						>
+							aria-hidden="true"
+							>→
+						</span>
 					</a>
 				</footer>
 			</article>
@@ -136,7 +137,7 @@
 </ul>
 
 <div class="mt-24 text-center">
-	<p class="text-gring-gray-600 mx-auto mb-6 max-w-md">
+	<p class="mx-auto mb-6 max-w-md text-gray-600">
 		¿Perteneces a un sector diferente? Creamos <strong>páginas web en {city}</strong> adaptadas a cualquier
 		tipo de negocio.
 	</p>
