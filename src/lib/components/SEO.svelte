@@ -14,7 +14,9 @@
 		country = 'Perú',
 		countryCode = 'PE',
 		latitude,
-		longitude
+		longitude,
+		streetAddress = '',
+		postalCode = ''
 	}: {
 		title: string;
 		description: string;
@@ -31,6 +33,8 @@
 		countryCode?: string;
 		latitude: string;
 		longitude: string;
+		streetAddress: string;
+		postalCode: string;
 	} = $props();
 
 	const locationData = $derived({
@@ -54,7 +58,6 @@
 			? `Ivan Gabriel Yarupaitan Rivera - Desarrollo Web en ${city}`
 			: 'Ivan Gabriel Yarupaitan Rivera - Servicios de Desarrollo Web',
 		alternateName: 'Vanchi',
-		jobTitle: 'Programador de aplicaciones web',
 		url: url,
 		image: schemaImages.map((img) => ({
 			'@type': 'ImageObject',
@@ -69,7 +72,9 @@
 			'@type': 'PostalAddress',
 			addressLocality: city,
 			addressRegion: region,
-			addressCountry: countryCode
+			addressCountry: countryCode,
+			postalCode: postalCode,
+			streetAddress: streetAddress
 		},
 		founder: {
 			'@type': 'Person',
@@ -89,7 +94,27 @@
 				'Vercel',
 				'Netlify',
 				'Astro'
-			]
+			],
+			worksFor: {
+				'@type': 'Organization',
+				name: 'Freelance - Servicios independientes de desarrollo'
+			},
+			skills: [
+				'Svelte',
+				'SvelteKit',
+				'TypeScript',
+				'JavaScript',
+				'CSS',
+				'HTML',
+				'Supabase',
+				'Frontend',
+				'UI/UX',
+				'Tailwind',
+				'Vercel',
+				'Netlify',
+				'Astro'
+			],
+			knowsLanguage: ['es', 'en']
 		},
 		sameAs: [
 			'https://github.com/IvanGabrielYarupaitanRivera/',
@@ -143,15 +168,6 @@
 				}
 			]
 		},
-		workLocation: {
-			'@type': 'Place',
-			address: {
-				'@type': 'PostalAddress',
-				addressLocality: city,
-				addressRegion: region,
-				addressCountry: countryCode
-			}
-		},
 		areaServed: [
 			{
 				'@type': 'City',
@@ -196,26 +212,6 @@
 				closes: '23:59'
 			}
 		],
-		worksFor: {
-			'@type': 'Organization',
-			name: 'Freelance - Servicios independientes de desarrollo'
-		},
-		skills: [
-			'Svelte',
-			'Sveltekit',
-			'TypeScript',
-			'JavaScript',
-			'CSS',
-			'HTML',
-			'Supabase',
-			'Frontend',
-			'UI/UX',
-			'Tailwind',
-			'Vercel',
-			'Netlify',
-			'Astro'
-		],
-		knowsLanguage: ['es', 'en'],
 		geo: {
 			'@type': 'GeoCoordinates',
 			latitude: latitude,
@@ -239,8 +235,7 @@
 				value: true
 			}
 		],
-		paymentAccepted: 'Transferencia bancaria, Yape, Efectivo',
-		serviceType: ['Desarrollo Web', 'Desarrollo Full Stack', 'Diseño UI/UX']
+		paymentAccepted: 'Transferencia bancaria, Yape, Efectivo'
 	});
 </script>
 

@@ -1,6 +1,9 @@
 <script lang="ts">
 	import { page } from '$app/stores';
+	import Header from '$lib/components/MainPage/Header/Header.svelte';
 </script>
+
+<Header />
 
 <section class="z-10 flex grow items-center justify-center">
 	<div class="container mx-auto max-w-2xl text-center">

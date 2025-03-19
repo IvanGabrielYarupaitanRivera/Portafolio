@@ -21,6 +21,8 @@
 	region="Huancavelica"
 	latitude="-12.78351904906107"
 	longitude="-74.96961627671286"
+	postalCode="09001"
+	streetAddress="Jr. Mayta Cápac N° 215"
 	image="https://www.vanchi.pro/images/pagina-web/pagina-web-huancavelica.webp"
 	altImage="Diseño de Página Web y Páginas Web en Huancavelica"
 	additionalImages={[
