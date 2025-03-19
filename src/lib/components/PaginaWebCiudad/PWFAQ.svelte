@@ -141,7 +141,7 @@
 					<dd
 						id={`faq-answer-${faq.id}`}
 						class="p mt-4 py-3 pr-6 pl-6"
-						transition:slide|local={{ duration: 300 }}
+						transition:slide|local={{ duration: 200 }}
 					>
 						{@html faq.answer}
 					</dd>
