@@ -95,7 +95,7 @@
 			>
 				<header class="flex flex-col items-center gap-4">
 					<figure class="my-bg my-transition rounded-xl p-3" aria-label={`Ícono de ${sector.name}`}>
-						<sector.icon size={40} color="currentColor" class="text-green-950" />
+						<sector.icon size={40} color="transparent" class="stroke-2 text-green-950" />
 					</figure>
 					<h3 class="mb-3 text-lg font-bold">{sector.name}</h3>
 				</header>
