@@ -2,7 +2,7 @@
 	import { MessageSquare, Palette, Code, Rocket } from 'lucide-svelte';
 
 	// Propiedades con sintaxis de Svelte 5
-	let { city = 'Huancayo' } = $props();
+	let { city = 'Huancayo' }: { city: string } = $props();
 
 	// Estado para los pasos del proceso con sintaxis de Svelte 5
 	const steps = $state([
