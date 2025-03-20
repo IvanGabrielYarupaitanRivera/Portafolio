@@ -23,12 +23,12 @@
 	longitude="-75.19187545630611"
 	postalCode="12001"
 	streetAddress="Jr. Las Estrellas N° 153"
-	image="https://www.vanchi.pro/images/sitios-web/sitios-web-huancavelica-principal.webp"
+	image="https://www.vanchi.pro/images/sitio-web/sitios-web-huancavelica-principal.webp"
 	altImage="Sitios Web Profesionales en Huancavelica"
 	additionalImages={[
-		'https://www.vanchi.pro/images/sitios-web/creacion-sitios-web-huancavelica.webp',
-		'https://www.vanchi.pro/images/sitios-web/empresas-sitios-web-huancavelica.webp',
-		'https://www.vanchi.pro/images/sitios-web/precio-sitio-web-huancavelica.webp'
+		'https://www.vanchi.pro/images/sitio-web/creacion-sitios-web-huancavelica.webp',
+		'https://www.vanchi.pro/images/sitio-web/empresas-sitios-web-huancavelica.webp',
+		'https://www.vanchi.pro/images/sitio-web/precio-sitio-web-huancavelica.webp'
 	]}
 	altAdditionalImages={[
 		'Creación de Sitios Web en Huancavelica',

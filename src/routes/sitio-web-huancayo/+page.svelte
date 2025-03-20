@@ -23,12 +23,12 @@
 	longitude="-75.19187545630611"
 	postalCode="12001"
 	streetAddress="Jr. Las Estrellas N° 153"
-	image="https://www.vanchi.pro/images/sitios-web/sitios-web-huancayo-principal.webp"
+	image="https://www.vanchi.pro/images/sitio-web/sitios-web-huancayo-principal.webp"
 	altImage="Sitios Web Profesionales en Huancayo"
 	additionalImages={[
-		'https://www.vanchi.pro/images/sitios-web/creacion-sitios-web-huancayo.webp',
-		'https://www.vanchi.pro/images/sitios-web/empresas-sitios-web-huancayo.webp',
-		'https://www.vanchi.pro/images/sitios-web/precio-sitio-web-huancayo.webp'
+		'https://www.vanchi.pro/images/sitio-web/creacion-sitios-web-huancayo.webp',
+		'https://www.vanchi.pro/images/sitio-web/empresas-sitios-web-huancayo.webp',
+		'https://www.vanchi.pro/images/sitio-web/precio-sitio-web-huancayo.webp'
 	]}
 	altAdditionalImages={[
 		'Creación de Sitios Web en Huancayo',
