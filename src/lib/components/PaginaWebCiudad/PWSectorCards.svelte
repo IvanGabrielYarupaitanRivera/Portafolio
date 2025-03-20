@@ -7,8 +7,7 @@
 	import Store from '$lib/icons/sector/StoreIcon.svelte';
 	import Hotel from '$lib/icons/sector/HotelIcon.svelte';
 
-	// Propiedades con sintaxis de Svelte 5
-	let { city = 'Huancayo' }: { city: string } = $props();
+	let { city }: { city: string } = $props();
 
 	// Estado para sectores empresariales usando sintaxis Svelte 5
 	const businessSectors = $state([
@@ -127,7 +126,8 @@
 						<span
 							class="ml-3 text-base transition-transform duration-300 group-hover:translate-x-1"
 							aria-hidden="true"
-							>→
+						>
+							→
 						</span>
 					</a>
 				</footer>
