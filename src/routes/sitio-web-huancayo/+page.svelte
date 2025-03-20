@@ -12,7 +12,7 @@
 </script>
 
 <Seo
-	title="Sitios Web en Huancayo | Diseño y Creación Profesional"
+	title="Sitios Web en Huancayo"
 	description="Creación de sitios web profesionales en Huancayo con diseño personalizado. Soluciones digitales a medida para empresas y negocios locales. Precios competitivos y resultados garantizados."
 	keywords="sitios web huancayo, sitios web en huancayo, sitios web de huancayo, huancayo sitios web, creación de sitios web huancayo, empresas de sitios web huancayo, precio sitio web huancayo, costo diseño sitio web huancayo"
 	url="https://www.vanchi.pro/sitio-web-huancayo"

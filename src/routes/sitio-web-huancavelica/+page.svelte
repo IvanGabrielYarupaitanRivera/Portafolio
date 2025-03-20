@@ -12,7 +12,7 @@
 </script>
 
 <Seo
-	title="Sitios Web en Huancavelica | Diseño y Creación Profesional"
+	title="Sitios Web en Huancavelica"
 	description="Creación de sitios web profesionales en Huancavelica con diseño personalizado. Soluciones digitales a medida para empresas y negocios locales. Precios competitivos y resultados garantizados."
 	keywords="sitios web huancavelica, sitios web en huancavelica, sitios web de huancavelica, huancavelica sitios web, creación de sitios web huancavelica, empresas de sitios web huancavelica, precio sitio web huancavelica, costo diseño sitio web huancavelica"
 	url="https://www.vanchi.pro/sitio-web-huancavelica"
