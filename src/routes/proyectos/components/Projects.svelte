@@ -9,7 +9,8 @@
 		ExternalLink,
 		Github,
 		Globe,
-		Layout
+		Layout,
+		LucideInfo
 	} from 'lucide-svelte';
 
 	import ChatPeraltaAsociadosImage from '$lib/images/chatbot-inteligencia-artificial-peralta-asociados.webp?enhanced';
@@ -20,6 +21,7 @@
 	const projects = $state([
 		{
 			id: 1,
+			slug: 'pagina-web-peralta-asociados',
 			title: 'Página Web de Peralta Asociados',
 			industry: 'Servicios Legales',
 			client: 'Peralta Asociados',
@@ -45,6 +47,7 @@
 		},
 		{
 			id: 2,
+			slug: 'asistente-legal-inteligencia-artificial',
 			title: 'Asistente Legal con Inteligencia Artificial',
 			industry: 'Servicios Legales',
 			client: 'Peralta Asociados',
@@ -70,6 +73,7 @@
 		},
 		{
 			id: 3,
+			slug: 'sistema-de-gestion-notas-academicas',
 			title: 'Sistema de Gestión Académica',
 			industry: 'Educación',
 			client: 'Proyeto Ficticio',
@@ -215,7 +219,7 @@
 </div>
 
 <!-- Grid de proyectos -->
-<ul id="projects-grid" class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-10" role="list">
+<ul id="projects-grid" class=" mb-24 grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-10" role="list">
 	{#each filteredProjects as project (project.id + '-' + version)}
 		<li in:blur>
 			<article
@@ -304,6 +308,15 @@
 					<!-- Enlaces del proyecto -->
 					<footer class="mt-6">
 						<nav class="flex flex-wrap gap-3" aria-label="Enlaces del proyecto">
+							<a
+								href="/proyectos/{project.slug}"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="my-border my-bg my-shadow my-effect my-transition flex items-center gap-2 rounded-xl border-2 px-4 py-2 text-xs font-bold text-green-950 focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:outline-none"
+							>
+								<span>Más Información</span>
+								<LucideInfo size={16} aria-hidden="true" />
+							</a>
 							<a
 								href={project.link}
 								target="_blank"
