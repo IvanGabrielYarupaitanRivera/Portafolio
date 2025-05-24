@@ -44,12 +44,12 @@
 			>
 				<header class="mb-2 flex justify-center">
 					<figure aria-hidden="true">
-						<TrendingUp size={24} class="text-blue-600" />
+						<TrendingUp size={24} class="text-green-600" />
 					</figure>
 				</header>
 
 				<div class="text-center">
-					<data value={projectsCount} class="text-3xl font-bold text-blue-900">
+					<data value={projectsCount} class="text-3xl font-bold text-green-900">
 						{projectsCount}+
 					</data>
 					<h3 id="projects-metric" class="text-sm font-medium text-gray-600">
@@ -65,12 +65,12 @@
 			>
 				<header class="mb-2 flex justify-center">
 					<figure aria-hidden="true">
-						<Users size={24} class="text-blue-600" />
+						<Users size={24} class="text-green-600" />
 					</figure>
 				</header>
 
 				<div class="text-center">
-					<data value={clientsCount} class="text-3xl font-bold text-blue-900">
+					<data value={clientsCount} class="text-3xl font-bold text-green-900">
 						{clientsCount}+
 					</data>
 					<h3 id="clients-metric" class="text-sm font-medium text-gray-600">
@@ -86,12 +86,12 @@
 			>
 				<header class="mb-2 flex justify-center">
 					<figure aria-hidden="true">
-						<Briefcase size={24} class="text-purple-600" />
+						<Briefcase size={24} class="text-green-600" />
 					</figure>
 				</header>
 
 				<div class="text-center">
-					<data value={successRate} class="text-3xl font-bold text-purple-900">
+					<data value={successRate} class="text-3xl font-bold text-green-900">
 						{successRate}%
 					</data>
 					<h3 id="success-metric" class="text-sm font-medium text-gray-600">Tasa de Éxito</h3>
