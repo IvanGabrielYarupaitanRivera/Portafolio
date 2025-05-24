@@ -310,7 +310,6 @@
 						<nav class="flex flex-wrap gap-3" aria-label="Enlaces del proyecto">
 							<a
 								href="/proyectos/{project.slug}"
-								target="_blank"
 								rel="noopener noreferrer"
 								class="my-border my-bg my-shadow my-effect my-transition flex items-center gap-2 rounded-xl border-2 px-4 py-2 text-xs font-bold text-green-950 focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:outline-none"
 							>
