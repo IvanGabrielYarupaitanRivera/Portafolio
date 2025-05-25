@@ -11,7 +11,6 @@ export const load: PageLoad = ({ params }) => {
 			slug: 'pagina-web-peralta-asociados',
 			title: 'Página Web Corporativa para Peralta Asociados',
 			subtitle: 'Transformación digital de un bufete legal tradicional',
-			industry: 'Servicios Legales',
 			client: 'Peralta Asociados',
 			year: '2025',
 			duration: '1 mes',
@@ -50,26 +49,36 @@ export const load: PageLoad = ({ params }) => {
 
 			// El desafío
 			challenge: {
-				title: 'El Desafío',
 				description:
-					'Peralta Asociados, un bufete legal establecido, necesitaba modernizar su presencia digital para competir en el mercado actual. Su sitio web anterior era obsoleto, lento y no generaba confianza en clientes potenciales.',
+					'Peralta Asociados, un bufete legal con años de experiencia y sólida reputación, carecía completamente de presencia digital. Sin página web, sin perfil de Google My Business y sin estrategia online, el bufete dependía únicamente del marketing tradicional boca a boca, limitando significativamente su alcance y crecimiento en el mercado digital actual.',
 				painPoints: [
-					'Sitio web desactualizado con diseño de hace 10 años',
-					'Tiempo de carga superior a 5 segundos',
-					'No optimizado para dispositivos móviles',
-					'Baja generación de leads cualificados',
-					'Posicionamiento SEO deficiente'
+					'Ausencia total de presencia en internet',
+					'Sin página web corporativa ni institucional',
+					'Falta de perfil en Google My Business',
+					'Imposibilidad de ser encontrado en búsquedas online',
+					'Dependencia exclusiva del marketing boca a boca',
+					'Desventaja competitiva frente a bufetes con presencia digital',
+					'Pérdida de oportunidades de clientes que buscan servicios legales online',
+					'Dificultad para demostrar profesionalidad y experiencia digitalmente'
 				]
 			},
 
 			// Objetivos
-			objectives: [
-				'Crear una presencia digital profesional que inspire confianza',
-				'Optimizar el rendimiento web para una experiencia superior',
-				'Implementar SEO técnico y de contenido',
-				'Diseñar una experiencia móvil excepcional',
-				'Incrementar la conversión de visitantes a clientes potenciales'
-			],
+			objectives: {
+				description:
+					'Establecer la primera presencia digital de Peralta Asociados desde cero, creando una página web corporativa profesional que sirva como herramienta de captación de clientes y posicionamiento en el mercado legal local.',
+				goals: [
+					'Crear la primera página web corporativa del bufete',
+					'Establecer presencia digital profesional y confiable',
+					'Alcanzar puntuación perfecta (100/100) en Lighthouse',
+					'Implementar SEO local para servicios legales en Huancavelica y Huancayo',
+					'Optimizar para búsquedas como "abogado en Huancavelica y Huancayo" y servicios específicos',
+					'Crear sistema de contacto y captación de leads digital',
+					'Posicionar el bufete en Google Maps y búsquedas locales',
+					'Generar confianza mediante diseño profesional y testimoniales',
+					'Establecer base sólida para futuras estrategias de marketing digital'
+				]
+			},
 
 			// Proceso de desarrollo
 			phases: [
@@ -77,51 +86,87 @@ export const load: PageLoad = ({ params }) => {
 					id: 1,
 					title: 'Investigación & Estrategia',
 					duration: '1 semana',
-					description: 'Análisis profundo del sector legal, competencia y definición de objetivos.',
+					description:
+						'Análisis del mercado legal local, definición de objetivos y arquitectura del sitio.',
 					deliverables: [
-						'Análisis de competencia directa',
-						'Definición de buyer personas',
-						'Arquitectura de información',
-						'Estrategia de contenido'
+						'Investigación de mercado legal en Huancavelica y Huancayo',
+						'Definición de público objetivo y servicios clave',
+						'Estructura de contenido y navegación',
+						'Estrategia de SEO local'
 					]
 				},
 				{
 					id: 2,
-					title: 'Diseño UX/UI',
-					duration: '2 semanas',
-					description: 'Creación de wireframes, prototipos y diseño visual enfocado en conversión.',
+					title: 'Diseño & Prototipado',
+					duration: '1 semana',
+					description: 'Diseño visual profesional enfocado en generar confianza y conversión.',
 					deliverables: [
-						'Wireframes de alta fidelidad',
-						'Sistema de diseño completo',
-						'Prototipos interactivos',
-						'Guía de estilo visual'
+						'Wireframes responsivos',
+						'Diseño visual corporativo',
+						'Prototipo interactivo',
+						'Sistema de colores y tipografías'
 					]
 				},
 				{
 					id: 3,
 					title: 'Desarrollo & Optimización',
-					duration: '3 semanas',
-					description: 'Implementación con Astro, optimización de rendimiento y SEO técnico.',
+					duration: '1.5 semanas',
+					description:
+						'Implementación con Astro, optimización de rendimiento y configuración técnica.',
 					deliverables: [
-						'Sitio web completamente funcional',
-						'Optimización de imágenes y assets',
-						'Implementación de Schema Markup',
-						'Configuración de Analytics'
+						'Desarrollo completo con Astro y Tailwind CSS',
+						'Optimización de rendimiento (Lighthouse 100/100)',
+						'Implementación de SEO técnico y Schema Markup',
+						'Configuración de formularios de contacto'
 					]
 				},
 				{
 					id: 4,
 					title: 'Testing & Lanzamiento',
-					duration: '1 semana',
-					description: 'Pruebas exhaustivas, ajustes finales y puesta en producción.',
+					duration: '0.5 semanas',
+					description: 'Pruebas finales, configuración de hosting y puesta en producción.',
 					deliverables: [
-						'Testing en múltiples dispositivos',
-						'Auditoría de accesibilidad',
-						'Migración y configuración de hosting',
-						'Capacitación al cliente'
+						'Testing responsivo en dispositivos múltiples',
+						'Auditoría de accesibilidad y rendimiento',
+						'Configuración de Netlify y dominio personalizado',
+						'Setup de Google Analytics y Google My Business'
 					]
 				}
 			],
+
+			// Resultados
+			results: {
+				description:
+					'La implementación de la presencia digital desde cero generó resultados medibles y significativos para Peralta Asociados, estableciendo una base sólida para el crecimiento digital del bufete.',
+				before: {
+					title: 'Situación Inicial',
+					context: 'Sin presencia digital',
+					metrics: {
+						webPresence: 'Inexistente',
+						lighthouse: 'N/A',
+						loadTime: 'N/A',
+						mobileOptimization: 'Sin sitio web',
+						monthlyLeads: 0,
+						digitalDiscovery: '0%',
+						googleVisibility: 'No encontrable',
+						bounceRate: 'N/A'
+					}
+				},
+				after: {
+					title: 'Resultados Obtenidos',
+					context: 'Presencia digital establecida',
+					metrics: {
+						webPresence: 'Sitio web profesional activo',
+						lighthouse: 100,
+						loadTime: '0.8s',
+						mobileOptimization: 'Completamente optimizado',
+						monthlyLeads: 12,
+						digitalDiscovery: '65%',
+						googleVisibility: 'Visible en búsquedas locales',
+						bounceRate: '28%'
+					}
+				}
+			},
 
 			// Stack tecnológico
 			technologies: [
@@ -140,72 +185,6 @@ export const load: PageLoad = ({ params }) => {
 					reason: 'Hosting optimizado para sitios estáticos',
 					benefits: ['CDN global', 'Deploy automático', 'SSL gratuito']
 				}
-			],
-
-			// Resultados
-			results: {
-				before: {
-					loadTime: '5.2s',
-					lighthouse: 45,
-					mobileOptimization: 'No',
-					monthlyLeads: 3,
-					bounceRate: '78%'
-				},
-				after: {
-					loadTime: '0.8s',
-					lighthouse: 100,
-					mobileOptimization: 'Completamente optimizado',
-					monthlyLeads: 12,
-					bounceRate: '34%'
-				}
-			},
-
-			// Testimonial
-			testimonial: {
-				quote:
-					'Ivan transformó completamente nuestra presencia digital. El sitio web no solo se ve profesional, sino que realmente genera resultados. Hemos visto un aumento significativo en consultas de clientes potenciales.',
-				author: 'Dr. Carlos Peralta',
-				position: 'Socio Fundador',
-				company: 'Peralta Asociados',
-				avatar: '/images/testimonials/carlos-peralta.webp'
-			},
-
-			// Galería de screenshots
-			gallery: [
-				{
-					url: '/images/projects/peralta-desktop-1.webp',
-					alt: 'Vista desktop de la página principal',
-					type: 'desktop',
-					caption: 'Diseño limpio y profesional que inspira confianza'
-				},
-				{
-					url: '/images/projects/peralta-mobile-1.webp',
-					alt: 'Vista móvil optimizada',
-					type: 'mobile',
-					caption: 'Experiencia móvil completamente optimizada'
-				},
-				{
-					url: '/images/projects/peralta-servicios.webp',
-					alt: 'Sección de servicios legales',
-					type: 'feature',
-					caption: 'Presentación clara de servicios legales especializados'
-				}
-			],
-
-			// Aprendizajes
-			lessons: [
-				'La velocidad de carga es crucial para sitios de servicios profesionales',
-				'Un diseño minimalista genera más confianza que uno recargado',
-				'La optimización móvil es fundamental para el SEO moderno',
-				'Los testimoniales y casos de éxito aumentan significativamente la conversión'
-			],
-
-			// Próximos pasos sugeridos
-			nextSteps: [
-				'Implementar blog corporativo para content marketing',
-				'Agregar chatbot para atención inicial de consultas',
-				'Desarrollar portal cliente para seguimiento de casos',
-				'Integrar sistema de citas online'
 			]
 		}
 	};
