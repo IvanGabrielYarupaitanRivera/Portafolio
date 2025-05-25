@@ -1,5 +1,8 @@
 import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
+import AstroIcon from '$lib/icons/technologies/AstroIcon.svelte';
+import NetlifyIcon from '$lib/icons/technologies/NetlifyIcon.svelte';
+import TailwindIcon from '$lib/icons/technologies/TailwindIcon.svelte';
 
 export const load: PageLoad = ({ params }) => {
 	const { slug } = params;
@@ -172,17 +175,23 @@ export const load: PageLoad = ({ params }) => {
 			technologies: [
 				{
 					name: 'Astro',
-					reason: 'Framework ideal para sitios estáticos con máximo rendimiento',
+					iconComponent: AstroIcon,
+					reason: 'Framework ideal para sitios estáticos ',
+					category: 'Framework',
 					benefits: ['Carga ultrarrápida', 'SEO optimizado', 'Hidratación parcial']
 				},
 				{
 					name: 'Tailwind CSS',
+					iconComponent: TailwindIcon,
 					reason: 'Sistema de diseño consistente y mantenible',
+					category: 'CSS Framework',
 					benefits: ['Desarrollo ágil', 'Bundle CSS mínimo', 'Responsive design']
 				},
 				{
 					name: 'Netlify',
+					iconComponent: NetlifyIcon,
 					reason: 'Hosting optimizado para sitios estáticos',
+					category: 'Hosting',
 					benefits: ['CDN global', 'Deploy automático', 'SSL gratuito']
 				}
 			]
