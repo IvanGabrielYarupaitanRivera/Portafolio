@@ -6,16 +6,13 @@
 		ExternalLink,
 		Github,
 		Target,
-		CheckCircle,
 		TrendingUp,
 		Users,
-		Smartphone,
 		Zap
 	} from 'lucide-svelte';
 
 	let { data } = $props();
-	let project = $state(data.project);
-	let activeGalleryIndex = $state(0);
+	let { project } = $derived(data);
 </script>
 
 <!-- <svelte:head>
@@ -29,7 +26,7 @@
 
 <main class="z-10 container mx-auto flex flex-1 flex-col py-6">
 	<!-- Navegación de regreso -->
-	<nav class="mx-20 px-4 py-6">
+	<nav class=" px-4 py-6">
 		<a
 			href="/proyectos"
 			class="flex items-center gap-2 text-sm text-gray-600 transition-colors hover:text-gray-900"
@@ -289,6 +286,7 @@
 		</div>
 	</section>
 
+	<!-- Resultados Obtenidos -->
 	<section class="container mx-auto py-16">
 		<div class=" px-4 text-center">
 			<h2 class="heading-2 relative z-10 mx-4 mb-12">
@@ -325,10 +323,10 @@
 					<dl role="list" aria-label="Métricas situación inicial" class="space-y-3">
 						{#each Object.entries(project.results.before.metrics) as [key, value]}
 							<div role="listitem" class="flex justify-between border-b border-red-200 pb-2">
-								<dt class="text-sm font-medium text-red-800 capitalize">
+								<dt class="text-xs font-medium text-red-800 capitalize md:text-sm">
 									{key.replace(/([A-Z])/g, ' $1').replace(/^./, (str) => str.toUpperCase())}
 								</dt>
-								<dd class="text-sm font-semibold text-red-700">
+								<dd class="text-xs font-semibold text-red-700 md:text-sm">
 									{value}
 								</dd>
 							</div>
@@ -345,7 +343,7 @@
 						<h4 id="after-title" class="font-cabinet text-xl font-bold text-green-800">
 							{project.results.after.title}
 						</h4>
-						<p class="text-sm text-green-600">
+						<p class="text-xs text-green-600 md:text-sm">
 							{project.results.after.context}
 						</p>
 					</header>
@@ -354,16 +352,95 @@
 					<dl role="list" aria-label="Métricas resultados obtenidos" class="space-y-3">
 						{#each Object.entries(project.results.after.metrics) as [key, value]}
 							<div role="listitem" class="flex justify-between border-b border-green-200 pb-2">
-								<dt class="text-sm font-medium text-green-800 capitalize">
+								<dt class="text-xs font-medium text-green-800 capitalize md:text-sm">
 									{key.replace(/([A-Z])/g, ' $1').replace(/^./, (str) => str.toUpperCase())}
 								</dt>
-								<dd class="text-sm font-semibold text-green-700">
+								<dd class="text-xs font-semibold text-green-700 md:text-sm">
 									{value}
 								</dd>
 							</div>
 						{/each}
 					</dl>
 				</article>
+			</div>
+		</div>
+	</section>
+
+	<!-- Sección de Stack Tecnológico -->
+	<section aria-labelledby="technologies-title" class="py-16">
+		<div class="container mx-auto px-4 text-center">
+			<h2 class="heading-2 relative z-10 mx-4 mb-12">
+				<span class="my-span underline decoration-blue-500/30 decoration-10 underline-offset-1">
+					Stack
+				</span>
+
+				Tecnológico
+			</h2>
+
+			<!-- Grid de tecnologías -->
+			<div
+				class="mx-auto grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
+				role="list"
+				aria-label="Tecnologías utilizadas en el proyecto"
+			>
+				{#each project.technologies as technology, index (technology.name)}
+					<article
+						class="my-border my-shadow rounded-xl border-2 bg-white p-6"
+						role="listitem"
+						aria-labelledby={`tech-${index}-title`}
+					>
+						<!-- Header de la tecnología -->
+						<header class="mb-6 text-center">
+							<!-- Logo/Icono de la tecnología -->
+
+							<div class="mb-4 flex justify-center">
+								<div class="my-bg my-transition rounded-xl p-3">
+									<technology.iconComponent size={40} />
+								</div>
+							</div>
+
+							<h3 id={`tech-${index}-title`} class="text-xl font-bold text-gray-900">
+								{technology.name}
+							</h3>
+						</header>
+
+						<!-- Razón de elección -->
+						<div class="mb-6">
+							<h4 class="mb-3 text-sm font-semibold text-gray-700">
+								¿Por qué {technology.name}?
+							</h4>
+							<p class="text-sm leading-relaxed text-gray-600">
+								{technology.reason}
+							</p>
+						</div>
+
+						<!-- Beneficios -->
+						<div>
+							<h4 id={`benefits-${index}`} class="mb-3 text-sm font-semibold text-gray-700">
+								Beneficios Clave
+							</h4>
+							<ul class="space-y-2" role="list" aria-labelledby={`benefits-${index}`}>
+								{#each technology.benefits as benefit}
+									<li class="flex items-start gap-3" role="listitem">
+										<div class="mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-green-500"></div>
+										<span class="text-sm text-gray-600">{benefit}</span>
+									</li>
+								{/each}
+							</ul>
+						</div>
+
+						<!-- Badge opcional para categoría/tipo -->
+						{#if technology.category}
+							<footer class="mt-6 border-t border-gray-100 pt-4">
+								<span
+									class="inline-block rounded-full bg-blue-100 px-3 py-1 text-xs font-medium text-blue-700"
+								>
+									{technology.category}
+								</span>
+							</footer>
+						{/if}
+					</article>
+				{/each}
 			</div>
 		</div>
 	</section>
