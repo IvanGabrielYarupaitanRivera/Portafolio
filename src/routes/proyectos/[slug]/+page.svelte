@@ -10,6 +10,7 @@
 		Heart,
 		Target,
 		TrendingUp,
+		User,
 		Users,
 		Zap
 	} from 'lucide-svelte';
@@ -140,6 +141,8 @@
 									<Heart size={24} class="text-green-600" />
 								{:else if metric.icon === 'robot'}
 									<BotMessageSquareIcon size={24} class="text-green-600" />
+								{:else if metric.icon === 'users'}
+									<User size={24} class="text-green-600" />
 								{/if}
 							</div>
 						</header>
