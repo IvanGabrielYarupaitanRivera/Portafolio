@@ -10,6 +10,7 @@
 			id: 1,
 			title: 'Página Web de Peralta Asociados',
 			industry: 'Servicios Legales',
+			slug: 'pagina-web-peralta-asociados',
 			description:
 				'Diseño y desarrollo de sitio web corporativo con rendimiento optimizado, alcanzando la puntuación máxima (100/100) en todas las métricas de Lighthouse.',
 			results: 'Incrementó contactos de clientes potenciales en un 35%',
@@ -23,6 +24,7 @@
 			id: 2,
 			title: 'Asistente Legal con Inteligencia Artificial',
 			industry: 'Servicios Legales',
+			slug: 'asistente-inteligente-peralta-asociados',
 			description:
 				'Desarrollo de un chatbot legal con IA que proporciona asesoramiento automatizado 24/7, utilizando embeddings vectoriales para respuestas precisas y relevantes.',
 			results: 'Aumentó en un 40% la atención de consultas sin intervención humana',
@@ -36,6 +38,7 @@
 			id: 3,
 			title: 'Sistema de Gestión Académica',
 			industry: 'Educación',
+			slug: 'sistema-gestion-academica',
 			description:
 				'Aplicación web académica para gestión de calificaciones con roles diferenciados (administrador, profesor y estudiante) y verificación de usuarios.',
 			results: 'Entorno Ficticio: Proyecto para demostrar habilidades de desarrollo',
@@ -155,7 +158,7 @@
 
 				<!-- Contenido del proyecto -->
 				<div class="p-6">
-					<header class="mb-4">
+					<header class="mb-2">
 						<div class="mb-1">
 							<mark
 								class="inline-block rounded bg-sky-100 px-2 py-1 text-xs font-medium text-sky-800"
@@ -166,6 +169,18 @@
 						</div>
 						<h3 class="heading-3">{project.title}</h3>
 					</header>
+
+					<!-- Botón de más información -->
+					<div class="mb-4">
+						<a
+							href="/proyectos/{project.slug}"
+							class="my-border my-shadow my-effect my-transition my-border my-bg inline-flex cursor-pointer items-center gap-2 rounded-xl border-2 px-4 py-2 text-sm font-bold text-green-950"
+							aria-label={`Ver más información sobre ${project.title}`}
+						>
+							<Brain size={16} aria-hidden="true" />
+							<span>Más información</span>
+						</a>
+					</div>
 
 					<section class="mb-6">
 						<p class="p">
