@@ -69,7 +69,7 @@
 		},
 		{
 			id: 3,
-			slug: 'sistema-de-gestion-notas-academicas',
+			slug: 'sistema-gestion-academica',
 			title: 'Sistema de Gestión Académica',
 			industry: 'Educación',
 			client: 'Proyeto Ficticio',
