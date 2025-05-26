@@ -7,6 +7,35 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>https://www.vanchi.pro/proyectos</loc>
+        <lastmod>2025-05-12T10:30:00.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+
+    <url>
+        <loc>https://www.vanchi.pro/proyectos/pagina-web-peralta-asociados</loc>
+        <lastmod>2025-05-12T10:30:00.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://www.vanchi.pro/proyectos/asistente-inteligente-peralta-asociados</loc>
+        <lastmod>2025-05-12T10:30:00.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://www.vanchi.pro/proyectos/sistema-gestion-academica</loc>
+        <lastmod>2025-05-12T10:30:00.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+
+    
+    <url>
         <loc>https://www.vanchi.pro/pagina-web-huancayo</loc>
         <lastmod>2025-03-17T10:30:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
