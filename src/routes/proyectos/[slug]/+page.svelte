@@ -1,10 +1,13 @@
 <script lang="ts">
+	import Seo from '$lib/components/SEO.svelte';
 	import {
 		ArrowLeft,
+		BotMessageSquareIcon,
 		Calendar,
 		Clock,
 		ExternalLink,
 		Github,
+		Heart,
 		Target,
 		TrendingUp,
 		Users,
@@ -13,16 +16,33 @@
 
 	let { data } = $props();
 	let { project } = $derived(data);
+
+	const title = $derived(project.title);
+	const description = $derived(project.description);
+	const keywords = $derived(project.keywords);
+	const image = $derived(project.image);
+	const altImage = $derived(project.altImage);
+	const additionalImages = $derived(project.additionalImages);
+	const altAdditionalImages = $derived(project.altAdditionalImages);
 </script>
 
-<!-- <svelte:head>
-	<title>{project.title} - Caso de Estudio | Ivan Yarupaitan</title>
-	<meta name="description" content={project.summary} />
-	<meta property="og:title" content={project.title} />
-	<meta property="og:description" content={project.summary} />
-	<meta property="og:image" content={project.heroImage} />
-	<meta property="og:type" content="article" />
-</svelte:head> -->
+<Seo
+	{title}
+	{description}
+	{keywords}
+	url="https://www.vanchi.pro/proyectos/{project.slug}"
+	type="website"
+	city="Huancayo"
+	region="Junín"
+	latitude="-12.041545380185886"
+	longitude="-75.19187545630611"
+	postalCode="12001"
+	streetAddress="Jr. Las Estrellas N° 153"
+	{image}
+	{altImage}
+	{additionalImages}
+	{altAdditionalImages}
+/>
 
 <main class="z-10 container mx-auto flex flex-1 flex-col py-6">
 	<!-- Navegación de regreso -->
@@ -114,6 +134,12 @@
 									<Zap size={24} class="text-green-600" />
 								{:else if metric.icon === 'target'}
 									<Target size={24} class="text-green-600" />
+								{:else if metric.icon === 'clock'}
+									<Clock size={24} class="text-green-600" />
+								{:else if metric.icon === 'heart'}
+									<Heart size={24} class="text-green-600" />
+								{:else if metric.icon === 'robot'}
+									<BotMessageSquareIcon size={24} class="text-green-600" />
 								{/if}
 							</div>
 						</header>
