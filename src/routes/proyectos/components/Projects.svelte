@@ -29,8 +29,6 @@
 			year: '2025',
 			description:
 				'Diseño y desarrollo de sitio web corporativo con rendimiento optimizado, alcanzando la puntuación máxima (100/100) en todas las métricas de Lighthouse.',
-			challenge:
-				'Crear una presencia digital profesional que genere confianza y atraiga nuevos clientes al bufete legal.',
 			solution:
 				'Desarrollo de sitio web minimalista con enfoque en conversión y optimización técnica.',
 			results: 'Incrementó contactos de clientes potenciales en un 35%',
@@ -47,7 +45,7 @@
 		},
 		{
 			id: 2,
-			slug: 'asistente-legal-inteligencia-artificial',
+			slug: 'asistente-inteligente-peralta-asociados',
 			title: 'Asistente Legal con Inteligencia Artificial',
 			industry: 'Servicios Legales',
 			client: 'Peralta Asociados',
@@ -55,8 +53,6 @@
 			year: '2025',
 			description:
 				'Desarrollo de un chatbot legal con IA que proporciona asesoramiento automatizado 24/7, utilizando embeddings vectoriales para respuestas precisas y relevantes.',
-			challenge:
-				'Automatizar la atención de consultas legales básicas para mejorar la eficiencia del bufete.',
 			solution:
 				'Implementación de chatbot inteligente con base de conocimiento jurídico y procesamiento de lenguaje natural.',
 			results: 'Aumentó en un 40% la atención de consultas sin intervención humana',
@@ -81,7 +77,6 @@
 			year: '2025',
 			description:
 				'Aplicación web académica para gestión de calificaciones con roles diferenciados (administrador, profesor y estudiante) y verificación de usuarios.',
-			challenge: 'Crear un sistema completo de gestión académica con múltiples roles y permisos.',
 			solution:
 				'Desarrollo de aplicación web con autenticación avanzada y panel administrativo completo.',
 			results: 'Entorno Ficticio: Proyecto para demostrar habilidades de desarrollo',
