@@ -595,22 +595,20 @@ export const load: PageLoad = ({ params }) => {
 						gradeCalculation: 'Sin cálculo de promedios',
 						profileEditing: 'Sin edición de perfiles',
 						passwordSecurity: 'Sin cambio de contraseñas',
-						teacherAssignment: 'Sin asignación de cursos',
-						studentTracking: 'Sin seguimiento académico'
+						teacherAssignment: 'Sin asignación de cursos'
 					}
 				},
 				after: {
 					title: 'Habilidades Demostradas',
 					context: 'Sistema académico completamente funcional',
 					metrics: {
-						userManagement: 'Gestión completa de usuarios',
-						roleSystem: '3 roles con permisos granulares',
+						userManagement: 'Gestión de usuarios y perfiles',
+						roleSystem: '3 roles con permisos',
 						courseManagement: 'Creación y gestión de cursos',
 						gradeCalculation: 'Cálculo automático de promedios',
 						profileEditing: 'Edición con validaciones',
 						passwordSecurity: 'Cambio seguro de contraseñas',
-						teacherAssignment: 'Asignación dinámica de cursos',
-						studentTracking: 'Seguimiento automático'
+						teacherAssignment: 'Asignación dinámica de cursos'
 					}
 				}
 			},
