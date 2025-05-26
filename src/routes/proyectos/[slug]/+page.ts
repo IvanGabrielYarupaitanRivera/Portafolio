@@ -7,6 +7,8 @@ import SvelteKitIcon from '$lib/icons/technologies/SvelteKitIcon.svelte';
 import SupabaseIcon from '$lib/icons/technologies/SupabaseIcon.svelte';
 import OpenRouterIcon from '$lib/icons/technologies/OpenRouterIcon.svelte';
 import RAGIcon from '$lib/icons/technologies/RAGIcon.svelte';
+import TypeScriptIcon from '$lib/icons/technologies/TypeScriptIcon.svelte';
+import VercelIcon from '$lib/icons/technologies/VercelIcon.svelte';
 
 export const load: PageLoad = ({ params }) => {
 	const { slug } = params;
@@ -430,6 +432,226 @@ export const load: PageLoad = ({ params }) => {
 					reason: 'Plataforma de deployment con edge functions para aplicaciones SvelteKit',
 					category: 'Hosting',
 					benefits: ['Deploy automático', 'Edge functions', 'CDN global']
+				}
+			]
+		},
+
+		'sistema-gestion-academica': {
+			id: 3,
+			image:
+				'https://www.vanchi.pro/images/proyectos/sistema-gestion-academica/sistema-gestion-academica.webp',
+			altImage: 'Sistema de gestión académica integral',
+			additionalImages: [
+				'https://www.vanchi.pro/images/proyectos/sistema-gestion-academica/dashboard-academico.webp'
+			],
+			altAdditionalImages: ['Dashboard del sistema de gestión académica'],
+			slug: 'sistema-gestion-academica',
+			title: 'Sistema de Gestión Académica Integral',
+			description:
+				'Desarrollo de una plataforma web completa para la gestión académica institucional, principalmente en la gestión de notas de los estudiantes.',
+			keywords:
+				'sistema académico, gestión educativa, plataforma estudiantil, automatización escolar, calificaciones digitales, gestión institucional',
+			subtitle: 'Gestión de notas de los estudiantes',
+			client: 'Demo: Proyecto Personal',
+			year: '2025',
+			duration: '2 meses',
+			projectType: 'Sistema Web Completo',
+			url: 'https://sistema-de-gestion-academica.vercel.app/',
+			github: 'https://github.com/IvanGabrielYarupaitanRivera/SistemaDeGestionAcademica',
+
+			// Resumen ejecutivo
+			summary:
+				'Desarrollo de sistema académico principalmente para demostrar mis habilidades de full stack.',
+
+			// Métricas clave
+			metrics: [
+				{
+					id: 'roles',
+					label: 'Roles de Usuario',
+					value: '3',
+					description: 'Administrador, Docente, Estudiante',
+					icon: 'users'
+				},
+				{
+					id: 'features',
+					label: 'Funcionalidades',
+					value: '15+',
+					description: 'Módulos integrados del sistema',
+					icon: 'trending-up'
+				},
+				{
+					id: 'improvement',
+					label: 'Tipo de Proyecto',
+					value: 'Demo',
+					description: 'Proyecto de demostración técnica',
+					icon: 'robot'
+				}
+			],
+
+			// El desafío
+			challenge: {
+				description:
+					'Como desarrollador full stack, necesitaba crear un proyecto que demostrara de manera integral mis habilidades técnicas en el desarrollo web moderno. El desafío consistía en construir una aplicación web completa desde cero, abarcando desde la arquitectura de base de datos hasta la experiencia de usuario, implementando funcionalidades complejas como autenticación, autorización por roles y gestión de datos en tiempo real.',
+				painPoints: [
+					'Demostrar competencias completas en desarrollo full stack',
+					'Implementar un sistema robusto de autenticación y autorización',
+					'Crear una arquitectura escalable de base de datos relacional',
+					'Desarrollar interfaces de usuario intuitivas y responsivas',
+					'Gestionar diferentes roles de usuario con permisos específicos',
+					'Implementar funcionalidades de tiempo real y notificaciones',
+					'Crear una experiencia de usuario fluida con feedback visual',
+					'Demostrar habilidades en deployment y configuración de producción',
+					'Mostrar dominio de tecnologías modernas del ecosistema web'
+				]
+			},
+
+			// Objetivos
+			objectives: {
+				description:
+					'Desarrollar una aplicación web completa que sirva como demostración práctica de mis habilidades como desarrollador full stack, implementando un sistema académico funcional que abarque todos los aspectos del desarrollo web moderno, desde la gestión de base de datos hasta la experiencia de usuario.',
+				goals: [
+					'Construir una aplicación full stack completamente funcional',
+					'Implementar sistema de autenticación con Supabase Auth seguro y escalable',
+					'Desarrollar arquitectura de roles con permisos granulares',
+					'Crear interfaces de usuario modernas y accesibles',
+					'Implementar gestión de estado reactivo y en tiempo real',
+					'Integrar notificaciones toast y feedback visual intuitivo',
+					'Desarrollar pantallas de carga y estados de interfaz optimizados',
+					'Configurar deployment automatizado en plataformas modernas',
+					'Demostrar uso de tecnologías actuales del stack web'
+				]
+			},
+
+			// Proceso de desarrollo
+			phases: [
+				{
+					id: 1,
+					title: 'Diseño & Arquitectura de Base de Datos',
+					duration: '2 semanas',
+					description:
+						'Diseño de la arquitectura del sistema, normalización de base de datos y definición de roles de usuario.',
+					deliverables: [
+						'Diseño y normalización de base de datos en Supabase',
+						'Definición de roles y permisos del sistema (Admin, Docente, Estudiante)',
+						'Arquitectura de autenticación con Supabase Auth',
+						'Wireframes y mockups de interfaces principales',
+						'Especificaciones técnicas del proyecto full stack'
+					]
+				},
+				{
+					id: 2,
+					title: 'Desarrollo Backend & Autenticación',
+					duration: '3 semanas',
+					description:
+						'Implementación de la lógica de negocio, configuración de Supabase y sistema de autenticación JWT.',
+					deliverables: [
+						'Configuración completa de Supabase como backend',
+						'Implementación de Supabase Auth con roles granulares',
+						'Creación de APIs y funciones de base de datos',
+						'Sistema de gestión de calificaciones y notas',
+						'Políticas de seguridad RLS (Row Level Security)'
+					]
+				},
+				{
+					id: 3,
+					title: 'Desarrollo Frontend & UI/UX',
+					duration: '2.5 semanas',
+					description:
+						'Creación de interfaces responsive, componentes reutilizables y experiencia de usuario optimizada.',
+					deliverables: [
+						'Desarrollo completo con SvelteKit y TypeScript',
+						'Componentes de toast para notificaciones en tiempo real',
+						'Pantallas de carga y estados de interfaz optimizados',
+						'Dashboard diferenciado por roles de usuario',
+						'Diseño responsive con Tailwind CSS'
+					]
+				},
+				{
+					id: 4,
+					title: 'Testing, Optimización & Deploy',
+					duration: '0.5 semanas',
+					description: 'Pruebas exhaustivas del sistema, optimización y despliegue en Vercel.',
+					deliverables: [
+						'Testing completo de funcionalidades por roles',
+						'Pruebas de autenticación y autorización',
+						'Optimización de rendimiento y carga',
+						'Deploy automatizado en Vercel',
+						'Documentación técnica del proyecto'
+					]
+				}
+			],
+
+			// Resultados
+			results: {
+				description:
+					'El desarrollo del sistema académico demostró exitosamente mis competencias como desarrollador full stack, implementando una aplicación completa con gestión de usuarios, roles, cursos y calificaciones con una arquitectura robusta y escalable.',
+				before: {
+					title: 'Objetivo de Demostración',
+					context: 'Habilidades técnicas por demostrar',
+					metrics: {
+						userManagement: 'Sin sistema de gestión de usuarios',
+						roleSystem: 'Sin arquitectura de roles implementada',
+						courseManagement: 'Sin funcionalidades académicas',
+						gradeCalculation: 'Sin algoritmos de cálculo de promedios',
+						profileEditing: 'Sin gestión de perfiles de usuario',
+						passwordSecurity: 'Sin sistema de cambio de contraseñas',
+						teacherAssignment: 'Sin asignación de cursos a docentes',
+						studentTracking: 'Sin seguimiento de rendimiento académico'
+					}
+				},
+				after: {
+					title: 'Habilidades Demostradas',
+					context: 'Sistema académico completamente funcional',
+					metrics: {
+						userManagement: 'Gestión completa de perfiles de usuarios',
+						roleSystem: 'Arquitectura de 3 roles con permisos granulares',
+						courseManagement: 'Sistema completo de creación y gestión de cursos',
+						gradeCalculation: 'Algoritmo automático de cálculo de promedios',
+						profileEditing: 'Edición de perfiles con validaciones',
+						passwordSecurity: 'Sistema seguro de cambio de contraseñas',
+						teacherAssignment: 'Asignación dinámica de cursos a docentes',
+						studentTracking: 'Seguimiento automático de estado académico'
+					}
+				}
+			},
+
+			// Stack tecnológico
+			technologies: [
+				{
+					name: 'SvelteKit',
+					iconComponent: SvelteKitIcon,
+					reason: 'Framework full-stack moderno para aplicaciones web complejas y escalables',
+					category: 'Frontend Framework',
+					benefits: ['Rendering híbrido', 'Routing automático', 'Performance excepcional']
+				},
+				{
+					name: 'Tailwind CSS',
+					iconComponent: TailwindIcon,
+					reason: 'Framework CSS utility-first para diseño responsive y desarrollo ágil',
+					category: 'CSS Framework',
+					benefits: ['Desarrollo ágil', 'Bundle CSS mínimo', 'Responsive design']
+				},
+				{
+					name: 'Supabase',
+					iconComponent: SupabaseIcon,
+					reason: 'Backend-as-a-Service con PostgreSQL para gestión de datos académicos robusta',
+					category: 'Backend & Database',
+					benefits: ['PostgreSQL robusto', 'Auth integrada', 'Real-time subscriptions']
+				},
+				{
+					name: 'TypeScript',
+					iconComponent: TypeScriptIcon,
+					reason: 'Superset de JavaScript con tipado estático para mayor confiabilidad del código',
+					category: 'Programming Language',
+					benefits: ['Tipado estático', 'Mejor DX', 'Detección temprana de errores']
+				},
+				{
+					name: 'Vercel',
+					iconComponent: VercelIcon,
+					reason:
+						'Plataforma de deployment optimizada para aplicaciones SvelteKit con CI/CD automático',
+					category: 'Hosting',
+					benefits: ['Deploy automático', 'Edge functions', 'Performance optimizado']
 				}
 			]
 		}
