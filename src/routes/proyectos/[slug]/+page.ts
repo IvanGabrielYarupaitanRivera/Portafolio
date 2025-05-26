@@ -589,28 +589,28 @@ export const load: PageLoad = ({ params }) => {
 					title: 'Objetivo de Demostración',
 					context: 'Habilidades técnicas por demostrar',
 					metrics: {
-						userManagement: 'Sin sistema de gestión de usuarios',
-						roleSystem: 'Sin arquitectura de roles implementada',
-						courseManagement: 'Sin funcionalidades académicas',
-						gradeCalculation: 'Sin algoritmos de cálculo de promedios',
-						profileEditing: 'Sin gestión de perfiles de usuario',
-						passwordSecurity: 'Sin sistema de cambio de contraseñas',
-						teacherAssignment: 'Sin asignación de cursos a docentes',
-						studentTracking: 'Sin seguimiento de rendimiento académico'
+						userManagement: 'Sin gestión de usuarios',
+						roleSystem: 'Sin arquitectura de roles',
+						courseManagement: 'Sin funciones académicas',
+						gradeCalculation: 'Sin cálculo de promedios',
+						profileEditing: 'Sin edición de perfiles',
+						passwordSecurity: 'Sin cambio de contraseñas',
+						teacherAssignment: 'Sin asignación de cursos',
+						studentTracking: 'Sin seguimiento académico'
 					}
 				},
 				after: {
 					title: 'Habilidades Demostradas',
 					context: 'Sistema académico completamente funcional',
 					metrics: {
-						userManagement: 'Gestión completa de perfiles de usuarios',
-						roleSystem: 'Arquitectura de 3 roles con permisos granulares',
-						courseManagement: 'Sistema completo de creación y gestión de cursos',
-						gradeCalculation: 'Algoritmo automático de cálculo de promedios',
-						profileEditing: 'Edición de perfiles con validaciones',
-						passwordSecurity: 'Sistema seguro de cambio de contraseñas',
-						teacherAssignment: 'Asignación dinámica de cursos a docentes',
-						studentTracking: 'Seguimiento automático de estado académico'
+						userManagement: 'Gestión completa de usuarios',
+						roleSystem: '3 roles con permisos granulares',
+						courseManagement: 'Creación y gestión de cursos',
+						gradeCalculation: 'Cálculo automático de promedios',
+						profileEditing: 'Edición con validaciones',
+						passwordSecurity: 'Cambio seguro de contraseñas',
+						teacherAssignment: 'Asignación dinámica de cursos',
+						studentTracking: 'Seguimiento automático'
 					}
 				}
 			},
