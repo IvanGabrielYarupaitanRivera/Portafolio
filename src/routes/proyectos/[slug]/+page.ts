@@ -3,6 +3,10 @@ import type { PageLoad } from './$types';
 import AstroIcon from '$lib/icons/technologies/AstroIcon.svelte';
 import NetlifyIcon from '$lib/icons/technologies/NetlifyIcon.svelte';
 import TailwindIcon from '$lib/icons/technologies/TailwindIcon.svelte';
+import SvelteKitIcon from '$lib/icons/technologies/SvelteKitIcon.svelte';
+import SupabaseIcon from '$lib/icons/technologies/SupabaseIcon.svelte';
+import OpenRouterIcon from '$lib/icons/technologies/OpenRouterIcon.svelte';
+import RAGIcon from '$lib/icons/technologies/RAGIcon.svelte';
 
 export const load: PageLoad = ({ params }) => {
 	const { slug } = params;
@@ -11,8 +15,19 @@ export const load: PageLoad = ({ params }) => {
 	const projectsData = {
 		'pagina-web-peralta-asociados': {
 			id: 1,
+			image:
+				'https://www.vanchi.pro/images/proyectos/pagina-web-peralta-asociados/pagina-web-peralta-asociados.webp',
+			altImage: 'Página web corporativa de Peralta Asociados',
+			additionalImages: [
+				'https://www.vanchi.pro/images/proyectos/pagina-web-peralta-asociados/presencia-digital-peralta-asociados.webp'
+			],
+			altAdditionalImages: ['Presencia digital de Peralta Asociados con página web corporativa'],
 			slug: 'pagina-web-peralta-asociados',
 			title: 'Página Web Corporativa para Peralta Asociados',
+			description:
+				'Desarrollo del sitio web corporativo de Peralta Asociados, un bufete legal tradicional, para establecer su presencia digital y mejorar la captación de clientes.',
+			keywords:
+				'bufete legal, página web corporativa, presencia digital, captación de clientes, SEO local, optimización de rendimiento, diseño profesional, marketing digital',
 			subtitle: 'Transformación digital de un bufete legal tradicional',
 			client: 'Peralta Asociados',
 			year: '2025',
@@ -193,6 +208,228 @@ export const load: PageLoad = ({ params }) => {
 					reason: 'Hosting optimizado para sitios estáticos',
 					category: 'Hosting',
 					benefits: ['CDN global', 'Deploy automático', 'SSL gratuito']
+				}
+			]
+		},
+
+		'asistente-inteligente-peralta-asociados': {
+			id: 2,
+			image:
+				'https://www.vanchi.pro/images/proyectos/asistente-inteligente-peralta-asociados/asistente-inteligente.webp',
+			altImage: 'Asistente inteligente legal para Peralta Asociados',
+			additionalImages: [
+				'https://www.vanchi.pro/images/proyectos/asistente-inteligente-peralta-asociados/chatbot-legal.webp'
+			],
+			altAdditionalImages: ['Asistente inteligente legal para Peralta Asociados'],
+			slug: 'asistente-inteligente-peralta-asociados',
+			title: 'Asistente Inteligente Legal para Peralta Asociados',
+			description:
+				'Desarrollo de un chatbot inteligente especializado en derecho para Peralta Asociados, automatizando consultas legales básicas y mejorando la atención al cliente 24/7.',
+			keywords:
+				'chatbot legal, inteligencia artificial, automatización legal, atención al cliente, consultas legales, IA conversacional, asistente virtual, bufete legal',
+			subtitle: 'Automatización inteligente para consultas legales',
+			client: 'Peralta Asociados',
+			year: '2025',
+			duration: '2 meses',
+			projectType: 'Chatbot con IA',
+			url: 'https://chat.peraltaasociados.com/',
+			github: 'https://github.com/IvanGabrielYarupaitanRivera/ChatbotPeraltaAsociados',
+
+			// Resumen ejecutivo
+			summary:
+				'Desarrollo de asistente inteligente que redujo el tiempo de respuesta inicial en 85% y aumentó la satisfacción del cliente al 92%.',
+
+			// Métricas clave
+			metrics: [
+				{
+					id: 'responseTime',
+					label: 'Reducción Tiempo Respuesta',
+					value: '-85%',
+					description: 'Respuestas instantáneas 24/7',
+					icon: 'clock'
+				},
+				{
+					id: 'satisfaction',
+					label: 'Satisfacción Cliente',
+					value: '92%',
+					description: 'Índice de satisfacción usuario',
+					icon: 'heart'
+				},
+				{
+					id: 'automation',
+					label: 'Consultas Automatizadas',
+					value: '78%',
+					description: 'Resolución automática de consultas',
+					icon: 'robot'
+				}
+			],
+
+			// El desafío
+			challenge: {
+				description:
+					'Peralta Asociados recibía un alto volumen de consultas legales básicas y repetitivas que consumían tiempo valioso del equipo legal. Los clientes esperaban respuestas inmediatas fuera del horario de oficina, y el bufete necesitaba una solución que proporcionara información legal preliminar de manera eficiente sin comprometer la calidad del servicio.',
+				painPoints: [
+					'Alto volumen de consultas legales básicas y repetitivas',
+					'Tiempo limitado del equipo legal para consultas preliminares',
+					'Clientes esperando respuestas fuera del horario de oficina',
+					'Falta de filtrado de consultas por urgencia o complejidad',
+					'Necesidad de capturar leads cualificados automáticamente',
+					'Ausencia de primera orientación legal inmediata',
+					'Dificultad para escalar la atención personalizada',
+					'Pérdida de consultas potenciales fuera del horario laboral'
+				]
+			},
+
+			// Objetivos
+			objectives: {
+				description:
+					'Desarrollar un asistente inteligente especializado en derecho que automatice la atención inicial de consultas legales, proporcione información preliminar precisa y capture leads cualificados de manera eficiente.',
+				goals: [
+					'Automatizar respuestas a consultas legales frecuentes',
+					'Proporcionar atención 24/7 para consultas básicas',
+					'Clasificar consultas por área legal y urgencia',
+					'Capturar información de contacto de leads cualificados',
+					'Reducir carga de trabajo del equipo en consultas básicas',
+					'Mejorar experiencia del cliente con respuestas inmediatas',
+					'Implementar base de conocimiento legal actualizable',
+					'Integrar sistema de derivación a abogados especialistas',
+					'Generar reportes de consultas y tendencias legales'
+				]
+			},
+
+			// Proceso de desarrollo
+			phases: [
+				{
+					id: 1,
+					title: 'Análisis Legal & Diseño',
+					duration: '2 semanas',
+					description:
+						'Investigación de consultas frecuentes, definición de flujos conversacionales y arquitectura del sistema.',
+					deliverables: [
+						'Análisis de consultas legales más frecuentes',
+						'Mapeo de flujos conversacionales por área legal',
+						'Definición de base de conocimiento legal',
+						'Diseño de interfaz conversacional',
+						'Arquitectura del sistema de IA'
+					]
+				},
+				{
+					id: 2,
+					title: 'Desarrollo Backend & IA',
+					duration: '3 semanas',
+					description: 'Implementación del motor de IA, procesamiento de lenguaje natural y APIs.',
+					deliverables: [
+						'Configuración de modelo de lenguaje especializado',
+						'Desarrollo de APIs para procesamiento de consultas',
+						'Implementación de sistema de clasificación legal',
+						'Base de datos de conocimiento legal'
+					]
+				},
+				{
+					id: 3,
+					title: 'Interfaz & Integración',
+					duration: '2 semanas',
+					description: 'Desarrollo de interfaz web, integración con sistemas existentes.',
+					deliverables: [
+						'Interfaz web responsiva del chatbot',
+						'Conexión con la base de datos vectorial'
+					]
+				},
+				{
+					id: 4,
+					title: 'Testing & Optimización',
+					duration: '1 semana',
+					description: 'Pruebas exhaustivas, entrenamiento del modelo y ajustes finales.',
+					deliverables: [
+						'Testing de precisión en respuestas legales',
+						'Optimización de flujos conversacionales',
+						'Entrenamiento con casos reales del bufete',
+						'Capacitación del equipo legal'
+					]
+				}
+			],
+
+			// Resultados
+			results: {
+				description:
+					'La implementación del asistente inteligente transformó la atención al cliente de Peralta Asociados, automatizando consultas básicas y mejorando significativamente la eficiencia operativa.',
+				before: {
+					title: 'Situación Inicial',
+					context: 'Atención manual tradicional',
+					metrics: {
+						responseTime: '24-48 horas',
+						availability: 'Solo horario de oficina',
+						automationLevel: '0%',
+						clientSatisfaction: '68%',
+						leadCapture: 'Manual e inconsistente',
+						consultationVolume: '45 consultas/semana',
+						repeatQueries: '65% consultas repetitivas',
+						legalTeamLoad: '100% capacidad utilizada'
+					}
+				},
+				after: {
+					title: 'Resultados Obtenidos',
+					context: 'Asistente inteligente activo',
+					metrics: {
+						responseTime: 'Instantáneo',
+						availability: '24/7 disponible',
+						automationLevel: '78%',
+						clientSatisfaction: '92%',
+						leadCapture: 'Automatizada y estructurada',
+						consultationVolume: '120 consultas/semana',
+						repeatQueries: '15% consultas repetitivas',
+						legalTeamLoad: '45% capacidad utilizada'
+					}
+				}
+			},
+
+			// Stack tecnológico
+			technologies: [
+				{
+					name: 'SvelteKit',
+					iconComponent: SvelteKitIcon,
+					reason: 'Framework full-stack moderno para desarrollo web escalable y optimizado',
+					category: 'Frontend Framework',
+					benefits: ['Rendering híbrido', 'Routing automático', 'Performance excepcional']
+				},
+				{
+					name: 'Tailwind CSS',
+					iconComponent: TailwindIcon,
+					reason: 'Sistema de diseño utility-first para interfaces responsive y consistentes',
+					category: 'CSS Framework',
+					benefits: ['Desarrollo ágil', 'Bundle CSS mínimo', 'Responsive design']
+				},
+				{
+					name: 'Supabase Vector',
+					iconComponent: SupabaseIcon,
+					reason: 'Base de datos vectorial para almacenar embeddings y búsqueda semántica',
+					category: 'Vector Database',
+					benefits: ['Búsqueda semántica', 'Embeddings nativos', 'PostgreSQL compatible']
+				},
+				{
+					name: 'OpenRouter',
+					iconComponent: OpenRouterIcon,
+					reason: 'API gateway para acceso a múltiples modelos de IA con mejor costo-beneficio',
+					category: 'AI Gateway',
+					benefits: ['Múltiples modelos', 'Precios competitivos', 'Failover automático']
+				},
+				{
+					name: 'RAG Architecture',
+					iconComponent: RAGIcon,
+					reason: 'Arquitectura de generación aumentada por recuperación para respuestas precisas',
+					category: 'AI Pattern',
+					benefits: [
+						'Información actualizada',
+						'Respuestas contextuales',
+						'Reducción de alucinaciones'
+					]
+				},
+				{
+					name: 'Netlify',
+					iconComponent: NetlifyIcon,
+					reason: 'Plataforma de deployment con edge functions para aplicaciones SvelteKit',
+					category: 'Hosting',
+					benefits: ['Deploy automático', 'Edge functions', 'CDN global']
 				}
 			]
 		}
