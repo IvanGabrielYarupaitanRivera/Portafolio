@@ -6,10 +6,10 @@
 	let isMenuOpen = $state(false);
 
 	const menuItems = $state([
-		{ href: '#servicios', text: 'Servicios' },
-		{ href: '#proyectos', text: 'Proyectos' },
-		{ href: '#testimonios', text: 'Testimonios' },
-		{ href: '#contacto', text: 'Contacto' }
+		{ href: '/#servicios', text: 'Servicios' },
+		{ href: '/proyectos', text: 'Proyectos' },
+		{ href: '/#testimonios', text: 'Testimonios' },
+		{ href: '/#contacto', text: 'Contacto' }
 	]);
 </script>
 
